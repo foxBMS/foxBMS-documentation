@@ -34,7 +34,7 @@ the receptables.
  
 
 -----------------------------------------------------
-Hardware Setup of |foxBMS Master| and |foxBMS| Slaves
+Hardware Setup of |Master| and |Slaves|
 -----------------------------------------------------
 
 The foxBMS system can be mounted in a metal housing, as shown in :numref:`fig. %s <housing_flash>`. 
@@ -43,9 +43,9 @@ The foxBMS system can be mounted in a metal housing, as shown in :numref:`fig. %
 .. figure:: ./_figures/foxBMS_housing.jpg
    :width: 100 %
    
-   |foxBMS| housing
+   |Master| housing
 
-Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flash>`, which presents all the connectors of the |foxBMS master|.
+Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flash>`, which presents all the connectors of the |Master|.
  
 .. _foxbmsfront_quickstart_flash:
 .. figure:: ./_figures/2016-04-13_foxBMS_Front.png
