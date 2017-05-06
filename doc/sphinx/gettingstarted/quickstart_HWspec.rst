@@ -1,20 +1,8 @@
 .. _hw_short_spec:
-
+.. include:: ../macros.rst
 =======================
 Hardware Specifications
 =======================
-
-.. -----------------------------------------------
-.. General Documentation Macros
-.. -----------------------------------------------
-.. |foxBMS| replace:: foxBMS
-.. |LTC| replace:: LTC6804-1 / LTC6811-1
-.. |foxBMS Master| replace:: foxBMS Master Unit
-.. |foxBMS Master Basic board| replace:: foxBMS BMS-Master board
-.. |foxBMS Master Extension board| replace:: foxBMS BMS-Extension board
-.. |foxBMS Interface board| replace:: foxBMS BMS-Interface board
-.. |foxBMS Slave| replace:: foxBMS Slave Unit
-.. |foxBMS Slave board| replace:: foxBMS BMS-Slave board
 
 These specifications are needed to work further with the |foxBMS| hardware.
 
@@ -39,7 +27,7 @@ foxBMS Idle Supply Current at 24V supply            --          110         --  
 Connectors
 ----------
 
-This section describes the pin out of all connectors on the |foxBMS Master|. 
+This section describes the pin out of all connectors on the |Master|. 
 
 .. _foxbmsfront:
 .. figure:: ./_figures/2016-04-13_foxBMS_Front.png
@@ -91,7 +79,7 @@ Pin    Signal           Direction       Description
 * SUPPLY_EXT_2 / GND_EXT_2: Contactor supply and interlock supply 
 
 --------------------------------------------
-CAN 0  (X801 on |foxBMS Master Basic board|)
+CAN 0  (X801 on |BMS-Master|)
 --------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -110,7 +98,7 @@ Pin     Signal       Direction        Description
 Ground of CAN 0 is shared with supply ground GND_EXT_0. CAN  bus 0 is isolated from the MCU via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by MCU_0. 
 
 -----------------------------------------------
-CAN 1 (X801 on |foxBMS Master Extension board|)
+CAN 1 (X801 on |BMS-Extension|)
 -----------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -129,7 +117,7 @@ Pin     Signal          Direction        Description
 CAN 1 has to be supplied externally (GND_EXT_1 / SUPPLY_EXT_1) with 12 - 24V. CAN bus 1 is isolated from the MCU via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by MCU_0. 
 
 --------------------------------------------------------------------------
-Isolation Monitor (Bender ISOMETER) (X701  on |foxBMS Master Basic board|)
+Isolation Monitor (Bender ISOMETER) (X701  on |BMS-Master|)
 --------------------------------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -145,10 +133,10 @@ Pin     Signal                     Direction         Description
 4       BENDER_PWM_EXT             Input             Isolation monitoring device diagnostic signal
 ====    =======================    ==============    ===================================================
 
-This interface is intended to be used with a Bender isolation monitoring device . Bender ISOMETER IR155-3203 and IR155-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the foxBMS Master. By factory, foxBMS is configured to work with Bender ISOMETER IR155-3204/-3210. In order to work with Bender ISOMETER IR155-3203, Jumper R705 must be removed on |foxBMS Master Basic board|. For details, check the schematic of foxBMS Master. 
+This interface is intended to be used with a Bender isolation monitoring device . Bender ISOMETER IR155-3203 and IR155-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the foxBMS Master. By factory, foxBMS is configured to work with Bender ISOMETER IR155-3204/-3210. In order to work with Bender ISOMETER IR155-3203, Jumper R705 must be removed on |BMS-Master|. For details, check the schematic of foxBMS Master. 
 
 --------------------------------------------------------------------------------------------------------------
-Contactors (X1201 - X1206 on |foxBMS Master Basic board| and X1201 - X1203 on |foxBMS Master Extension board|)
+Contactors (X1201 - X1206 on |BMS-Master| and X1201 - X1203 on |BMS-Extension|)
 --------------------------------------------------------------------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -169,7 +157,7 @@ All contactor connectors share one common ground. This common ground is switched
 Optional freewheeling diodes are not populated on the PCB. If the used contactor does not have built-in freewheeling diodes, freewheeling diodes must be added to protect the contactor control circuit. The load current is limited by the optically isolated power switch AQV25G2S (6A continuous load). Every contactor connector is fused with an onboard slow blow fuse type Schurter UMT-250 630mA (3403.0164.xx). 
 
 -----------------------------------------------
-Interlock (X901 on |foxBMS Master Basic board|)
+Interlock (X901 on |BMS-Master|)
 -----------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_twocon.png
@@ -186,7 +174,7 @@ Pin     Signal                      Direction             Description
 The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened immediately by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the foxBMS supply or communication interfaces. 
 
 --------------------------------------------------------------------------
-Daisy Chain - Primary and Secondary (X1601 on |foxBMS Master Basic board|)
+Daisy Chain - Primary and Secondary (X1601 on |BMS-Master|)
 --------------------------------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_sixteencon.png
@@ -217,7 +205,7 @@ Pin    Signal
 Please note: This connector pin out is only valid for use of a foxBMS Master Interface board for the LTC6802 monitoring IC. 
 
 ------------------------------------------------
-RS485 (X1301 on |foxBMS Master Extension board|)
+RS485 (X1301 on |BMS-Extension|)
 ------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_sixcon.png
@@ -238,7 +226,7 @@ Pin    Signal           Direction       Description
 The RS485 interface uses the ESD rugged transceiver LT1785. Moreover, the interface is galvanically isolated. An external supply has to be provided (12 - 24V). 
 
 --------------------------------------------------------
-Isolated GPIO (X1901 on |foxBMS Master Extension board|)
+Isolated GPIO (X1901 on |BMS-Extension|)
 --------------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_tencon.png
@@ -263,7 +251,7 @@ Pin    Signal           Direction       Description
 The foxBMS Master Extension board provides 4 isolated general purpose inputs and 4 isolated general purpose outputs. The GPIOs are isolated by an ADUM1402. The inputs are equipped with 10kOhm pull down resistors and are intended for a maximum input voltage of 5V. The output voltage is also 5V. An external supply is not needed.  
 
 -----------------------------------------------------------------------------------
-Isolated normally open contacts - isoNOC (X2001 on |foxBMS Master Extension board|)
+Isolated normally open contacts - isoNOC (X2001 on |BMS-Extension|)
 -----------------------------------------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_twelvecon.png
@@ -290,7 +278,7 @@ Pin    Signal                  Direction       Description
 The foxBMS Master Extension board features 6 isolated normally open contacts. The load current of each channel is limited by the optically isolated power switch AQV25G2S. The channels are not fused, however freewheeling diodes type GF1B are installed on board. 
 
 ----------------------------------------------------
-Analog Inputs (X1701 on |foxBMS Master Basic board|)
+Analog Inputs (X1701 on |BMS-Master|)
 ----------------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_twelvecon.png
