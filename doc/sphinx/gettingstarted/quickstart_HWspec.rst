@@ -58,7 +58,7 @@ Pin Count    Molex Housing Part Number    Farnell Order Number
    Defined viewing direction for the connector pin out; receptable - rear view; header - front view (image source: MOLEX)
 
 --------------------------------------------
-Supply (X201 on |foxBMS Master Basic board|)
+Supply (X201 on |BMS-Master|)
 --------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_sixcon.png
