@@ -9,12 +9,12 @@ Hardware Short Specification
 .. -----------------------------------------------
 .. |foxBMS| replace:: foxBMS
 .. |LTC| replace:: LTC6804-1
-.. |foxBMS Master| replace:: foxBMS Master
-.. |foxBMS Master Basic board| replace:: foxBMS Master Basic board
-.. |foxBMS Master Extension board| replace:: foxBMS Master Extension board
-.. |foxBMS Interface board| replace:: foxBMS Interface board
-.. |foxBMS Slave| replace:: foxBMS Slave
-.. |foxBMS Slave board| replace:: foxBMS Slave board
+.. |foxBMS Master| replace:: foxBMS Master Unit
+.. |foxBMS Master Basic board| replace:: foxBMS BMS-Master board
+.. |foxBMS Master Extension board| replace:: foxBMS BMS-Extension board
+.. |foxBMS Interface board| replace:: foxBMS BMS-Interface board
+.. |foxBMS Slave| replace:: foxBMS Slave Unit
+.. |foxBMS Slave board| replace:: foxBMS BMS-Slave board
 
 These specifications are needed to work further with the |foxBMS| hardware.
 
@@ -26,7 +26,7 @@ Electrical Ratings
 Description                                         Minimum     Typical     Maximum     Unit
 ==================================================  =======     =======     =======     ====
 Supply Voltage DC                                   10          --          26          V
-Contactor Continuous Current                         --          --          4           A
+Contactor Continuous Current                        --          --          4           A
 Contactor Feedback Supply Voltage                   --          5.0         --          V
 Analog Input                                        --          --          3.3         V
 Isolated Contacts Continuous Current                --          --          4           A
