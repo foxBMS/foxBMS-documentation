@@ -1,8 +1,8 @@
 .. _hw_short_spec:
 
-============================
-Hardware Short Specification
-============================
+=======================
+Hardware Specifications
+=======================
 
 .. -----------------------------------------------
 .. General Documentation Macros
