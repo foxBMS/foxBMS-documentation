@@ -61,15 +61,15 @@ In-stock Products
   +-------------------------+---------------+-------------------------------+--------------------+
   |Part Description         |Manufacturer   |Part Suggested                 |Supplier            |
   +-------------------------+---------------+-------------------------------+--------------------+
-  |Power Switches           |Gigavac        |GX16-BEB (600A)                |HVC Technologies    |
+  |Power Contactors         |Gigavac        |GX16BEB (600A)                 |HVC Technologies    |
   +-------------------------+---------------+-------------------------------+--------------------+
-  |Precharge Switch         |  TE           |LEV200A4ANA                    |Mouser              |
+  |Precharge Contactor      |  TE           |LEV200A4ANA                    |Mouser              |
   +-------------------------+---------------+-------------------------------+--------------------+
   |Precharge Resistor       |               |100W 680Ohm                    |Farnell             |
   +-------------------------+---------------+-------------------------------+--------------------+
   |DC Fuse*                 |Cooper Bussmann|FWP-Series                     |Mouser              |
   +-------------------------+---------------+-------------------------------+--------------------+
-  |Current Sensor           |Isabellenhuette|IVT Mod 300                    |Isabellenhuette     |
+  |Current Sensor           |Isabellenhuette|IVT-MOD 300                    |Isabellenhuette     |
   +-------------------------+---------------+-------------------------------+--------------------+
   |Emergency Off Button     |Moeller        |M22-PV/K11 + M22 K01           |Farnell             |
   +-------------------------+---------------+-------------------------------+--------------------+
