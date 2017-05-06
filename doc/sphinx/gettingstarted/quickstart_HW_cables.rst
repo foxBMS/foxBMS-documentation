@@ -7,10 +7,10 @@ Getting Started with the Hardware: Connections to foxBMS
 
 .. include:: ../macros.rst
 
-In the preceeding sections, the |foxBMS| master has been supplied and the |foxBMS| program flashed on it.
+In the preceeding sections, the |Master| has been supplied and the |foxBMS| program flashed on it.
 
-This section describes the |foxBMS| hardware in more details and how to connect the slaves that performs
-the cell voltages and temperature measurements. The CAN communication is shortly described, too.
+This section describes the |foxBMS| hardware in more details and how to connect the |Slaves| that performs
+the cell voltages and temperature measurements. The CAN communication is also shortly described.
 
 .. note::
    
@@ -51,7 +51,7 @@ The foxBMS system can be mounted in a metal housing, shown in :numref:`fig. %s <
    
    |foxBMS| housing
 
-In this configuration, the top plate can be removed to have access to the foxBMS boards. This is done by unscrewing the four
+In this configuration, the top plate can be removed to have access to the |Master| boards. This is done by unscrewing the four
 screws holding the top plate.
 
 The open housing is shown in :numref:`fig. %s <housing_open>`.
@@ -77,26 +77,26 @@ For the quickstart guide, it is not necessary to remove the boards from the hous
 .. figure:: ./_figures/foxBMS_housing_detail.jpg
    :width: 100 %
 
-   Introduction of the |foxBMS Master| board stack in the housing
+   Introduction of the board stack in the |Master| housing
 
 ------------------------------------------
 Detailed Description of the Hardware Parts
 ------------------------------------------
 
-The main part of foxBMS is the |foxBMS Master|, shown in :numref:`fig. %s <foxbms_master>`.
+The heart of |foxBMS| is the |Master|, shown in :numref:`fig. %s <foxbms_master>`.
 
 .. _foxbms_master:
 .. figure:: ./_figures/foxbms_master_basic_annotations.jpg
    :width: 100 %
 
-   |foxBMS Master Basic board|
+   |BMS-Master|
 
-As shown in :numref:`fig. %s <foxbms_master>`, the |foxBMS Master| has two microcontroller units (MCU):
+As shown in :numref:`fig. %s <foxbms_master>`, the |BMS-Master| has two microcontroller units (MCU):
 
- - Primary (also called MCU0)
- - Secondary (also called MCU1)
+ - Primary (also called |MCU0|)
+ - Secondary (also called |MCU1|)
 
-Primary is the MCU where the |foxBMS| software is run. Secondary is present for safety.
+Primary is the MCU where the |foxBMS| software is run. The secondary MCU is present for redundant safety when developing software code on the primary MCU.
 
 Each MCU has a set of LEDs, as shown in :numref:`fig. %s <foxbms_master>`:
 
@@ -104,32 +104,32 @@ Each MCU has a set of LEDs, as shown in :numref:`fig. %s <foxbms_master>`:
  - Red indicator LED
  - Green indicator LED
 
-The power LED must be lit when power is supplied to the |foxBMS Master Basic board|, and the indicator LEDs should blink, except during flashing of software on the MCU.
+The power LED must be lit when power is supplied to the |BMS-Master|, and the indicator LEDs should blink, except during flashing of software on the MCU.
 
 If a debugger is used, it must be connected to the debug port (JTAG-interface) corresponding to the MCU being used. 
 
-An extension board (shown in :numref:`fig. %s <foxbms_extension>`) is present under the |foxBMS Master Basic board|, named |foxBMS Master Extension board|. 
+An extension board (shown in :numref:`fig. %s <foxbms_extension>`) is present under the |BMS-Master|, named |BMS-Extension|. 
 
 .. _foxbms_extension:
 .. figure:: ./_figures/foxBMS_master_extension.jpg
    :width: 100 %
    
-   |foxBMS Master Extension board|
+   |BMS-Extension|
 
-It is used to present more interfaces than with the |foxBMS Master| only.
+It is used to provide more I/O and interfaces than with the |BMS-Master| only.
 
-On top of the |foxBMS Master|, an interface board (shown in :numref:`fig. %s <foxbms_interface>`) is present
+The |BMS-Interface| is located on top of the |BMS-Master| (shown in :numref:`fig. %s <foxbms_interface>`) is present
 
 .. _foxbms_interface:
 .. figure:: ./_figures/foxBMS_master_interface.jpg
    :width: 50 %
    :align: center
    
-   |foxBMS Interface board|
+   |BMS-Interface|
 
-Its purpose is to convert the signals sent by the Serial Peripheral Interface (SPI) of the |foxBMS Master| to the |foxBMS| slaves.
+Its purpose is to convert the signals sent by the Serial Peripheral Interface (SPI) of the |BMS-Master| to the first |BMS-Slave| in the daisy chain.
 
-A |foxBMS Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
+A |BMS-Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
 
 .. _foxbms_slave:
 .. figure:: ./_figures/foxBMS_slave.jpg
@@ -137,20 +137,20 @@ A |foxBMS Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
    
    |foxBMS Slave board|
 
-The slave unit (|foxBMS Slave|) is based on the |LTC| battery cell monitoring chip. More information on the |LTC| chip can
+The slave unit (|BMS-Slave|) is based on the |LTC| battery cell monitoring chip. More information on the |LTC| chip can
 be found in the datasheet ([ltc_datasheet6804]_). It supervises up to 12 battery cells connected in series. It performs
 voltage measurement, temperature measurement and passive cell balancing.
 In the daisy chain, slaves are connected via differential pair.
 
-The |foxBMS| slaves are not designed to be used in the housing.
+The |BMS-Slave| is not designed to be used in a specific housing.
 
-A schematic diagram of a |foxBMS Slave| unit is shown in :numref:`fig. %s <slave_diagram>`
+A block diagram of a |BMS-Slave| is shown in :numref:`fig. %s <slave_diagram>`
 
 .. _slave_diagram:
 .. figure:: ./_figures/BlockDiagram.png
    :width: 100 %
    
-   schematic of a |foxBMS Slave board|
+   Block diagram of a |BMS-Slave|
 
 -----------------------------------
 Use of |foxBMS| in a Battery System
@@ -158,9 +158,9 @@ Use of |foxBMS| in a Battery System
 
 :numref:`Fig. %s <hw_description>` present the organization of the hardware.
 The system consists of :math:`n` battery modules and :math:`m` slaves.
-Each |foxBMS Slave| is connected to a battery module, where it measures cell voltages and cell temperatures.
-The |foxBMS| slaves are connected in a daisy-chain configuration: when a data package is sent to the daisy-chain, it is first received by slave 1,
-which transmits it to slave 2 and so on until the data package is received by the last slave.
+Each |BMS-Slave| is connected to a battery module, where it measures cell voltages and cell temperatures.
+The |foxBMS| slaves are connected in a daisy chain configuration: when a data package is sent to the daisy chain, it is first received by slave 1,
+which transmits it to slave 2 and so on until the data package is received by the last |BMS-Slave|.
 
 .. _hw_description:
 .. figure:: ./_figures/hw_system_overview.png
@@ -168,18 +168,18 @@ which transmits it to slave 2 and so on until the data package is received by th
    
    foxBMS in the battery system
 
-The |foxBMS Interface board| converts the messages sent by the |foxBMS Master| so that they can be transmitted to the daisy-chain and vice-versa.
+The |BMS-Interface| converts the messages sent by the |BMS-Master| so that they can be transmitted to the daisy chain and vice versa.
 
-If the current sensor is used, the foxBMS master communicates with it via CAN.
+The |Master| communicates with the Isabellenhuette current sensor IVT-MOD or IVT-S via CAN.
 
-Communication with the control unit (for instance, a personal computer), is made  via CAN, too.
+Communication with the control unit (for instance, a personal computer), is also made via CAN.
 
 -----------------------------------------------------
-Hardware Setup of |foxBMS Master| and |foxBMS| Slaves
+Hardware Setup of |BMS-Master| and |BMS-Slave|
 -----------------------------------------------------
 
 
-:numref:`Fig. %s <foxbmsfront_quickstart>` presents all the connectors of the |foxBMS master|.
+:numref:`Fig. %s <foxbmsfront_quickstart>` presents all the connectors of the |BMS-Master|.
  
 .. _foxbmsfront_quickstart:
 .. figure:: ./_figures/2016-04-13_foxBMS_Front.png
@@ -189,15 +189,15 @@ Hardware Setup of |foxBMS Master| and |foxBMS| Slaves
 
 The connectors needed for this quickstart guide are indicated in the following parts. 
 
-Connecting the |foxBMS Slave board| to the |foxBMS Master Basic board|
+Connecting the |BMS-Slave| to the |BMS-Master|
 ----------------------------------------------------------------------
 
 .. note::
    
-      When the connection is made between the |foxBMS Master Basic board| and the |foxBMS Slave|, two communication lines
-      have to be connected: primary and secondary.
+      When the connection is made between the |BMS-Master| and the |BMS-Slave|, two communication lines
+      have to be connected: the primary and the secondary daisy chain.
 
-The connector indicated as ``Daisy Chain`` in :numref:`fig. %s <foxbmsfront_quickstart>` must be used on the |foxBMS Master Basic board|. Its layout
+The connector indicated as ``Daisy Chain`` in :numref:`fig. %s <foxbmsfront_quickstart>` must be used on the |BMS-Master|. Its layout
 is described in :numref:`table %s <master_daisy_connector>`.
 
 .. figure:: ./_figures/2016-04-12_sixteencon.png
@@ -205,7 +205,7 @@ is described in :numref:`table %s <master_daisy_connector>`.
 
 .. _master_daisy_connector:
 
-.. table:: |foxBMS Master Basic board| Daisy Chain Connector
+.. table:: |BMS-Master| Daisy Chain Connector
 
    ====   ====================== 
    Pin    Signal                    
@@ -231,7 +231,7 @@ is described in :numref:`table %s <master_daisy_connector>`.
 .. note::
    This connector pin out is only valid for use of a foxBMS Master Interface board for the |LTC| monitoring IC. 
 
-On the |foxBMS Slave board|, the connectors indicated as ``Primary Daisy Chain connector`` and ``Secondary Daisy Chain connector`` in :numref:`fig. %s <slave_diagram>`
+On the |BMS-Slave|, the connectors indicated as ``Primary Daisy Chain connector`` and ``Secondary Daisy Chain connector`` in :numref:`fig. %s <slave_diagram>`
 must be used. Their layout is described in :numref:`table %s <primary_daisy_connector>`. 
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -250,10 +250,10 @@ must be used. Their layout is described in :numref:`table %s <primary_daisy_conn
    4              OUT+ (Primary |LTC|)
    =============  ============
 
-The OUT+ and OUT- pins of the |foxBMS Master Basic board| go to the IN+ and IN- pins of |foxBMS Slave| respectively.  A cable with a receptable on both ends must be crimped correctly to make the connection.
+The OUT+ and OUT- pins of the |BMS-Master| go to the IN+ and IN- pins of |BMS-Slave| respectively.  A cable with a receptable on both ends must be crimped correctly to make the connection.
 
-In case a second |foxBMS Slave| would be connected to the daisy chain (which is not the case in this quickstart guide),
-The OUT+ and OUT- pins of the first |foxBMS Slave| must be connected to the IN+ and IN- pins of the second |foxBMS Slave| respectively.
+In case a second |BMS-Slave| would be connected to the daisy chain (which is not the case in this quickstart guide),
+The OUT+ and OUT- pins of the first |BMS-Slave| must be connected to the IN+ and IN- pins of the second |BMS-Slave| respectively.
 
 
 
@@ -282,7 +282,7 @@ If less than 12 cells are used, information must searched in the |LTC| datasheet
 
 .. _cell_voltage_connector:
 
-.. table:: |foxBMS Slave board|, battery cell voltage connector
+.. table:: |BMS-Slave|, battery cell voltage connector
 
    =============  ============
    Connector Pin  Battery Cell
@@ -317,7 +317,7 @@ Cell Temperature Connector on the |foxBMS Slave|
 ------------------------------------------------
 
 The connector indicated as ``Temperature sensor connector (24 pin)`` in :numref:`fig. %s <slave_diagram>` is used to
-connect temperature sensors to the |foxBMS Slave board|.
+connect temperature sensors to the |BMS-Slave|.
 
 :numref:`Table %s <cell_temperature_connector>` describes the temperature connector.
 
@@ -367,7 +367,7 @@ sensors 0 to 5, as shown in :numref:`table %s <cell_temperature_connector>`.
 CAN Connector
 -------------
 
-The connector indicated as ``CAN 0`` in :numref:`fig. %s <foxbmsfront_quickstart>` must be used on the |foxBMS Master Basic board|. Its layout
+The connector indicated as ``CAN 0`` in :numref:`fig. %s <foxbmsfront_quickstart>` must be used on the |BMS-Master|. Its layout
 is described in :numref:`table %s <master_CAN>`.
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -390,10 +390,10 @@ Ground of CAN 0 is shared with supply ground GND_EXT_0. CAN  bus 0 is isolated f
 The CAN transceiver may be put into standby mode by MCU_0. 
 
 --------------------------------------
-Communication with the |foxBMS Master|
+Communication with the |BMS-Master|
 --------------------------------------
 
-Once the foxBMS runs, CAN messages should be sent.
+Once |foxBMS| is running, CAN messages should be sent.
 
 .. note::
    
