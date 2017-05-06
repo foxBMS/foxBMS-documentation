@@ -3,7 +3,7 @@
 Overview of hardware and software
 =================================
 
-The |Master| is made of a |BMS-Master|, on which resides an ARM-based microcontroller unit, called |MCU0| (or primary MCU). The BMS software runs on |MCU0|.
+The |Master| consists of 3 boards: |BMS-Master|, |BMS-Interface|, |BMS-Extension|. Two ARM-based microcontroller units (Cortex-M4) are used on |BMS-Master|: |MCU0| (also called primary MCU) and |MCU1| (also called secondary MCU). The BMS software runs on |MCU0|, while |MCU1| is used for redundant safety.
 
 |MCU0| communicates with the outside world via a CAN bus. The current flowing through the battery system is measured via a current sensor connected via the CAN bus. The sensor is controlled via CAN by |MCU0| and sends the resulting measurement via CAN. 
 
