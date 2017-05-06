@@ -6,13 +6,13 @@ Hardware-Software Quickcheck Guide
 .. General Documentation Macros
 .. -----------------------------------------------
 .. |foxBMS| replace:: foxBMS
-.. |LTC| replace:: LTC6804-1
-.. |foxBMS Master| replace:: foxBMS Master
-.. |foxBMS Master Basic board| replace:: foxBMS Master Basic board
-.. |foxBMS Master Extension board| replace:: foxBMS Master Extension board
-.. |foxBMS Interface board| replace:: foxBMS Interface board
-.. |foxBMS Slave| replace:: foxBMS Slave
-.. |foxBMS Slave board| replace:: foxBMS Slave board
+.. |LTC| replace:: LTC6804-1 / LTC6811-1
+.. |foxBMS Master| replace:: foxBMS Master Unit
+.. |foxBMS Master Basic board| replace:: foxBMS BMS-Master board
+.. |foxBMS Master Extension board| replace:: foxBMS BMS-Extension board
+.. |foxBMS Interface board| replace:: foxBMS BMS-Interface board
+.. |foxBMS Slave| replace:: foxBMS Slave Unit
+.. |foxBMS Slave board| replace:: foxBMS BMS-Slave board
 
 .. -----------------------------------------------
 .. Hardware-Software Quickcheck Macros
