@@ -8,7 +8,7 @@ Hardware Short Specification
 .. General Documentation Macros
 .. -----------------------------------------------
 .. |foxBMS| replace:: foxBMS
-.. |LTC| replace:: LTC6804-1
+.. |LTC| replace:: LTC6804-1 / LTC6811-1
 .. |foxBMS Master| replace:: foxBMS Master Unit
 .. |foxBMS Master Basic board| replace:: foxBMS BMS-Master board
 .. |foxBMS Master Extension board| replace:: foxBMS BMS-Extension board
@@ -145,7 +145,7 @@ Pin     Signal                     Direction         Description
 4       BENDER_PWM_EXT             Input             Isolation monitoring device diagnostic signal
 ====    =======================    ==============    ===================================================
 
-This interface is intended to be used with a Bender isolation monitoring device . Bender ISOMETER IR155-3203 and IR155-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the foxBMS Master. By factory, foxBMS is configured to work with Bender ISOMETER IR155-3204/-3210. In order to work with Bender ISOMETER IR155-3203, Jumper R705 must be removed on foxBMS Basic Board. For details, check the schematic of foxBMS Master. 
+This interface is intended to be used with a Bender isolation monitoring device . Bender ISOMETER IR155-3203 and IR155-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the foxBMS Master. By factory, foxBMS is configured to work with Bender ISOMETER IR155-3204/-3210. In order to work with Bender ISOMETER IR155-3203, Jumper R705 must be removed on |foxBMS Master Basic board|. For details, check the schematic of foxBMS Master. 
 
 --------------------------------------------------------------------------------------------------------------
 Contactors (X1201 - X1206 on |foxBMS Master Basic board| and X1201 - X1203 on |foxBMS Master Extension board|)
