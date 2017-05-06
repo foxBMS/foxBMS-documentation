@@ -4,7 +4,9 @@
 .. |foxBMS| replace:: foxBMS
 .. |LTC| replace:: LTC6804-1 or LTC6811-1
 .. |Master| replace:: foxBMS Master Unit
+.. |Masters| replace:: foxBMS Master Units
 .. |Slave| replace:: foxBMS Slave Unit
+.. |Slaves| replace:: foxBMS Slave Units
 .. |BMS-Master| replace:: BMS-Master board
 .. |BMS-Extension| replace:: BMS-Extension board
 .. |BMS-Interface| replace:: BMS-Interface board
