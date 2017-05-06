@@ -2,13 +2,15 @@
 .. General Documentation Macros
 .. -----------------------------------------------
 .. |foxBMS| replace:: foxBMS
-.. |LTC| replace:: LTC6804-1 / LTC6811-1
+.. |LTC| replace:: LTC6804-1 or LTC6811-1
 .. |foxBMS Master| replace:: foxBMS Master Unit
-.. |foxBMS Master Basic board| replace:: foxBMS BMS-Master board
-.. |foxBMS Master Extension board| replace:: foxBMS BMS-Extension board
-.. |foxBMS Interface board| replace:: foxBMS BMS-Interface board
 .. |foxBMS Slave| replace:: foxBMS Slave Unit
-.. |foxBMS Slave board| replace:: foxBMS BMS-Slave board
+.. |BMS-Master| replace:: foxBMS BMS-Master board
+.. |BMS-Extension| replace:: foxBMS BMS-Extension board
+.. |BMS-Interface| replace:: foxBMS BMS-Interface board
+.. |BMS-Slave| replace:: foxBMS BMS-Slave board
+.. |MCU0| replace:: MCU0
+.. |MCU1| replace:: MCU1
 .. |diag module| replace:: ``diag`` module
 .. |contactor module| replace:: ``contactor`` module
 .. |syscontrol module| replace:: ``syscontrol`` module
