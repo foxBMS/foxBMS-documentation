@@ -6,22 +6,17 @@ Getting Started with the Software
 
 .. include:: ../macros.rst
 
-The |foxBMS| software consists of a program written in C. Before it can be flashed and run on the microcontroller unit (MCU),
-it must be compiled to generate a binary file.
+The |foxBMS| software consists of a program written in C. Before it can be flashed and run on the microcontroller units (i.e., |MCU0| and |MCU1| located on the |BMS-Master|), it must be compiled to generate a binary file.
 
 Different softwares (the software toolchain) are needed for this compilation step. They are based on a Python environment.
 All the needed software, including the Python environment, are contained in a Python distribution called **foxConda**.
 It will be installed in the next step. 
 
-In addition, some parameters can be adjusted in the sources before compilation, to change the behavior of the software.
-A graphical environment is provided to simplify all theses tasks
-(configuration, compilation, flashing).
+In addition, some parameters can be adjusted in the sources before compilation, to change the behavior of the software. A graphical environment is provided to simplify all theses tasks (configuration, compilation, flashing).
 
-This section shows how to (1) set up the development environment,
-foxConda (the software toolchain), (2) launch the graphical development tool, (3) configure the
-|foxBMS| source, (4) compile it. 
+This section shows how to (1) set up the development environment, foxConda (the software toolchain), (2) launch the graphical development tool, (3) configure the |foxBMS| source, (4) compile it.
 
-In a dedicated section (:ref:`hw_quickstart_flash`) the compiled sources are flashed on the |foxBMS| hardware.
+In a dedicated section (:ref:`hw_quickstart_flash`) the compiled sources are flashed on the |foxBMS| |Master|.
 
 -----------------------------------------------------------------
 Installation of the needed software via the foxConda distribution
