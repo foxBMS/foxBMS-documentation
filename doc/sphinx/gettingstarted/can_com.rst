@@ -1,5 +1,7 @@
 .. _CAN_communication:
 
+.. include:: ../macros.rst
+
 Communication via CAN
 =====================
 
@@ -140,7 +142,7 @@ have a feedback if the supervisory control unit is still alive (i.e., as a heart
 | BMS1_reserved                    | 56                    | 8              | False           | 1.0        | 0.0        | 0.0     | 0.0     | Intel         |
 +----------------------------------+-----------------------+----------------+-----------------+------------+------------+---------+---------+---------------+
 
-The signals of this message display status information of the foxBMS. 
+The signals of this message display status information of the |foxBMS|. 
 
 The status of contactors is represented as bitfield in ``BMS1_status_contactors`` (0: open, 1: closed):
 
