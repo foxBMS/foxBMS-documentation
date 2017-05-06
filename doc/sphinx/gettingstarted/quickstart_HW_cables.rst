@@ -14,7 +14,7 @@ the cell voltages and temperature measurements. The CAN communication is also sh
 
 .. note::
    
-      When the connection is made between the |foxBMS Master Basic board| and the |foxBMS Slave|, **two communication lines
+      When the connection is made between the |Master| and the |Slaves|, **two communication lines
       have to be connected: primary and secondary**.
 
 ----------------------------------
@@ -135,7 +135,7 @@ A |BMS-Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
 .. figure:: ./_figures/foxBMS_slave.jpg
    :width: 100 %
    
-   |foxBMS Slave board|
+   |BMS-Slave|
 
 The slave unit (|BMS-Slave|) is based on the |LTC| battery cell monitoring chip. More information on the |LTC| chip can
 be found in the datasheet ([ltc_datasheet6804]_). It supervises up to 12 battery cells connected in series. It performs
@@ -259,7 +259,7 @@ The OUT+ and OUT- pins of the first |BMS-Slave| must be connected to the IN+ and
 
 
 
-Cell Voltage Connector on the |foxBMS Slave|
+Cell Voltage Connector on the |Slaves|
 --------------------------------------------
 
 The connector indicated as ``Battery cell connector (16 pin)`` in :numref:`fig. %s <slave_diagram>` has two purposes:
@@ -313,7 +313,7 @@ of the safe operating area defined by default in the |foxBMS| software.
 
 
 
-Cell Temperature Connector on the |foxBMS Slave|
+Cell Temperature Connector on the |Slaves|
 ------------------------------------------------
 
 The connector indicated as ``Temperature sensor connector (24 pin)`` in :numref:`fig. %s <slave_diagram>` is used to
