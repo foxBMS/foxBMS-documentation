@@ -59,7 +59,7 @@ master_doc = 'qstart'
 
 # General information about the project.
 project = u'foxBMS'
-copyright = u'2016, The Fraunhofer IISB foxBMS team'
+copyright = u'2017, The Fraunhofer IISB foxBMS team'
 author = u'The Fraunhofer IISB foxBMS team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -273,10 +273,10 @@ latex_elements = {
 %\fancyhead[LO]{\rightmark}
 %\fancyhead[RE]{\leftmark}
 %\fancyhead[LE,RO]{\thepage}
-%\fancyfoot[LO]{\small{}(c) 2016 Fraunhofer IISB, all rights reserved}
+%\fancyfoot[LO]{\small{}(c) 2017 Fraunhofer IISB, all rights reserved}
 
-\fancyfoot[LO]{\tiny{}(c) 2016 Fraunhofer IISB, all rights reserved}
-\fancyfoot[RE]{\tiny{}(c) 2016 Fraunhofer IISB, all rights reserved}
+\fancyfoot[LO]{\tiny{}(c) 2017 Fraunhofer IISB, all rights reserved}
+\fancyfoot[RE]{\tiny{}(c) 2017 Fraunhofer IISB, all rights reserved}
 %\fancyfoot[C]{\@title}
 \fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{0.0pt}
