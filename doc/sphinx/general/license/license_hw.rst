@@ -3,7 +3,7 @@ foxBMS Hardware and Documentation License
 
 .. include:: <isonum.txt>
 
-|copy| 2010-2016, Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
+|copy| 2010-2017, Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
 All rights reserved.
 
 
