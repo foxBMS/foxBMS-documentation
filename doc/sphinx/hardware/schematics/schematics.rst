@@ -1,7 +1,7 @@
 .. _hw_layout_schematic:
 
-foxBMS Schematic and Board Layout
-=================================
+Schematic and Board Layout
+==========================
 
 The following figures are giving information on the schematics of foxBMS. This includes the BMS-Master, the BMS-Extension, the
 BMS-Interface and the BMS-Slave. As the BMS-Master and BMS-Extension were designed as one unit, the schematic may include blank pages.

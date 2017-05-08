@@ -1,6 +1,8 @@
-===========================
-foxBMS Hardware Description
-===========================
+.. _hw_basics:
+
+====================
+Hardware Description
+====================
 
 This part of the documentation describes the hardware modules used in foxBMS.
 :numref:`Fig. %s <hwblockdiagram>` shows a block diagram of the foxBMS master with all its components. 

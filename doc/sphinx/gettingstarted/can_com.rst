@@ -1,16 +1,16 @@
 .. _CAN_communication:
 
-.. include:: ../macros.rst
-
 Communication via CAN
 =====================
+
+.. include:: ../macros.rst
 
 CAN Matrix
 ~~~~~~~~~~
 
 .. foxBMS by Fraunhofer IISB
  
-.. Copyright 2010-2016 by
+.. Copyright 2010-2017 by
 .. Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.,
 .. Munich, Germany (Fraunhofer IISB, Erlangen)
 

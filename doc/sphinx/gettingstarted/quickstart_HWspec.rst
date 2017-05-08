@@ -1,10 +1,12 @@
 .. _hw_short_spec:
-.. include:: ../macros.rst
+
 =======================
 Hardware Specifications
 =======================
 
-These specifications are needed to work further with the |foxBMS| hardware.
+.. include:: ../macros.rst
+
+The following specifications must be met to ensure a safe and optimal work with the |foxBMS| hardware.
 
 ------------------
 Electrical Ratings
@@ -79,7 +81,7 @@ Pin    Signal           Direction       Description
 * SUPPLY_EXT_2 / GND_EXT_2: Contactor supply and interlock supply 
 
 --------------------------------------------
-CAN 0  (X801 on |BMS-Master|)
+|CAN0|  (X801 on |BMS-Master|)
 --------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -95,10 +97,10 @@ Pin     Signal       Direction        Description
 4       CAN_0_H      Input/Output
 ====    =========    =============    ============
 
-Ground of CAN 0 is shared with supply ground GND_EXT_0. CAN  bus 0 is isolated from the MCU via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by MCU_0. 
+Ground of |CAN0| is shared with supply ground GND_EXT_0. |CAN0| is isolated from the |MCU0| via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by |MCU0|.
 
 -----------------------------------------------
-CAN 1 (X801 on |BMS-Extension|)
+|CAN1| (X801 on |BMS-Extension|)
 -----------------------------------------------
 
 .. figure:: ./_figures/2016-04-12_fourcon.png
@@ -114,7 +116,7 @@ Pin     Signal          Direction        Description
 4       CAN_1_H         Input/Output
 ====    ============    =============    ============
 
-CAN 1 has to be supplied externally (GND_EXT_1 / SUPPLY_EXT_1) with 12 - 24V. CAN bus 1 is isolated from the MCU via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by MCU_0. 
+|CAN1| has to be supplied externally (GND_EXT_1 / SUPPLY_EXT_1) with 12 - 24V. |CAN1| is isolated from the |MCU0| via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by |MCU0|.
 
 --------------------------------------------------------------------------
 Isolation Monitor (Bender ISOMETER) (X701  on |BMS-Master|)
@@ -171,7 +173,7 @@ Pin     Signal                      Direction             Description
 2       INTERLOCK_OUT               Output                --
 ====    ========================    ==============        ============================================
 
-The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened immediately by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the foxBMS supply or communication interfaces. 
+The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened immediately by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the |foxBMS| supply or communication interfaces. 
 
 --------------------------------------------------------------------------
 Daisy Chain - Primary and Secondary (X1601 on |BMS-Master|)
@@ -202,7 +204,7 @@ Pin    Signal
 16     NC                               
 ====   ======================
 
-Please note: This connector pin out is only valid for use of a foxBMS Master Interface board for the LTC6802 monitoring IC. 
+Please note: This connector pin out is only valid for use of a |BMS-Interface| with the LTC6820 monitoring IC. 
 
 ------------------------------------------------
 RS485 (X1301 on |BMS-Extension|)
@@ -248,7 +250,7 @@ Pin    Signal           Direction       Description
 10     GND_EXT_0        Output
 ====   =============    ============    ============
 
-The foxBMS Master Extension board provides 4 isolated general purpose inputs and 4 isolated general purpose outputs. The GPIOs are isolated by an ADUM1402. The inputs are equipped with 10kOhm pull down resistors and are intended for a maximum input voltage of 5V. The output voltage is also 5V. An external supply is not needed.  
+The |BMS-Extension| provides 4 isolated general purpose inputs and 4 isolated general purpose outputs. The GPIOs are isolated by an ADUM3402 (i.e., ESD rugged version of the ADUM1402). The inputs are equipped with 10kOhm pull down resistors and are intended for a maximum input voltage of 5V. The output voltage is also 5V. An external supply is not needed.
 
 -----------------------------------------------------------------------------------
 Isolated normally open contacts - isoNOC (X2001 on |BMS-Extension|)
@@ -275,7 +277,7 @@ Pin    Signal                  Direction       Description
 12     ISONOC_5_NEGATIVE       
 ====   ====================    ============    ============
 
-The foxBMS Master Extension board features 6 isolated normally open contacts. The load current of each channel is limited by the optically isolated power switch AQV25G2S. The channels are not fused, however freewheeling diodes type GF1B are installed on board. 
+The |BMS-Extension| features 6 isolated normally open contacts. The load current of each channel is limited by the optically isolated power switch AQV25G2S. The channels are not fused, however freewheeling diodes type GF1B are installed on board. 
 
 ----------------------------------------------------
 Analog Inputs (X1701 on |BMS-Master|)
@@ -302,4 +304,4 @@ Pin    Signal                  Direction       Description
 12     GND_0                   Output
 ====   ====================    ============    ============
 
-On the foxBMS BMS-Master Extension board 4 unisolated analog inputs to MCU_0 are available. For applications using NTCs, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V (Zener protected). For further information on the input circuit, please refer to the circuit description in the hardware user manual or the foxBMS Master schematic.   
+On the |BMS-Extension| 4 unisolated analog inputs to |MCU0| are available. For applications using NTCs as temperature sensors, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V and Zener protected. For further information on the input circuit, please refer to the |foxBMS| :ref:`hw_basics` or to the |foxBMS| :ref:`hw_layout_schematic`.

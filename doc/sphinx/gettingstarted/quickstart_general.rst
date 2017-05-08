@@ -7,7 +7,7 @@ Getting started with |foxBMS|
 How to use this documentation
 -----------------------------
 
-The complete |foxBMS| documentation is available in HTML form.
+The complete |foxBMS| documentation is available and maintained in HTML, PDF and EPUB formats.
 
 .. note::
    

@@ -8,8 +8,8 @@ Welcome to `foxBMS <http://www.foxbms.org/>`_. This is the documentation of the 
 
 .. note::
    
-      **The foxBMS hardware and software is currently in beta test. The beta version of |foxBMS| is not designed to be used
-      as-is in road vehicles or in a production environment or any similar usage: it is currently for evaluation only.**
+      The foxBMS hardware and software is currently in beta test. The beta version of |foxBMS| is not designed to be used
+      as-is in road vehicles or in a production environment or any similar usage: it is currently for evaluation only.
 
 First, general information about |foxBMS| can be found (:ref:`infos`): who made it, its purpose, and the intended audience.
 
