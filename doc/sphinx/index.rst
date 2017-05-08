@@ -1,6 +1,6 @@
-======
-foxBMS
-======
+========================
+The foxBMS Documentation
+========================
 
 .. include:: ./macros.rst
 
@@ -29,7 +29,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 .. toctree::   
    :titlesonly:
    :numbered:
-   :caption: General information about |foxBMS|
+   :caption: General information about foxBMS
    
    general/team/team
    general/motivation/motivation
