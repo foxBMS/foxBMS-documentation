@@ -135,7 +135,7 @@ Pin     Signal                     Direction         Description
 4       BENDER_PWM_EXT             Input             Isolation monitoring device diagnostic signal
 ====    =======================    ==============    ===================================================
 
-This interface is intended to be used with a Bender isolation monitoring device . Bender ISOMETER IR155-3203 and IR155-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the foxBMS Master. By factory, foxBMS is configured to work with Bender ISOMETER IR155-3204/-3210. In order to work with Bender ISOMETER IR155-3203, Jumper R705 must be removed on |BMS-Master|. For details, check the schematic of foxBMS Master. 
+This interface is intended to be used with a Bender isolation monitoring device. Bender ISOMETER IR155-3203/-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the |Master|. By factory, the |Master| is configured to operate with the Bender ISOMETER IR155-3204/-3210. In order to operate with the Bender ISOMETER IR155-3203, Jumper R705 must be removed on |BMS-Master|. For more details, check the schematic of the |BMS-Master| in section :ref:`hw_layout_schematic`.
 
 --------------------------------------------------------------------------------------------------------------
 Contactors (X1201 - X1206 on |BMS-Master| and X1201 - X1203 on |BMS-Extension|)
@@ -154,9 +154,9 @@ Pin     Signal                      Direction         Description
 4       CONTACTORS_COMMON_NEG       Output            Negative contactor coil supply
 ====    ========================    ==============    ============================================
 
-All contactor connectors share one common ground. This common ground is switched lowside by the interlock circuit. Opening the interlock loop deactivates the contactor supply and opens all contactors immediately. A contactor auxiliary contact may be read by connecting the auxiliary contact to the corresponding pins of the contactor connector.
+All contactor connectors share one common ground. This common ground is switched lowside by the interlock circuit. Opening the interlock loop deactivates the contactor supply and opens all contactors. A contactor auxiliary contact may be read by connecting the auxiliary contact to the corresponding pins of the contactor connector.
 
-Optional freewheeling diodes are not populated on the PCB. If the used contactor does not have built-in freewheeling diodes, freewheeling diodes must be added to protect the contactor control circuit. The load current is limited by the optically isolated power switch AQV25G2S (6A continuous load). Every contactor connector is fused with an onboard slow blow fuse type Schurter UMT-250 630mA (3403.0164.xx). 
+Freewheeling diodes are not populated on the PCB, since some contactors like the Gigavac GX16 have built-in diodes and should not be used with additional external freewheeling diodes in parallel. If the used contactors do not have built-in freewheeling diodes, freewheeling diodes must be added to protect the contactor control circuitry. The load current is limited by the optically isolated power switch AQV25G2S (6A continuous load). Every contactor connector is fused with an onboard slow blow fuse type Schurter UMT-250 630mA (3403.0164.xx).
 
 -----------------------------------------------
 Interlock (X901 on |BMS-Master|)
@@ -173,7 +173,7 @@ Pin     Signal                      Direction             Description
 2       INTERLOCK_OUT               Output                --
 ====    ========================    ==============        ============================================
 
-The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened immediately by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the |foxBMS| supply or communication interfaces. 
+The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the |foxBMS| supply or communication interfaces. 
 
 --------------------------------------------------------------------------
 Daisy Chain - Primary and Secondary (X1601 on |BMS-Master|)
@@ -204,7 +204,7 @@ Pin    Signal
 16     NC                               
 ====   ======================
 
-Please note: This connector pin out is only valid for use of a |BMS-Interface| with the LTC6820 monitoring IC. 
+Please note that this connector pin out is only valid when the |BMS-Interface| with the LTC6820 interfacing IC to the |LTC|.
 
 ------------------------------------------------
 RS485 (X1301 on |BMS-Extension|)
@@ -225,7 +225,7 @@ Pin    Signal           Direction       Description
 6      GND_EXT_2        Input
 ====   =============    ============    ============
 
-The RS485 interface uses the ESD rugged transceiver LT1785. Moreover, the interface is galvanically isolated. An external supply has to be provided (12 - 24V). 
+The RS485 interface uses the ESD rugged transceiver LT1785. Moreover, the interface is galvanically isolated. An external supply has to be provided (12 - 24V).
 
 --------------------------------------------------------
 Isolated GPIO (X1901 on |BMS-Extension|)
@@ -304,4 +304,4 @@ Pin    Signal                  Direction       Description
 12     GND_0                   Output
 ====   ====================    ============    ============
 
-On the |BMS-Extension| 4 unisolated analog inputs to |MCU0| are available. For applications using NTCs as temperature sensors, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V and Zener protected. For further information on the input circuit, please refer to the |foxBMS| :ref:`hw_basics` or to the |foxBMS| :ref:`hw_layout_schematic`.
+On the |BMS-Extension| 4 nonisolated analog inputs to |MCU0| are available. For applications using NTCs as temperature sensors, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V and is Zener protected. For further information on the input circuit, please refer to the |foxBMS| :ref:`hw_basics` and to the |foxBMS| :ref:`hw_layout_schematic`.

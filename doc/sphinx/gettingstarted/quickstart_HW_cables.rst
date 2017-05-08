@@ -6,14 +6,13 @@ Getting Started with the Hardware: Connecting |foxBMS|
 
 .. include:: ../macros.rst
 
-In the preceeding sections, the |Master| has been supplied and the |foxBMS| program flashed on it.
+In the preceeding sections, the |Master| has been supplied and the |foxBMS| firmware flashed on it.
 
 This section describes the |foxBMS| hardware in more details and how to connect the |Master| to the |Slaves| that perform the cell voltage and temperature measurements. The CAN communication is also described.
 
 .. note::
    
-      When the connection is made between the |Master| and the |Slaves|, **both primary and secondary communication lines
-      have to be connected**.
+      When the connection is made between the |Master| and the |Slaves|, both primary and secondary isoSPI daisy chains have to be connected.
 
 ----------------------------------
 Convention for Connector Numbering
@@ -45,7 +44,7 @@ The |foxBMS| system can be mounted in a metal housing, shown in :numref:`fig. %s
 .. figure:: ./_figures/foxBMS_housing.jpg
    :width: 100 %
    
-   |foxBMS| housing
+   |Master| housing
 
 In this configuration, the top plate can be removed to have access to the |foxBMS| electronic boards. This is done by unscrewing the four screws holding the top plate.
 
@@ -55,15 +54,15 @@ The open housing is shown in :numref:`fig. %s <housing_open>`.
 .. figure:: ./_figures/foxBMS_housing_open.jpg
    :width: 100 %
 
-   |foxBMS| housing, top plate removed
+   |Master| housing, top plate removed
 
-The boards can be removed from the housing. The boards without housing are shown in :numref:`fig. %s <foxbms_stack>`. For the quickstart guide, it is not necessary to remove the boards from the housing.
+The boards can be removed from the housing. The boards without housing are shown in :numref:`fig. %s <foxbms_stack>`. To start, it is not necessary to remove the boards from the housing, but it is helpful to be able to look at the LEDs located on the |BMS-Master|.
 
 .. _foxbms_stack:
 .. figure:: ./_figures/foxBMS_stack.jpg
    :width: 100 %
    
-   |foxBMS| board stack outside without housing (|BMS-Master| and |BMS-Interface| are shown)
+   |foxBMS| board stack removed from the housing (both |BMS-Master| and |BMS-Interface| are shown)
 
 :numref:`Fig. %s <housing_detail>` shows how to put the boards back in the housing. 
 
@@ -112,7 +111,7 @@ An extension board named |BMS-Extension| is present under the |BMS-Master| and i
 
 It is used to provide more I/O and interfaces than with the |BMS-Master| alone.
 
-The |BMS-Interface| is located on top of the |BMS-Master| (shown in :numref:`fig. %s <foxbms_interface>`) is present
+The |BMS-Interface| is located on top of the |BMS-Master| (shown in :numref:`fig. %s <foxbms_interface>`).
 
 .. _foxbms_interface:
 .. figure:: ./_figures/foxBMS_master_interface.jpg
@@ -121,7 +120,7 @@ The |BMS-Interface| is located on top of the |BMS-Master| (shown in :numref:`fig
    
    |foxBMS| |BMS-Interface|
 
-Its purpose is to convert the signals sent by the Serial Peripheral Interface (SPI) of the |BMS-Master| to the first |BMS-Slave| in the daisy chain.
+Its purpose is to convert the signals sent by the Serial Peripheral Interface (SPI) of the |BMS-Master| to the first |BMS-Slave| in the daisy by using a proprietary isoSPI interface from Linear Technology.
 
 A |BMS-Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
 
@@ -131,7 +130,7 @@ A |BMS-Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
    
    |foxBMS| |BMS-Slave|
 
-The |BMS-Slave| is based on the |LTC| battery cell monitoring chip. More information on the |LTC| integrated circuit can be found in the datasheet ([ltc_datasheet6804]_). It supervises up to 12 battery cells connected in series. It performs voltage measurements, temperature measurements and passive cell balancing. In the daisy chain, the |BMS-Slaves| are connected via differential pair cables.
+The |BMS-Slave| is based on the |LTC| battery cell monitoring chip. More information on the |LTC| integrated circuit can be found in the datasheet ([ltc_datasheet6804]_ and [ltc_datasheet6811]_). It supervises up to 12 battery cells connected in series. It performs voltage measurements, temperature measurements and passive cell balancing. In the daisy chain, the |BMS-Slaves| are connected via differential pair cables.
 
 The |BMS-Slave| is not designed to be used in a specific housing.
 
