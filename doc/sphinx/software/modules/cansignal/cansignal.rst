@@ -152,7 +152,7 @@ In detail these members can be described as:
 The control flow for transmission of a multiplexed signal in the CANSIGNAL module is shown in :numref:`fig. %s <cansignal_figure2>`.
 
 .. _cansignal_figure2:
-.. figure:: CANSMsgMultiplexTx2.jpg
+.. figure:: CANSMsgMultiplexTX2.png
 
    CAN data flow to assemble message
    
