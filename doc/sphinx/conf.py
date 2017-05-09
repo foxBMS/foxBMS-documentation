@@ -20,7 +20,7 @@ We kindly request you to use one or more of the following phrases to refer to fo
 '''
 
 '''
-@author: FoxBMS team
+@author: The foxBMS Team
 '''
 
 # vim: set fenc=utf-8 ft=python :
@@ -228,10 +228,28 @@ pdf_documents = [
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-latex_paper_size = 'a4'
+#latex_paper_size = 'a4'
 
 # The font size ('10pt', '11pt' or '12pt').
-latex_font_size = '10pt'
+#latex_font_size = '10pt'
+
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    'papersize': 'a4paper',
+
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    'pointsize': '10pt'
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    # 'preamble': '',
+
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
