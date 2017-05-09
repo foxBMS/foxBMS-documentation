@@ -96,7 +96,7 @@ if (time.tzname[time.daylight] == "Mitteleurop\xe4ische Sommerzeit"): #fixing ge
 elif not (isinstance(time.tzname[time.daylight] , unicode)): # fixing all other unicode problems
     _now = time_now + ' ' + 'Time zone not defined'
 else:
-    _now = time_now + ' ' + utime.tzname[time.daylight]
+    _now = time_now + ' ' + time.tzname[time.daylight]
 print _now
 # The short X.Y version.
 version = _now
