@@ -9,10 +9,9 @@ The current version of the software is 0.4.3 (more information in :ref:`fox-rele
 
 .. note::
    
-      The foxBMS hardware and software is currently in beta test. The beta version of |foxBMS| is not designed to be used
-      as-is in road vehicles or in a production environment or any similar usage: it is currently for evaluation only.
+      The |foxbms| hardware and software is still under development. The free and open research and development platform |foxbms| is not designed to be used as-is in road vehicles or in a production environment or any similar usage: it is for evaluation only.
 
-First, general information about foxBMS can be found (:ref:`infos`):
+First, general information about |foxbms| can be found (:ref:`infos`):
 
  - Information about the versions and release notes (:ref:`fox-releases`)
  - Licenses
@@ -21,7 +20,7 @@ First, general information about foxBMS can be found (:ref:`infos`):
  - Roadmap
  - Who made it
 
-Then the getting started guide (:ref:`start`) allows starting |foxBMS| rapidly:
+Then the getting started guide (:ref:`start`) allows starting |foxbms| rapidly:
 
  - The location of the electronic schematic and layout files in the HTML documentation is indicated
  - The hardware guide describes how the hardware is structured and works
@@ -30,14 +29,14 @@ Then the getting started guide (:ref:`start`) allows starting |foxBMS| rapidly:
 
 To study and modify the software, the software documentation (:ref:`sw`) then explains the structure of the software and of the most import modules, how the basic tasks run and how to call user-defined functions easily. A FAQ answers the most common questions. A detailed description of the software functions and variables can be found in the Doxygen documentation.
 
-Finally, the hardware documentation (:ref:`hw`) gives the details needed to understand the |foxBMS| hardware.
+Finally, the hardware documentation (:ref:`hw`) gives the details needed to understand the |foxbms| hardware.
 
 .. _infos:
 
 .. toctree::   
    :titlesonly:
    :numbered:
-   :caption: General information about foxBMS
+   :caption: General information about |foxbms|
    
    general/release/release
    general/license/license
@@ -51,7 +50,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 .. toctree::   
    :titlesonly:
    :numbered:
-   :caption: Getting started with foxBMS
+   :caption: Getting started with |foxbms|
 
    gettingstarted/quickstart_general
    gettingstarted/quickstart_SW

@@ -1,10 +1,11 @@
-Tools used for foxBMS
-=====================
+Tools used for |foxbms|
+=======================
 
-This section contains a documentation of the tools used with foxBMS.
+.. include:: ../../macros.rst
+
+This section contains a documentation of the tools used with |foxbms|.
 
 .. toctree::   
-   :numbered:
    :maxdepth: 2
 
    ./checksum/checksum

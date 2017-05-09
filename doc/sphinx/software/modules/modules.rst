@@ -1,12 +1,13 @@
 Important Software Modules
 ==========================
 
+.. include:: ../../macros.rst
+
 This section contains a documentation of the most important software modules.
 
 .. highlight:: C
 
 .. toctree::   
-   :numbered:
    :maxdepth: 2
    
    ./bmsctrl/bmsctrl
