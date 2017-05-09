@@ -883,3 +883,35 @@ The last step is to store the temperature into a ``sint16`` variable.
 
 At this step, the resolution can be changed. For instance, m°C could be stored instead of °C. 
 
+
+.. _faq_checksum:
+
+How to use and deactivate the checksum
+--------------------------------------
+
+The checksum mechanism is activated via the following define in the file ``general.h``.
+
+.. code-block:: C
+
+    /*fox
+    * enables checking of flash checksum at startup.
+    * @var enable flash checksum
+    * @level advanced
+    * @type select(2)
+    * @default 0
+    * @group GENERAL
+    */
+    
+    #define BUILD_MODULE_ENABLE_FLASHCHECKSUM           1
+
+If the checksum is active, the following parameters must be used at compilation:
+
+.. code-block:: Python
+
+    python tools\waf-18.12 configure --check-c-compiler=gcc build chksum
+    
+Otherwise, the flashed code will not work.
+In case of problems with the checksum, it can be deactivated by setting the define to 0.
+
+
+
