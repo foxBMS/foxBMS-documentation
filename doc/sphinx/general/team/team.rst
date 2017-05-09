@@ -39,6 +39,8 @@ The foxBMS Team
 ..          - Software Development
 ..        * - Stefan Waldhör
 ..          - Software Development
+..        * - Johannes Wachtler 
+..          - Software Development
 ..        * - Christian Freund
 ..          - Software Configuration Management
 ..        * - Radu Schwarz
@@ -62,8 +64,6 @@ The foxBMS Team
 ..     
 ..        * - Robin Heim 
 ..          - Hardware and Software Development
-..        * - Johannes Wachtler 
-..          - Software Development
 ..        * - Christian Thomas 
 ..          - Software Development
 ..        * - Lucas Grunenberg 
@@ -228,6 +228,9 @@ Development Team Fraunhofer IISB
     <tr><td>Stefan Waldhör</td>
     <td>Software Development</td>
     </tr>
+    <tr><td>Johannes Wachtler</td>
+    <td>Software Development</td>
+    </tr>
     <tr><td>Christian Freund</td>
     <td>Software Configuration Management</td>
     </tr>
@@ -261,11 +264,6 @@ Student Team Fraunhofer IISB
     Robin Heim
      & 
     Hardware and Software Development
-     \\
-    
-    Johannes Wachtler
-     & 
-    Software Development
      \\
     
     Christian Thomas
