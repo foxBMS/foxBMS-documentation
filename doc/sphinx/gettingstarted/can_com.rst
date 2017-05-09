@@ -89,11 +89,11 @@ CAN Signals
 | BMS0_Request               | 8                     | 8              | False           | 1.0        | 0.0        | 0.0     | 256.0   | Intel         |
 +----------------------------+-----------------------+----------------+-----------------+------------+------------+---------+---------+---------------+
 
-In the messages described in the previous table, the signal ``BMS0_Request`` is used to change the state of the |Master|. This is one of the most important signals: it allows initiating the procedure to close the power contactors. Possible request numbers in default configuration are 3 (Normal state) and 8 (Standby state), but can be configured using |Foxygen| (0 is No Request). More details can be found in the documentation of the module :ref:`BMSCTRL`.
+In the messages described in the previous table, the signal ``BMS0_Request`` is used to change the state of the |master|. This is one of the most important signals: it allows initiating the procedure to close the power contactors. Possible request numbers in default configuration are 3 (Normal state) and 8 (Standby state), but can be configured using |foxygen| (0 is No Request). More details can be found in the documentation of the module :ref:`BMSCTRL`.
 
 A state request has to be sent every 100ms, otherwise the BMS enters into an error state. The requests must come in the window 95-105ms to be valid. 
 
-The signal ``BMS0_Overflow`` is not used in the |foxBMS| embedded software. Its intended use is to have a feedback if the supervisory control unit is still alive (i.e., as a heartbeat signal).
+The signal ``BMS0_Overflow`` is not used in the |foxbms| embedded software. Its intended use is to have a feedback if the supervisory control unit is still alive (i.e., as a heartbeat signal).
 
 --------------
 
@@ -133,7 +133,7 @@ The signal ``BMS0_Overflow`` is not used in the |foxBMS| embedded software. Its 
 | BMS1_reserved                    | 56                    | 8              | False           | 1.0        | 0.0        | 0.0     | 0.0     | Intel         |
 +----------------------------------+-----------------------+----------------+-----------------+------------+------------+---------+---------+---------------+
 
-The signals of these messages display status information of the |Master|.
+The signals of these messages display status information of the |master|.
 
 The status of contactors is represented as a bitfield in ``BMS1_status_contactors`` (0: open, 1: closed):
 
@@ -144,7 +144,7 @@ The status of contactors is represented as a bitfield in ``BMS1_status_contactor
 * Fifth bit: (not used)
 * Sixth bit: (not used)
 
-The various error signals ``BMS1_error_xxx`` give information about limit violations and internal errors. In general, a value of 0 indicates no error and the higher the number the more hazardous is the error. The signal ``BMS1_general_error`` indicates the highest error level of all the errors occurring in the |Master|. The signal ``BMS1_balancing_active`` is a simple flag to show if balancing is ON (1) or OFF (0). ``BMS1_msg_overflow_cnt`` is a counter that is incremented every time the message is sent (not implemented right now in the |foxBMS| embedded software). This can help implementation in supervisory control units that have no possibility to get timestamps of CAN message reception.
+The various error signals ``BMS1_error_xxx`` give information about limit violations and internal errors. In general, a value of 0 indicates no error and the higher the number the more hazardous is the error. The signal ``BMS1_general_error`` indicates the highest error level of all the errors occurring in the |master|. The signal ``BMS1_balancing_active`` is a simple flag to show if balancing is ON (1) or OFF (0). ``BMS1_msg_overflow_cnt`` is a counter that is incremented every time the message is sent (not implemented right now in the |foxbms| embedded software). This can help implementation in supervisory control units that have no possibility to get timestamps of CAN message reception.
 
 The current state signal in ``BMS1_current_state`` is currently not filled with information.
 
@@ -230,9 +230,9 @@ The signals of the previous tables give the cell voltages. The signal ``BMSx_Mux
 
 The cell voltage values are transmitted in 1mV resolution. Nevertheless, 16 bit signal length are reserved for higher resolutions.
 
-When a module is not connected properly (e.g., a loose connection), the transmission of the voltage measurement signal from the |Slave| to the |Master| is interrupted. For the |LTC| monitoring chip, this results in a measurement of hexadecimal 0xFFFF and a conversion to a CAN cell voltage signal of 6.55V.
+When a module is not connected properly (e.g., a loose connection), the transmission of the voltage measurement signal from the |slave| to the |master| is interrupted. For the |LTC| monitoring chip, this results in a measurement of hexadecimal 0xFFFF and a conversion to a CAN cell voltage signal of 6.55V.
 
-Battery systems with more than 12 cells per module can be supported by |foxBMS|, by using specific |Slaves| (available on request by contacting us under info@foxbms.org) and enhanced software. For this special case, the message ``CANS_MSG_BMS6`` has been implemented. It should state voltage measurement values of 0V when the number of battery cells per module is less than 13.
+Battery systems with more than 12 cells per module can be supported by |foxbms|, by using specific |slaves| (available on request by contacting us under info@foxbms.org) and enhanced software. For this special case, the message ``CANS_MSG_BMS6`` has been implemented. It should state voltage measurement values of 0V when the number of battery cells per module is less than 13.
 
 --------------------------------
 
@@ -289,7 +289,7 @@ The signals ``BMS7_Cooling_Needed``, ``BMS7_Heating_Needed`` and ``BMS7_Temperin
 | BMS8_reserved              | 48                    | 16             | False           | 1.0        | 0.0        | 0.0     | 1.0     | Intel         |
 +----------------------------+-----------------------+----------------+-----------------+------------+------------+---------+---------+---------------+
 
-In the free and open version of |foxBMS|, ``BMS8_SOC_Average``, ``BMS8_SOC_Minimum``, ``BMS8_SOC_Maximum`` are set to the same value, that is implemented by a Coulomb counter. ``BMS8_SOH_Average``, ``BMS8_SOH_Minimum``, ``BMS8_SOH_Maximum`` are set to an arbitrary SOH value of 50. Specific SOH algorithms must be implemented by the user to change this value. Since Non-Disclosure-Agreements are required to analyze battery cells and intensive effort is necessary to develop accurate SOC/SOH battery models, specific state estimation algorithms can be purshased on request by contacting us under info@foxbms.org.
+In the free and open version of |foxbms|, ``BMS8_SOC_Average``, ``BMS8_SOC_Minimum``, ``BMS8_SOC_Maximum`` are set to the same value, that is implemented by a Coulomb counter. ``BMS8_SOH_Average``, ``BMS8_SOH_Minimum``, ``BMS8_SOH_Maximum`` are set to an arbitrary SOH value of 50. Specific SOH algorithms must be implemented by the user to change this value. Since Non-Disclosure-Agreements are required to analyze battery cells and intensive effort is necessary to develop accurate SOC/SOH battery models, specific state estimation algorithms can be purshased on request by contacting us under info@foxbms.org.
 
 
 -----------------------------

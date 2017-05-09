@@ -294,9 +294,6 @@ Student Team Fraunhofer IISB
     <tr><td>Robin Heim</td>
     <td>Hardware and Software Development</td>
     </tr>
-    <tr><td>Johannes Wachtler</td>
-    <td>Software Development</td>
-    </tr>
     <tr><td>Christian Thomas</td>
     <td>Software Development</td>
     </tr>

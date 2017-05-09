@@ -1,15 +1,15 @@
 .. -----------------------------------------------
 .. General Documentation Macros
 .. -----------------------------------------------
-.. |foxBMS| replace:: foxBMS
-.. |foxConda| replace:: foxConda
-.. |FrontDesk| replace:: Front Desk
-.. |Foxygen| replace:: Foxygen
-.. |LTC| replace:: LTC6804-1 or LTC6811-1
-.. |Master| replace:: foxBMS Master Unit
-.. |Masters| replace:: foxBMS Master Units
-.. |Slave| replace:: foxBMS Slave Unit
-.. |Slaves| replace:: foxBMS Slave Units
+.. |foxbms| replace:: foxBMS
+.. |foxconda| replace:: foxConda
+.. |frontdesk| replace:: Front Desk
+.. |foxygen| replace:: Foxygen
+.. |LTC| replace:: LTC6804-1/LTC6811-1
+.. |master| replace:: foxBMS Master Unit
+.. |masters| replace:: foxBMS Master Units
+.. |slave| replace:: foxBMS Slave Unit
+.. |slaves| replace:: foxBMS Slave Units
 .. |BMS-Master| replace:: BMS-Master board
 .. |BMS-Extension| replace:: BMS-Extension board
 .. |BMS-Interface| replace:: BMS-Interface board
@@ -43,7 +43,7 @@
 .. |pmc| replace:: ``plus main contactor``
 .. |ppc| replace:: ``plus precharge contactor``
 .. |mmc| replace:: ``minus main contactor``
-.. |version| replace:: ``0.4``
+.. |version| replace:: ``0.4.4``
 .. |hear| replace:: *(H)*
 .. |build| replace:: ``python Tools\waf-1.8.12 configure --check-c-compiler=gcc build``
 .. |drive| replace:: Drive

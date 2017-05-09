@@ -7,13 +7,11 @@ BMS Control
 
 .. highlight:: C
 
-BMS Control (|bmsctrl module|) handles requests of superior control units (e.g., via CAN reception) 
-and checks for limits of voltage, current and temperature and monitors correct can timing.
+BMScontrol (|bmsctrl module|) handles requests of superior control units (e.g., via CAN messages) and checks for limits of voltage, current and temperature and monitors correct CAN timing.
 
 
 .. ignore .. sectnum::
 
-.. contents:: Table Of Contents
 
 Structure
 ~~~~~~~~~
@@ -31,19 +29,19 @@ Module Files
 
 
 Driver:
- - src\\engine\\bmsctrl\\bmsctrl.c
- - src\\engine\\bmsctrl\\bmsctrl.h
+ - ``src\\engine\\bmsctrl\\bmsctrl.c``
+ - ``src\\engine\\bmsctrl\\bmsctrl.h``
  
 Driver Configuration:
- - src\\engine\\config\\bmsctrl_cfg.c
- - src\\engine\\config\\bmsctrl_cfg.h
+ - ``src\\engine\\config\\bmsctrl_cfg.c``
+ - ``src\\engine\\config\\bmsctrl_cfg.h``
 
 .. _BMSCTRL_CONFIG:
  
 BMSCTRL Configuration
 ~~~~~~~~~~~~~~~~~~~~~
  
-FOXYGEN configurable variables that define safe operating area:
+|Foxygen| configurable variables that define safe operating area:
 
 ==================  =========   ====   =========   ====   =========================================  ===============
 NAME                LEVEL       TYPE   VALIDATOR   UNIT   DESCRIPTION                                standard value

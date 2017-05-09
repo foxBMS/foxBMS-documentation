@@ -1,15 +1,16 @@
-.. include:: ../../macros.rst
 
 Overview of hardware and software
 =================================
 
-The |Master| consists of 3 boards: |BMS-Master|, |BMS-Interface|, |BMS-Extension|. Two ARM-based microcontroller units (Cortex-M4) are used on |BMS-Master|: |MCU0| (also called primary MCU) and |MCU1| (also called secondary MCU). The BMS software runs on |MCU0|, while |MCU1| is used for redundant safety.
+.. include:: ../../macros.rst
+
+The |master| consists of 3 boards: |BMS-Master|, |BMS-Interface|, |BMS-Extension|. Two ARM-based microcontroller units (Cortex-M4) are used on |BMS-Master|: |MCU0| (also called primary MCU) and |MCU1| (also called secondary MCU). The BMS software runs on |MCU0|, while |MCU1| is used for redundant safety.
 
 |MCU0| communicates with the outside world via a CAN bus. The current flowing through the battery system is measured via a current sensor connected via the CAN bus. The sensor is controlled via CAN by |MCU0| and sends the resulting measurement via CAN. 
 
-The |Slave| (|BMS-Slave|) are used to measure cell voltages and cell temperatures in the battery modules. The |Slaves| are linked via a proprietary daisy chain from the company Linear Technology (i.e., isoSPI).
+The |Slave| (|BMS-Slave|) are used to measure cell voltages and cell temperatures in the battery modules. The |slaves| are linked via a proprietary daisy chain from the company Linear Technology (i.e., isoSPI).
 
-In order for the |Master| to communicate with the |Slaves|, an interface board (i.e., |BMS-Interface|) is needed. It converts the SPI signals from the |BMS-Master| into differential signals used by the daisy chain and vice versa.
+In order for the |master| to communicate with the |slaves|, an interface board (i.e., |BMS-Interface|) is needed. It converts the SPI signals from the |BMS-Master| into differential signals used by the daisy chain and vice versa.
 
 Three power contactors are used to connect and disconnect the battery modules (or pack) from the load:
 
@@ -28,6 +29,6 @@ In case more inputs and outputs and further functions are required, an |BMS-Inte
 This description reflects the current state of foxBMS. Due to the open nature of the system, many other possibilities can be implemented, like for example:
 
  - Use of other types of current sensors (e.g., shunt-based or Hall-effect based)
- - No |Slave| needs to be used: a direct measurement of the cell voltages and cell temperatures can be performed by the |Master|
+ - No |slave| needs to be used: a direct measurement of the cell voltages and cell temperatures can be performed by the |master|
  - A higher number of contactors can be controlled (e.g., up to 9)
  - etc...

@@ -51,8 +51,8 @@ It is also possible to get little information if the system is running correctly
 Required Software
 -----------------
 
-- |foxBMS| firmware for |MCU0|
-- |foxBMS| firmware for |MCU1|
+- |foxbms| firmware for |MCU0|
+- |foxbms| firmware for |MCU1|
 - Debugger
 - CAN-Bus to PC
 - CAN message for |drive| and |stdby|
@@ -67,14 +67,14 @@ The test procedure consists of two steps:
  #. building the software from source
  #. requesting bms-states to |BMS-Master| and checking variable values on the debugger
 
-If no debugger is available, only a partially test if all parts of |foxBMS| are running correctly can be performed. As mentioned above, it can be checked accoustically if the 
+If no debugger is available, only a partially test if all parts of |foxbms| are running correctly can be performed. As mentioned above, it can be checked accoustically if the 
 contactors are opening and closing. This is marked in the `Test`_ with |hear| and a following explanation if needed.
 
 Hardware Setup
 --------------
 
 #. Use a voltage divider for voltage simulation at the |LTC| and connect it to the |BMS-Slave|.
-#. Connect the two daisy chain connectors from the |BMS-Slave| to the |BMS-Master|. A daisy chain of 2 |Slaves| is simulated.
+#. Connect the two daisy chain connectors from the |BMS-Slave| to the |BMS-Master|. A daisy chain of 2 |slaves| is simulated.
 #. Connect the |eo| to the |il| of the |BMS-Master|.
 #. Connect the following contactors to the |BMS-Master|:
 
@@ -88,15 +88,15 @@ Hardware Setup
 Software Setup
 --------------
 
-#. Build |foxBMS| version |version| with |build|.
+#. Build |foxbms| version |version| with |build|.
 
 Test
 ----
 
-#. Power |foxBMS|
-#. Flash |foxBMS| |MCU0|
+#. Power |foxbms|
+#. Flash |foxbms| |MCU0|
 #. Start PCAN-View
-#. Start |foxBMS|
+#. Start |foxbms|
 #. |req_stdby|
 #. Check on the debugger if the system timer is running; variable: ``os_timer``
 #. Check if |BMS-Slave| reads voltages; variable: ``ltc_cellvoltage``
@@ -184,8 +184,8 @@ Test
    #. Check on the debugger if |il| is closed; |var_il|
    #. Check on the debugger if contactors are still open; |var_co|
 
-#. Power |foxBMS| off
-#. Power |foxBMS|
+#. Power |foxbms| off
+#. Power |foxbms|
 #. Break  on ``main()`` with debugger
 #. Distort contactor counter in SRAM; |var_bkpsram_co|
 #. Go on/release break point

@@ -6,7 +6,7 @@ Hardware Specifications
 
 .. include:: ../macros.rst
 
-The following specifications must be met to ensure a safe and optimal work with the |foxBMS| hardware.
+The following specifications must be met to ensure a safe and optimal work with the |foxbms| hardware.
 
 ------------------
 Electrical Ratings
@@ -29,7 +29,7 @@ foxBMS Idle Supply Current at 24V supply            --          110         --  
 Connectors
 ----------
 
-This section describes the pin out of all connectors on the |Master|. 
+This section describes the pin out of all connectors on the |master|. 
 
 .. _foxbmsfront:
 .. figure:: ./_figures/2016-04-13_foxBMS_Front.png
@@ -37,7 +37,7 @@ This section describes the pin out of all connectors on the |Master|.
    
    Front view of the foxBMS Master, indicating the location of each header
 
-|foxBMS| uses only Molex Micro-Fit 3.0 type connectors, except for USB. A comprehensive set of connectors and crimps is supplied with |foxBMS| to start connecting immediately. In case crimps or housings are missing, they are commonly available at major distributors. 
+|foxbms| uses only Molex Micro-Fit 3.0 type connectors, except for USB. A comprehensive set of connectors and crimps is supplied with |foxbms| to start connecting immediately. In case crimps or housings are missing, they are commonly available at major distributors. 
 
 Molex Micro-Fit 3.0 Crimps Part Number: 46235-0001 (Farnell 2284551)
 
@@ -135,7 +135,7 @@ Pin     Signal                     Direction         Description
 4       BENDER_PWM_EXT             Input             Isolation monitoring device diagnostic signal
 ====    =======================    ==============    ===================================================
 
-This interface is intended to be used with a Bender isolation monitoring device. Bender ISOMETER IR155-3203/-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the |Master|. By factory, the |Master| is configured to operate with the Bender ISOMETER IR155-3204/-3210. In order to operate with the Bender ISOMETER IR155-3203, Jumper R705 must be removed on |BMS-Master|. For more details, check the schematic of the |BMS-Master| in section :ref:`hw_layout_schematic`.
+This interface is intended to be used with a Bender isolation monitoring device. Bender ISOMETER IR155-3203/-3204/-3210 are supported. The Bender ISOMETER is supplied and may be switched on or off (lowside) by the |master|. By factory, the |master| is configured to operate with the Bender ISOMETER IR155-3204/-3210. In order to operate with the Bender ISOMETER IR155-3203, Jumper R705 must be removed on |BMS-Master|. For more details, check the schematic of the |BMS-Master| in section :ref:`hw_layout_schematic`.
 
 --------------------------------------------------------------------------------------------------------------
 Contactors (X1201 - X1206 on |BMS-Master| and X1201 - X1203 on |BMS-Extension|)
@@ -173,7 +173,7 @@ Pin     Signal                      Direction             Description
 2       INTERLOCK_OUT               Output                --
 ====    ========================    ==============        ============================================
 
-The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the |foxBMS| supply or communication interfaces. 
+The interlock circuit has a built-in current source, adjusted to 10mA constant current. In fault conditions, all contactors are opened by opening the interlock circuit. If the interlock circuit is externally opened, the contactor supply is deactivated immediately. This circuit has no effect on the |foxbms| supply or communication interfaces. 
 
 --------------------------------------------------------------------------
 Daisy Chain - Primary and Secondary (X1601 on |BMS-Master|)
@@ -304,4 +304,4 @@ Pin    Signal                  Direction       Description
 12     GND_0                   Output
 ====   ====================    ============    ============
 
-On the |BMS-Extension| 4 nonisolated analog inputs to |MCU0| are available. For applications using NTCs as temperature sensors, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V and is Zener protected. For further information on the input circuit, please refer to the |foxBMS| :ref:`hw_basics` and to the |foxBMS| :ref:`hw_layout_schematic`.
+On the |BMS-Extension| 4 nonisolated analog inputs to |MCU0| are available. For applications using NTCs as temperature sensors, also a reference voltage of 2.5V is provided. The maximum input voltage is limited to 3.3V and is Zener protected. For further information on the input circuit, please refer to the |foxbms| :ref:`hw_basics` and to the |foxbms| :ref:`hw_layout_schematic`.

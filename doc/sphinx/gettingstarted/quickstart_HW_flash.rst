@@ -6,9 +6,9 @@ Getting Started with Flashing
 
 .. include:: ../macros.rst
 
-This section describes how to supply the |Master| in order to flash compiled sources.
+This section describes how to supply the |master| in order to flash compiled sources.
 
-This section shows how to connect the different parts of the |foxBMS|.
+This section shows how to connect the different parts of the |foxbms|.
 
 ----------------------------------
 Convention for Connector Numbering
@@ -32,7 +32,7 @@ The numbering shown on the left in :numref:`fig. %s <connector_convention_flash>
  
 
 -----------------------------------------------------
-Hardware Setup of |Master| and |Slaves|
+Hardware Setup of |master| and |slaves|
 -----------------------------------------------------
 
 The foxBMS system can be mounted in a metal housing, as shown in :numref:`fig. %s <housing_flash>`.
@@ -41,9 +41,9 @@ The foxBMS system can be mounted in a metal housing, as shown in :numref:`fig. %
 .. figure:: ./_figures/foxBMS_housing.jpg
    :width: 100 %
    
-   |Master| housing
+   |master| housing
 
-Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flash>`, which presents all the connectors of the |Master|.
+Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flash>`, which presents all the connectors of the |master|.
  
 .. _foxbmsfront_quickstart_flash:
 .. figure:: ./_figures/2016-04-13_foxBMS_Front.png
@@ -54,10 +54,10 @@ Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flas
 For this section on flashing, only the connector "Supply" is needed. 
 
 -----------------------------
-Supply of the |Master|
+Supply of the |master|
 -----------------------------
 
-The first step is to supply the |Master|, which works with supply voltages between 12 and 24V DC. To supply the |Master|, a connector must be prepared for the ``Supply`` connector as shown in :numref:`table %s <master_supply_connector>`, which describes the different pins used.
+The first step is to supply the |master|, which works with supply voltages between 12 and 24V DC. To supply the |master|, a connector must be prepared for the ``Supply`` connector as shown in :numref:`table %s <master_supply_connector>`, which describes the different pins used.
 
 .. _sixcon_view:
 .. figure:: ./_figures/2016-04-12_sixcon.png
@@ -83,7 +83,7 @@ The supply is separated as follows:
  - With pins SUPPLY_EXT_0 and GND_EXT_0, the microcontroller and the isolation devices are supplied 
  - With SUPPLY_EXT_2 and GND_EXT_2, the contactors and the interlock are supplied 
 
-To power up the |Master|, plug in the supply connector and apply a voltage between 12 and 24V. SUPPLY_EXT_0 / GND_EXT_0 and SUPPLY_EXT_2 / GND_EXT_2 may be connected to the same source for this initial test. At this point, the |Master| should draw approximately 150mA at 12V or 110mA at 24V.
+To power up the |master|, plug in the supply connector and apply a voltage between 12 and 24V. SUPPLY_EXT_0 / GND_EXT_0 and SUPPLY_EXT_2 / GND_EXT_2 may be connected to the same source for this initial test. At this point, the |master| should draw approximately 150mA at 12V or 110mA at 24V.
 
 -------------------------
 Primary and Secondary MCU
@@ -93,21 +93,21 @@ The |BMS-Master| has two MCUs: primary (|MCU0|) and secondary (|MCU1|). The seco
 
 First, the primary MCU will be flashed.
 
-In order to program the primary MCU, the mini USB jack indicated as ``Prim. USB`` in :numref:`fig. %s <foxbmsfront_quickstart_flash>` must be used to connect the |Master| to a PC. The |Master| can be connected to a PC immediately. When connecting |Master| for the first time, the required drivers will install automatically. After the drivers have been installed, the USB cable should be disconnected from the computer before going on with the quickstart guide.
+In order to program the primary MCU, the mini USB jack indicated as ``Prim. USB`` in :numref:`fig. %s <foxbmsfront_quickstart_flash>` must be used to connect the |master| to a PC. The |master| can be connected to a PC immediately. When connecting |master| for the first time, the required drivers will install automatically. After the drivers have been installed, the USB cable should be disconnected from the computer before going on with the quickstart guide.
 
 .. note::
    
-      Before the connection is made between the |Master| and the computer for the first time, the computer must be connected to the internet, because the operating system might look for drivers on the internet. It this fails, administrators right are needed to install the driver.
+      Before the connection is made between the |master| and the computer for the first time, the computer must be connected to the internet, because the operating system might look for drivers on the internet. It this fails, administrators right are needed to install the driver.
 
-In case of problems by the installation of the drivers, administrator rights might be needed. Once the hardware is supplied, the |foxBMS| binaries can be flashed. 
+In case of problems by the installation of the drivers, administrator rights might be needed. Once the hardware is supplied, the |foxbms| binaries can be flashed. 
 
-The same procedure must be made for secondary: the mini USB jack indicated as ``Sec. USB`` in :numref:`fig. %s <foxbmsfront_quickstart_flash>` must be used to connect the |Master| to a PC. As for the primary MCU, the PC must be connected to the internet before the connection is made with the |Master|.
+The same procedure must be made for secondary: the mini USB jack indicated as ``Sec. USB`` in :numref:`fig. %s <foxbmsfront_quickstart_flash>` must be used to connect the |master| to a PC. As for the primary MCU, the PC must be connected to the internet before the connection is made with the |master|.
 
 ---------------------------------------------
 Flash the Compiled Source for the Primary MCU
 ---------------------------------------------
 
-In the section :ref:`sw_quickstart`, the |foxBMS| sources have been compiled and the generated binary is ready to be flashed. As the archive |primary archive| was used, the sources are made for the |MCU0|: the |MCU0| will be flashed first.
+In the section :ref:`sw_quickstart`, the |foxbms| sources have been compiled and the generated binary is ready to be flashed. As the archive |primary archive| was used, the sources are made for the |MCU0|: the |MCU0| will be flashed first.
 
 These binaries are needed: 
 
@@ -145,7 +145,7 @@ When the flash button is clicked, a windows appears, reminding not to touch the 
 
    Flashing tab, device connected, flashing
 
-The connection state can also be checked by watching the LEDs on the |Master| hardware: for a running board, the green power LED is on, and the two indicator LEDs (green and red) are blinking alternately. If the device is connected and being flashed, the power-on LED is on but the two indicator LEDs are off.
+The connection state can also be checked by watching the LEDs on the |master| hardware: for a running board, the green power LED is on, and the two indicator LEDs (green and red) are blinking alternately. If the device is connected and being flashed, the power-on LED is on but the two indicator LEDs are off.
 
 The LEDs for the |MCU0| must be used. In the :ref:`hw_quickstart_cables`, it is explained how to find the |MCU0| indicator LEDs.
 
@@ -193,7 +193,7 @@ to
 
    **Working without configuring the right battery cell voltage limits is dangerous and should never be done when real batteries are connected, since they may burn and explode when overcharged or shorted.**
    
-The next step is to connect a |Slave| to perform voltage and temperature measurement.
+The next step is to connect a |slave| to perform voltage and temperature measurement.
 
 ---------------------------------------
 Debugging the Primary and Secondary MCU
