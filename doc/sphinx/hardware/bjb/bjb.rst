@@ -24,6 +24,7 @@ The BJB contains the Battery Management System (BMS) and all safety relevant com
 
 .. _big_bjb:
 .. figure:: big_bjb.jpg
+   :width: 100 %
 
    BJB top view
    
@@ -41,6 +42,7 @@ To break the current flowing if a short circuit condition occurs, a fuse is plac
 
 .. _block_diagram:
 .. figure:: block_diagram.png
+   :width: 100 %
 
    BJB block diagram
 

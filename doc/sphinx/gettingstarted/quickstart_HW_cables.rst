@@ -186,7 +186,7 @@ Connecting the |BMS-Slave| to the |BMS-Master|
 The connector indicated as ``Daisy Chain`` in :numref:`fig. %s <foxbmsfront_quickstart>` must be used on the |BMS-Master|. Its layout is described in :numref:`table %s <master_daisy_connector>`.
 
 .. figure:: ./_figures/2016-04-12_sixteencon.png
-   :width: 30%
+   :width: 30 %
 
 .. _master_daisy_connector:
 
@@ -315,7 +315,7 @@ The connector indicated as ``Temperature sensor connector (24 pin)`` in :numref:
 
 .. _temp_sensor:
 .. figure:: ./_figures/temperature_sensor.png
-   :width: 70 %
+   :width: 30 %
 
    Temperature sensor circuit.
 

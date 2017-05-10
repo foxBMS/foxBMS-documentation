@@ -59,9 +59,7 @@ When a CAN message needs to be transmitted physically, the signals data belongin
 
 .. _cansignal_figure1:
 .. figure:: CANSMsgHandling_xxl.png
-   :height: 541 px
-   :width: 1042 px
-   :scale: 60 %
+   :width: 100 %
 
    CAN data flow to assemble messages
 
@@ -121,6 +119,7 @@ The control flow for transmission of a multiplexed signal in the CANSIGNAL modul
 
 .. _cansignal_figure2:
 .. figure:: CANSMsgMultiplexTX2.png
+   :width: 100 %
 
    CAN data flow to assemble message
    

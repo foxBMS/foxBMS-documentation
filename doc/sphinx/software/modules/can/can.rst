@@ -68,9 +68,7 @@ The external interface to the can module is easy and consists of seven functions
 
 .. _can_figure1:
 .. figure:: CAN_Interface.png
-   :height: 541 px
-   :width: 1042 px
-   :scale: 60 %
+   :width: 75 %
 
    External CAN Driver interface
 
@@ -103,9 +101,7 @@ A detailed overview over how the CAN driver software interacts with the hardware
 
 .. _can_figure2:
 .. figure:: CAN_Flowchart.png
-   :height: 1011 px
-   :width: 1493 px
-   :scale: 65 %
+   :width: 100 %
    
    CAN flow chart of the interaction between hardware and software
 
@@ -204,9 +200,7 @@ The calling hierarchy and the control/data flow of the initialization process is
 
 .. _can_figure3:
 .. figure:: CAN_Initialization.png
-   :height: 721 px
-   :width: 1210 px
-   :scale: 65 %
+   :width: 100 %
    
    CAN driver initialization calling hierarchy
 
@@ -219,8 +213,7 @@ The recommended transmission possibility via message buffer is visible in the fo
 
 .. _can_figure4:
 .. figure:: CAN_TX_Sequence.png
-   :height: 278 px
-   :width: 634 px
+   :width: 100 %
    
    CAN driver transmission sequence diagram with buffer usage
 
@@ -234,8 +227,7 @@ The interpreting mechanism is shown in the sequence diagram in :numref:`fig. %s 
 
 .. _can_figure5:
 .. figure:: CAN_RX_Sequence.png
-   :height: 571 px
-   :width: 714 px
+   :width: 100 %
    
    CAN driver reception sequence diagram
    

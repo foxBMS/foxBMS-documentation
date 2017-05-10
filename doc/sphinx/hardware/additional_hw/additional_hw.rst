@@ -6,6 +6,7 @@ Recommended Additional Hardware
 
 .. include:: ../../macros.rst
 
+
 Before using |master| and the |slaves| with lithium-ion batteries, safety must be considered carefully. The following parts and components are recommended to be used in addition to the |master| and the |slaves|.
 
 -----------------

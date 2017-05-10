@@ -11,7 +11,7 @@ This part of the documentation describes the hardware modules used in |foxbms|.
 
 .. _hwblockdiagram:
 .. figure:: ./_figures/2016-04-06_foxBMS_Block_Diagram.png
-   
+   :width: 100 %   
    
    |BMS-Master| hardware block diagram
 
@@ -20,6 +20,7 @@ Supply 0 (|primary|)
 
 .. _supplyzero:
 .. figure:: ./_figures/2016-04-14_SUPPLY_0.png
+   :width: 100 %
    
    Supply for all circuit parts related to the |primary| part of |foxbms|
 
@@ -30,6 +31,7 @@ Supply 1 (|secondary|)
 
 .. _supplyone:
 .. figure:: ./_figures/2016-04-14_SUPPLY_1.png
+   :width: 100 %
    
    Supply for all circuit parts related to the |secondary| part of |foxbms|
 
@@ -40,8 +42,7 @@ The |secondary| part of |foxbms| is also supplied by SUPPLY_EXT_0 as shown in :n
 
 .. _mcuzerobootrst:
 .. figure:: ./_figures/2016-04-14_MCU_0_BOOT_RST.png
-   :width: 2175 px
-   :scale: 20 %   
+   :width: 100 %
    
    Boot and reset circuit for the |primary| microcontroller
 
@@ -49,6 +50,7 @@ The |secondary| part of |foxbms| is also supplied by SUPPLY_EXT_0 as shown in :n
 
 .. _mcuzeroadcref:
 .. figure:: ./_figures/2016-04-14_MCU_0_ADC_REF.png
+   :width: 100 %
    
    ADC reference voltage for the |primary| microcontroller
 
@@ -56,6 +58,7 @@ The ADCs of the |primary| microcontroller |MCU0| are supplied with a 2.5V refere
    
 .. _mcuzeroosc:
 .. figure:: ./_figures/2016-04-14_MCU_0_OSC.png
+   :width: 100 %
    
    Clock circuits of the |primary| microcontroller
    
@@ -67,6 +70,7 @@ Interface between |MCU0| and |MCU1|
 
 .. _mcumcuif:
 .. figure:: ./_figures/2016-04-14_MCU_TO_MCU_IF.png
+   :width: 100 %
    
    Interface between |primary| and |secondary| microcontroller
 
@@ -76,6 +80,7 @@ Interface to Bender ISOMETER
 ----------------------------
 .. _bender:
 .. figure:: ./_figures/2016-04-14_BENDER.png
+   :width: 100 %
    
    Interface to the Bender ISOMETER
 
@@ -86,6 +91,7 @@ The |BMS-Master| supports Bender ISOMETER IR155-3203/-3204/-3210. Two inputs are
 
 .. _can:
 .. figure:: ./_figures/2016-04-14_CAN_0.png
+   :width: 100 %
    
    Circuit of the CAN interface (|CAN0|) 
 
@@ -96,6 +102,7 @@ Interlock
 
 .. _interlock:
 .. figure:: ./_figures/2016-04-14_INTERLOCK.png
+   :width: 100 %
    
    Interlock circuit 
 
@@ -106,6 +113,7 @@ Contactors
 
 .. _contactors:
 .. figure:: ./_figures/2016-04-14_CONTACTORS.png
+   :width: 100 %
    
    Contactor circuit, exemplariliy shown for contactor 0 
 
@@ -116,6 +124,7 @@ Isolated USB interface (|primary| and |secondary|)
 
 .. _usb:
 .. figure:: ./_figures/2016-04-14_USB.png
+   :width: 100 %
    
    USB interface circuit
 
@@ -126,6 +135,7 @@ EEPROM
 
 .. _eeprom:
 .. figure:: ./_figures/2016-04-14_EEPROM.png
+   :width: 100 %
    
    EEPROM, exemplarily shown for the |MCU0|
 
@@ -137,6 +147,7 @@ Isolated RS485 Interface
 
 .. _rs485:
 .. figure:: ./_figures/2016-04-07_RS485.png
+   :width: 100 %
    
    Isolated RS485 interface circuit
 
@@ -148,6 +159,7 @@ Isolated Normally Open Contacts (isoNOC)
 
 .. _isonoc:
 .. figure:: ./_figures/2016-04-07_iso_NOC.png
+   :width: 100 %
    
    Isolated normally open contacts (ISONOC_0 examplarily)
 
@@ -158,6 +170,7 @@ Analog Inputs
 
 .. _analoginput:
 .. figure:: ./_figures/2016-04-07_analog_input.png
+   :width: 100 %
    
    Non isolated analog inputs (analog channel 0 exemplarily)
 
@@ -172,6 +185,7 @@ Isolated GPIO
 
 .. _isogpio:
 .. figure:: ./_figures/2016-04-07_isolated_GPIO.png
+   :width: 100 %
    
    Isolated GPIOs (Input 0 and 1; Output 0 and 1 shown exemplarily)
 
@@ -182,6 +196,7 @@ SD Card
 
 .. _sdcard:
 .. figure:: ./_figures/2016-04-07_SD_Card.png
+   :width: 100 %
    
    SD Card
 

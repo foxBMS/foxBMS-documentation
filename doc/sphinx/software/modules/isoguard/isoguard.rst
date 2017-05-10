@@ -61,9 +61,7 @@ The external interface to the |mod_isoguard| is simple and consists of three fun
 
 .. _isoguard_figure1:
 .. figure:: ISO_Block.png
-   :height: 286 px
-   :width: 1042 px
-   :scale: 55 %
+   :width: 100 %
 
    External isoguard driver interface
 
@@ -100,9 +98,7 @@ as shown in :numref:`fig. %s <isoguard_figure2>`.
 
 .. _isoguard_figure2:
 .. figure:: ISO_Init.png
-   :height: 500 px
-   :width: 1293 px
-   :scale: 55 %
+   :width: 100 %
 
    Initialization of the |mod_isoguard|
 
