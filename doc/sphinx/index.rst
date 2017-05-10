@@ -5,7 +5,7 @@ The foxBMS Documentation
 .. include:: ./macros.rst
 
 Welcome to `foxBMS <http://www.foxbms.org/>`_. This is the documentation of the free, open and flexible battery management system from the Fraunhofer IISB.
-The current version of the software is 0.4.3 (more information in :ref:`fox-releases`). 
+The current version of the software is |version| (more information in :ref:`fox-releases`). 
 
 .. note::
    
@@ -36,7 +36,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 .. toctree::   
    :titlesonly:
    :numbered:
-   :caption: General information about |foxbms|
+   :caption: General information
    
    general/release/release
    general/license/license
@@ -50,7 +50,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 .. toctree::   
    :titlesonly:
    :numbered:
-   :caption: Getting started with |foxbms|
+   :caption: Getting started
 
    gettingstarted/quickstart_general
    gettingstarted/quickstart_SW

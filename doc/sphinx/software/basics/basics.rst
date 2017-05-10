@@ -67,7 +67,7 @@ The two key functions called within the engine tasks are:
 A watchdog instance is needed in case one of the aforementioned tasks hangs: in this case, the control over the contactors would not be provided anymore. This watchdog is made by the System Monitor module which monitors all important tasks (e.g., ``Database``, ``SysControl``, ``BMSControl)``: if any of the monitored tasks hangs, the contactors are opened to prevent damage and protect persons and the battery. To ensure the highest level of safety, opening the contactors is made by two ways:
 
  - State request to ``SysControl`` to open the contactors
- - Direct access to the Contactor module in case ``SysControl`` is not responding anymore
+ - Direct access to the |mod_contactor| in case ``SysControl`` is not responding anymore
 
 A last barrier is present in case all the preceding measures fail: the hardware watchdog timer. In case it is not triggered periodically, it resets the systems, provoking the opening of the contactors. Function calls (other than ``SysControl`` and ``BMSControl)`` and closely related to the system are made in the engine tasks, for example:
 
@@ -82,7 +82,7 @@ A last barrier is present in case all the preceding measures fail: the hardware 
 Diagnostic
 ----------
 
-The |diag module| is designed to report problems on the whole system. The events that trigger the |diag module| have to be defined by the user. The event handler ``DIAG_Handler(...)`` has to be called when the event is detected. The way the system reacts to a ``Diag`` event is defined via a callback function or by the caller according the return value.
+The |mod_diag| is designed to report problems on the whole system. The events that trigger the |mod_diag| have to be defined by the user. The event handler ``DIAG_Handler(...)`` has to be called when the event is detected. The way the system reacts to a ``Diag`` event is defined via a callback function or by the caller according the return value.
 
 Diagnostic events are stored in the Backup SRAM memory in variable ``DIAG_ERROR_ENTRY_s diag_memory[]``
 

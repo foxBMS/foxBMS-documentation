@@ -1,10 +1,16 @@
 .. -----------------------------------------------
 .. General Documentation Macros
 .. -----------------------------------------------
+.. |version| replace:: ``0.4.4``
 .. |foxbms| replace:: foxBMS
 .. |foxconda| replace:: foxConda
 .. |frontdesk| replace:: Front Desk
 .. |foxygen| replace:: Foxygen
+.. |doxygen| replace:: Doxygen
+
+.. -----------------------------------------------
+.. Haardware Documentation Macros
+.. -----------------------------------------------
 .. |LTC| replace:: LTC6804-1/LTC6811-1
 .. |master| replace:: foxBMS Master Unit
 .. |masters| replace:: foxBMS Master Units
@@ -21,16 +27,21 @@
 .. |CAN1| replace:: CAN_1
 
 .. -----------------------------------------------
-.. Software Module Macros
+.. Software Module Name Macros
 .. -----------------------------------------------
-.. |diag module| replace:: ``diag`` module
-.. |contactor module| replace:: ``contactor`` module
-.. |syscontrol module| replace:: ``syscontrol`` module
-.. |bmsctrl module| replace:: ``bmsctrl`` module
-.. |can module| replace:: ``can`` module
-.. |cansignal module| replace:: ``can`` module
-.. |io module| replace:: ``io`` module
-.. |isoguard module| replace:: ``isoguard`` module
+.. |mod_bmsctrl| replace:: ``bmsctrl`` module
+.. |mod_sysctrl| replace:: ``syscontrol`` module
+.. |mod_io| replace:: ``io`` module
+.. |mod_contactor| replace:: ``contactor`` module
+.. |mod_can| replace:: ``can`` module
+.. |mod_cansignal| replace:: ``cansignal`` module
+.. |mod_ltc| replace:: ``ltc`` module
+.. |mod_com| replace:: ``com`` module
+.. |mod_uart| replace:: ``uart`` module
+.. |mod_chksum| replace:: ``chksum`` module
+.. |mod_sox| replace:: ``sox`` module
+.. |mod_isoguard| replace:: ``isoguard`` module
+.. |mod_diag| replace:: ``diag`` module
 .. |primary archive| replace:: ``foxbms_primary-0-4-3.tar.gz``
 .. |secondary archive| replace:: ``foxbms_secondary-0-4-3.tar.gz``
 .. |installer archive| replace:: ``foxcondainstaller-0-4-3.exe``
@@ -43,7 +54,6 @@
 .. |pmc| replace:: ``plus main contactor``
 .. |ppc| replace:: ``plus precharge contactor``
 .. |mmc| replace:: ``minus main contactor``
-.. |version| replace:: ``0.4.4``
 .. |hear| replace:: *(H)*
 .. |build| replace:: ``python Tools\waf-1.8.12 configure --check-c-compiler=gcc build``
 .. |drive| replace:: Drive
