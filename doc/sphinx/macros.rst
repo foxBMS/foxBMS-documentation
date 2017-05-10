@@ -21,6 +21,8 @@
 .. |BMS-Interface| replace:: BMS-Interface board
 .. |BMS-Slave| replace:: BMS-Slave board
 .. |BMS-Slaves| replace:: BMS-Slave boards
+.. |primary| replace:: primary
+.. |secondary| replace:: secondary
 .. |MCU0| replace:: MCU0
 .. |MCU1| replace:: MCU1
 .. |CAN0| replace:: CAN_0
