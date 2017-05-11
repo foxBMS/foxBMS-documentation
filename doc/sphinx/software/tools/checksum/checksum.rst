@@ -80,7 +80,7 @@ How does it work
     calls the waf function ``cksum(conf)``.
     
         #. Reads the ``foxbms.hex`` file and calculates the checksum. The checksum is written back into the ``foxbms.hex`` file by the checksum script.
-        #. Calls the gbd debugger and replaces the initial ``ver_sw_validation.Checksum_u32`` in ``foxbms.elf`` with the correct checksum.
+        #. Calls the GDB debugger and replaces the initial ``ver_sw_validation.Checksum_u32`` in ``foxbms.elf`` with the correct checksum.
         #. Calls the ``objcopy`` to regenerate the ``foxbms_flashheader.bin`` of ``foxbms.elf``.
 
 Related Modules
