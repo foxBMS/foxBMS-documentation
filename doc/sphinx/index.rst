@@ -1,8 +1,8 @@
+.. include:: ./macros.rst
+
 ========================
 The foxBMS Documentation
 ========================
-
-.. include:: ./macros.rst
 
 Welcome to `foxBMS <https://www.foxbms.org/>`_. This is the documentation of the free, open and flexible battery management system from the Fraunhofer IISB. The current version of |foxbms| is |version| (more information in :ref:`fox-releases`). 
 
@@ -32,7 +32,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 
 .. _infos:
 
-.. toctree::   
+.. toctree::
    :titlesonly:
    :numbered:
    :caption: General information
@@ -46,7 +46,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 
 .. _start:
 
-.. toctree::   
+.. toctree::
    :titlesonly:
    :numbered:
    :caption: Getting started
@@ -61,7 +61,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 
 .. _sw:
 
-.. toctree::  
+.. toctree::
    :titlesonly:  
    :numbered:
    :maxdepth: 1
@@ -79,7 +79,7 @@ Finally, the hardware documentation (:ref:`hw`) gives the details needed to unde
 
 .. _hw:
 
-.. toctree:: 
+.. toctree::
    :titlesonly:
    :numbered:
    :caption: Hardware documentation
