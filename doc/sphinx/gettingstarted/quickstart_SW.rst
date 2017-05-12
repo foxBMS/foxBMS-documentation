@@ -105,7 +105,9 @@ The IDE starts with the source selection tab shown in :numref:`fig. %s <frontdes
 
    Project selection tab
 
-A project corresponds to the |foxbms| source code tree located on the computer. A folder must be created were the projects will be stored. First, the ``foxBMS workspaces directory`` must be clicked on to select the folder that was created, under which all the new |foxbms| projects will be placed. Next, the latest |foxbms| release source code archive must be fetched and placed at a convenient folder. Clicking on the ``Add from archive`` button allows opening the archive. The archive must not be extracted, this is done by the IDE. For the quickstart guide, the archive is called |primary archive|. The source tree will be extracted into the workspace directory, and the project will be added to the list of available projects, as shown in :numref:`fig. %s <frontdesk_figure2>`.
+A project corresponds to the |foxbms| source code tree located on the computer. A folder must be created were the projects will be stored. First, the ``foxBMS workspaces directory`` must be clicked on to select the folder that was created, under which all the new |foxbms| projects will be placed.
+
+If an archive was provided, next, the latest |foxbms| release source code archive must be fetched and placed at a convenient folder. Clicking on the ``Add from archive`` button allows opening the archive. The archive must not be extracted, this is done by the IDE. For the quickstart guide, the archive is called |primary archive|. The source tree will be extracted into the workspace directory, and the project will be added to the list of available projects, as shown in :numref:`fig. %s <frontdesk_figure2>`.
 
 .. _frontdesk_figure2:
 .. figure:: ./_figures/frontdesk2.png
@@ -113,7 +115,7 @@ A project corresponds to the |foxbms| source code tree located on the computer. 
 
    Project selection tab, one project added
 
-An existing source tree directory can also be added, which, for example, has been manually unpacked. The button ``Add from existing directory`` must be used. The folder will not be copied to the workspace directory. It will only be linked to the list of available directories. This possibility is not used in the quickstart guide.
+An existing source tree directory can also be added, which, for example, was downloaded from GitHub and manually unpacked. The button ``Add from existing directory`` must be used. The folder will not be copied to the workspace directory. It will only be linked to the list of available directories. This possibility is not used in the quickstart guide.
 
 .. _html_docu_generation:
 

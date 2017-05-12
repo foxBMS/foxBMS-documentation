@@ -5,7 +5,7 @@ PCB Schematics and Layouts
 
 .. include:: ../../macros.rst
 
-The schematics and the layout of files for the |BMS-Master|, the |BMS-Extension|, the |BMS-Interface| and the |BMS-Slave| are available in their dedicated `GitHub repository <https://github.com/foxBMS/foxBMS-hardware>`_.
+The schematics and the layout of files for the |BMS-Master|, the |BMS-Extension|, the |BMS-Interface| and the |BMS-Slave| are available in their dedicated `GitHub repository <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x>`_.
 
 .. note::
 	To open the schematic and layout files, please download `AUTODESK EAGLE <https://www.autodesk.com/products/eagle/overview>`_. 
@@ -20,23 +20,23 @@ This repository also contains the bill of material (BOM) and a PDF version of th
 |BMS-Master|
 ============
 
-The PCB layout, schematic and BOM files for the |BMS-Master| are available on GitHub: `BMS-Master <https://github.com/foxBMS/foxBMS-hardware/tree/master/BMS-Master>`_.
+The PCB layout, schematic and BOM files for the |BMS-Master| are available on GitHub: `BMS-Master <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x/BMS-Master>`_.
 
 ===============
 |BMS-Extension|
 ===============
 
-The PCB layout, schematic and BOM files for the |BMS-Extension| are available on GitHub `BMS-Extension <https://github.com/foxBMS/foxBMS-hardware/tree/master/BMS-Extension>`_.
+The PCB layout, schematic and BOM files for the |BMS-Extension| are available on GitHub: `BMS-Extension <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x/BMS-Extension>`_.
 
 ===============
 |BMS-Interface|
 ===============
 
-The PCB layout, schematic and BOM files for the |BMS-Interface| are available on GitHub`BMS-Interface <https://github.com/foxBMS/foxBMS-hardware/tree/master/BMS-Interface>`_.
+The PCB layout, schematic and BOM files for the |BMS-Interface| are available on GitHub: `BMS-Interface <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x/BMS-Interface>`_.
 
 ===========
 |BMS-Slave|
 ===========
 
-The PCB layout, schematic and BOM files for the |BMS-Slave| are available on GitHub `BMS-Slave <https://github.com/foxBMS/foxBMS-hardware/tree/master/BMS-Slave>`_.
+The PCB layout, schematic and BOM files for the |BMS-Slave| are available on GitHub: `BMS-Slave <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x/BMS-Slave>`_.
 

@@ -1,3 +1,5 @@
+:orphan:
+
 .. -----------------------------------------------
 .. General Documentation Macros
 .. -----------------------------------------------
@@ -44,8 +46,8 @@
 .. |mod_sox| replace:: ``sox`` module
 .. |mod_isoguard| replace:: ``isoguard`` module
 .. |mod_diag| replace:: ``diag`` module
-.. |primary archive| replace:: ``foxbms_primary-0-4-3.tar.gz``
-.. |secondary archive| replace:: ``foxbms_secondary-0-4-3.tar.gz``
+.. |primary archive| replace:: ``foxbms_primary-0-4-4.tar.gz``
+.. |secondary archive| replace:: ``foxbms_secondary-0-4-4.tar.gz``
 .. |installer archive| replace:: ``foxcondainstaller-0-4-3.exe``
 
 .. -----------------------------------------------
