@@ -1,7 +1,10 @@
+.. include:: ../../macros.rst
+
+
+
+=======================
 Software File Structure
 =======================
-
-.. include:: ../../macros.rst
 
 .. highlight:: C
 

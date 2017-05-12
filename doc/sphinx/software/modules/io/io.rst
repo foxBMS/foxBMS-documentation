@@ -1,7 +1,9 @@
+.. include:: ../../../macros.rst
+
+
+==
 IO
 ==
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

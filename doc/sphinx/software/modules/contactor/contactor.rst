@@ -1,7 +1,9 @@
+.. include:: ../../../macros.rst
+
+
+=========
 Contactor
 =========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

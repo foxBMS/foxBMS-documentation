@@ -1,8 +1,8 @@
 .. include:: ./macros.rst
 
-========================
-The foxBMS Documentation
-========================
+==========================
+The |foxBMS| Documentation
+==========================
 
 Welcome to `foxBMS <https://www.foxbms.org/>`_. This is the documentation of the free, open and flexible battery management system from the Fraunhofer IISB. The current version of |foxbms| is |version| (more information in :ref:`fox-releases`). 
 

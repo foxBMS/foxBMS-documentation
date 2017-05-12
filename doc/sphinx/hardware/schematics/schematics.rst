@@ -1,9 +1,9 @@
+.. include:: ../../macros.rst
+
 .. _hw_layout_schematic:
 
 PCB Schematics and Layouts
 ==========================
-
-.. include:: ../../macros.rst
 
 The schematics and the layout of files for the |BMS-Master|, the |BMS-Extension|, the |BMS-Interface| and the |BMS-Slave| are available in their dedicated `GitHub repository <https://github.com/foxBMS/foxBMS-hardware/tree/release-1.0.x>`_.
 

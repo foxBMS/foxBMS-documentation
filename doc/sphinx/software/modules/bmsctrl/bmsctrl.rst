@@ -1,9 +1,11 @@
+.. include:: ../../../macros.rst
+
 .. _BMSCTRL:
 
+
+===========
 BMS Control
 ===========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

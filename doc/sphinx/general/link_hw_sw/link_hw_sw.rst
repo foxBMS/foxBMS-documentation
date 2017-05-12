@@ -1,8 +1,9 @@
-
-Overview of hardware and software
-=================================
-
 .. include:: ../../macros.rst
+
+
+=================================
+Overview of Hardware and Software
+=================================
 
 The |master| consists of 3 boards: |BMS-Master|, |BMS-Interface|, |BMS-Extension|. Two ARM-based microcontroller units (Cortex-M4) are used on |BMS-Master|: |MCU0| (also called primary MCU) and |MCU1| (also called secondary MCU). The BMS software runs on |MCU0|, while |MCU1| is used for redundant safety.
 

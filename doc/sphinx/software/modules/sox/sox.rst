@@ -1,7 +1,9 @@
+.. include:: ../../../macros.rst
+
+
+===
 SOX
 ===
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

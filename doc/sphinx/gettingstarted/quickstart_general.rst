@@ -1,8 +1,8 @@
+.. include:: ../macros.rst
+
 =============================
 Getting started with |foxbms|
 =============================
-
-.. include:: ../macros.rst
 
 How to use this documentation
 -----------------------------

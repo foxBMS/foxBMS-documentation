@@ -1,10 +1,10 @@
+.. include:: ../macros.rst
+
 .. _hw_quickstart_flash:
 
 =============================
 Getting Started with Flashing
 =============================
-
-.. include:: ../macros.rst
 
 This section describes how to supply the |master| in order to flash compiled sources.
 

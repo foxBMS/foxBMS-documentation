@@ -1,9 +1,9 @@
+.. include:: ../macros.rst
+
 .. _CAN_communication:
 
 Communication via CAN
 =====================
-
-.. include:: ../macros.rst
 
 
 CAN Matrix Description

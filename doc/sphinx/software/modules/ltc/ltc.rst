@@ -1,7 +1,10 @@
+.. include:: ../../../macros.rst
+
+
+
+===
 LTC
 ===
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

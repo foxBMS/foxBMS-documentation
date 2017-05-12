@@ -1,9 +1,10 @@
+.. include:: ../../macros.rst
+
 .. _fox-releases:
 
-Versions and release notes
 ==========================
-
-.. include:: ../../macros.rst
+Versions and Release Notes
+==========================
 
 The following table describes the different versions of |foxbms| that were released.
 The first line is the most recent one, the last one the oldest one.

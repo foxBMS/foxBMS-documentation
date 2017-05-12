@@ -1,7 +1,9 @@
+.. include:: ../../macros.rst
+
+
+===================
 Software Components
 ===================
-
-.. include:: ../../macros.rst
 
 .. highlight:: C
 

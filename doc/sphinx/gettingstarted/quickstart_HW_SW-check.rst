@@ -1,11 +1,10 @@
+.. include:: ../macros.rst
+
 .. _quickchek:
 
 ==================================
 Hardware-Software Quickcheck Guide
 ==================================
-
-.. include:: ../macros.rst
-
 
 This section describes how to test the |BMS-Master| with one |BMS-Slave| connected. These tests shows if the hardware and software components are working correctly:
 

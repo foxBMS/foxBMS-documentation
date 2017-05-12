@@ -1,7 +1,9 @@
+.. include:: ../../../macros.rst
+
+
+===
 CAN
 ===
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

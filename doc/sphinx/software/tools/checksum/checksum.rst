@@ -1,9 +1,11 @@
+.. include:: ../../../macros.rst
+
 .. _checksum_tool:
 
+
+=============
 Checksum Tool
 =============
-
-.. include:: ../../../macros.rst
 
 .. highlight:: python
 

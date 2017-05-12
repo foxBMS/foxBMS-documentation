@@ -1,10 +1,14 @@
+.. include:: ../../macros.rst
+.. include:: <isonum.txt>
+
+
+
+========
 Licenses
 ========
 
-.. include:: <isonum.txt>
-
-foxBMS Software License
-~~~~~~~~~~~~~~~~~~~~~~~
+|foxbms| Software License
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |copy| 2010-2017, Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
 All rights reserved.
@@ -38,8 +42,8 @@ We kindly request you to use one or more of the following phrases to refer to fo
    
 |
 
-foxBMS Hardware and Documentation License
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|foxbms| Hardware and Documentation License
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |copy| 2010-2017, Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
 All rights reserved.

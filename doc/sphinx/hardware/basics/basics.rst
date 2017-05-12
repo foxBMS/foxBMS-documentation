@@ -1,10 +1,10 @@
+.. include:: ../../macros.rst
+
 .. _hw_basics:
 
 ====================
 Hardware Description
 ====================
-
-.. include:: ../../macros.rst
 
 This part of the documentation describes the hardware modules used in |foxbms|.
 :numref:`Fig. %s <hwblockdiagram>` shows a block diagram of the |BMS-Master| with all its components.

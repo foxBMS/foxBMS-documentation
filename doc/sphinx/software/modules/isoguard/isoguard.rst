@@ -1,7 +1,10 @@
+.. include:: ../../../macros.rst
+
+
+
+========
 Isoguard
 ========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

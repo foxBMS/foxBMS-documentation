@@ -1,9 +1,10 @@
+.. include:: ../../../macros.rst
+
 .. _SYSCTRL:
 
+==============
 System Control
 ==============
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

@@ -1,9 +1,11 @@
+.. include:: ../../../macros.rst
+
 .. _checksum_module:
 
+
+===============
 Checksum Module
 ===============
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 
