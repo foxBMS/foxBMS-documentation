@@ -1,5 +1,7 @@
 .. include:: ./macros.rst
 
+.. highlight:: c
+
 ==========================
 The |foxBMS| Documentation
 ==========================
