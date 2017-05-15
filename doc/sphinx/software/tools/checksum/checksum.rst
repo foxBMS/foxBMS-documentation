@@ -47,7 +47,6 @@ Checksum is an after-build process.
 
     python tools\waf-1.8.12 configure --check-c-compiler=gcc
     python tools\waf-1.8.12 build
-    python tools\waf-1.8.12 chksum
 
 How does it work
 ~~~~~~~~~~~~~~~~
@@ -73,17 +72,11 @@ How does it work
      - ``foxbms_flash.bin``
      - ``foxbms_flashheader.bin``
 
-#. The step
+    The chksum featured task is perfmored at next as defined in the main wscript. The steps are of this task are:
 
-    .. code:: bash
-    
-        python tools\waf-1.8.12 chksum
-    
-    calls the waf function ``cksum(conf)``.
-    
-        #. Reads the ``foxbms.hex`` file and calculates the checksum. The checksum is written back into the ``foxbms.hex`` file by the checksum script.
-        #. Calls the GDB debugger and replaces the initial ``ver_sw_validation.Checksum_u32`` in ``foxbms.elf`` with the correct checksum.
-        #. Calls the ``objcopy`` to regenerate the ``foxbms_flashheader.bin`` of ``foxbms.elf``.
+        #. Reading the ``foxbms.hex`` file and calculates the checksum. The checksum is written back into the ``foxbms.hex`` file by the checksum script.
+        #. Calling the GDB debugger and replaces the initial ``ver_sw_validation.Checksum_u32`` in ``foxbms.elf`` with the correct checksum.
+        #. Calling the ``objcopy`` to regenerate the ``foxbms_flashheader.bin`` of ``foxbms.elf``.
 
 Related Modules
 ~~~~~~~~~~~~~~~

@@ -1,8 +1,5 @@
-.. include:: ../../macros.rst
-
-=================
-The |foxbms| Team
-=================
+The foxBMS Team
+===============
 
 
 Management Team Fraunhofer IISB

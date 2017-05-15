@@ -49,17 +49,17 @@ The state of function estimation (SOF) consists of some current derating values.
 
 Specific points in the following derating curves have to be defined by |foxygen| configurable variables:
 
-.. figure:: SOF_T.png
+.. figure:: sof_t.png
    :width: 100 %
    
    Temperature dependent current derating 
 
-.. figure:: SOF_U.png
+.. figure:: sof_u.png
    :width: 100 %
    
    Voltage dependent current derating
 
-.. figure:: SOF_S.png
+.. figure:: sof_s.png
    :width: 100 %
    
    SOC dependent current derating

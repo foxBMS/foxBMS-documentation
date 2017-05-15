@@ -46,7 +46,7 @@ Detailed Description of SYSCTRL
 :numref:`Fig. %s <sysctrl_figure1>` shows the organization of the Syscontrol statemachine.
 
 .. _sysctrl_figure1:
-.. figure:: SysControl.png
+.. figure:: syscontrol.png
    :width: 100 %
 
    System Control state machine
@@ -125,7 +125,7 @@ If the interlock is closed, the following procedure is performed:
 :numref:`Fig. %s <sysctrl_figure2>` shows the detailed sequence of the normal state of the Syscontrol statemachine.
 
 .. _sysctrl_figure2:
-.. figure:: SYSCTRL_detailedNormal.png
+.. figure:: sysctrl_detailednormal.png
    :width: 100 %
 
    Detailed view of SysControl state NORMAL
