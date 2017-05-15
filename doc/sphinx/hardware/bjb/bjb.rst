@@ -1,9 +1,9 @@
+.. include:: ../../macros.rst
+
 .. _bjb_description:
 
 Example of a Battery Junction Box
 =================================
-
-.. include:: ../../macros.rst
 
 This section presents an example of a typical battery junction box. The design must be adapted to the application and specific care must be taken by sizing the components to ensure the required safety level.
 

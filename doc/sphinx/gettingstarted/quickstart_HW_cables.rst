@@ -1,10 +1,10 @@
+.. include:: ../macros.rst
+
 .. _hw_quickstart_cables:
 
 ======================================================
 Getting Started with the Hardware: Connecting |foxbms|
 ======================================================
-
-.. include:: ../macros.rst
 
 In the preceeding sections, the |master| has been supplied and the |foxbms| firmware flashed on it.
 

@@ -1,7 +1,10 @@
+.. include:: ../../../macros.rst
+
+
+
+========
 Isoguard
 ========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 
@@ -60,7 +63,7 @@ The |mod_isoguard| is separated into two different layers, a bottom and a top la
 The external interface to the |mod_isoguard| is simple and consists of three functions and is viewable in :numref:`fig. %s <isoguard_figure1>`:
 
 .. _isoguard_figure1:
-.. figure:: ISO_Block.png
+.. figure:: iso_block.png
    :width: 100 %
 
    External isoguard driver interface
@@ -97,7 +100,7 @@ The initialization is done via the interface function ``ISO_Init(void)``, which 
 as shown in :numref:`fig. %s <isoguard_figure2>`.
 
 .. _isoguard_figure2:
-.. figure:: ISO_Init.png
+.. figure:: iso_init.png
    :width: 100 %
 
    Initialization of the |mod_isoguard|

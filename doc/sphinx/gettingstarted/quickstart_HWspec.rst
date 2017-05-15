@@ -1,10 +1,10 @@
+.. include:: ../macros.rst
+
 .. _hw_short_spec:
 
 =======================
 Hardware Specifications
 =======================
-
-.. include:: ../macros.rst
 
 The following specifications must be met to ensure a safe and optimal work with the |foxbms| hardware.
 

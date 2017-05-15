@@ -1,8 +1,11 @@
+.. include:: ../../macros.rst
+
+
+
+==================================
 Basic Function of the BMS Software
 ==================================
 
-
-.. include:: ../../macros.rst
 
 .. highlight:: C
 

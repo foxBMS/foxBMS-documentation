@@ -1,7 +1,10 @@
+.. include:: ../../macros.rst
+
+
+=====
 Build
 =====
 
-.. include:: ../../macros.rst
 
 Requirements
 ------------

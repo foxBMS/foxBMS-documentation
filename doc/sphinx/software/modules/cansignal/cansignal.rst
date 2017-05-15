@@ -1,7 +1,10 @@
+.. include:: ../../../macros.rst
+
+
+
+==========
 CAN Signal
 ==========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

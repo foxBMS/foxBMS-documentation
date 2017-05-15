@@ -1,7 +1,9 @@
+.. include:: ../../../macros.rst
+
+
+=========
 Contactor
 =========
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 
@@ -102,7 +104,7 @@ At this point the setup of the contactors is finished.
 
 
 .. _contactor_figure1:
-.. figure:: contactorConfig.png
+.. figure:: contactor-config.png
    :width: 100 %
 
    Contactor configuration 

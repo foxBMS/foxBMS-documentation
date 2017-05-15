@@ -1,9 +1,11 @@
+.. include:: ../../macros.rst
+
 .. _sw_faq:
 
+
+=======================
 Software FAQ and HOWTOs
 =======================
-
-.. include:: ../../macros.rst
 
 .. highlight:: C
 

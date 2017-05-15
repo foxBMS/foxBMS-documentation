@@ -1,9 +1,10 @@
+.. include:: ../../macros.rst
+
 .. _fox-releases:
 
-Versions and release notes
 ==========================
-
-.. include:: ../../macros.rst
+Versions and Release Notes
+==========================
 
 The following table describes the different versions of |foxbms| that were released.
 The first line is the most recent one, the last one the oldest one.
@@ -33,6 +34,11 @@ Release notes:
 
 	- Full update and correction of the documentation based on the feedback received
 	- Consistency check and update of the wording and naming used in the hardware, software and documentation
+	- Improved checksum process
+	
+		- faster implementation of checksum script
+		- checksum script is called automatically after "python tools/waf-1.8.12 configure build"
+		- build command "python tools/waf-1.8.12 configure build chksum" NO longer supported
 
 Release 0.4.3
 -------------

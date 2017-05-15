@@ -1,8 +1,9 @@
+.. include:: ../../../macros.rst
 
+
+===
 COM
 ===
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

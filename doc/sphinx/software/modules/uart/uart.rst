@@ -1,7 +1,10 @@
+.. include:: ../../../macros.rst
+
+
+
+====
 UART
 ====
-
-.. include:: ../../../macros.rst
 
 .. highlight:: C
 

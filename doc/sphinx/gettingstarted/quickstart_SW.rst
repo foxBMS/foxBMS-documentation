@@ -1,10 +1,10 @@
+.. include:: ../macros.rst
+
 .. _sw_quickstart:
 
 =================================
 Getting Started with the Software
 =================================
-
-.. include:: ../macros.rst
 
 The |foxbms| software consists of a program written in C. Before it can be flashed and run on the microcontroller units (i.e., |MCU0| and |MCU1| located on the |BMS-Master|), it must be compiled to generate a binary file.
 

@@ -1,9 +1,10 @@
+.. include:: ../../macros.rst
 
 
+==========
 Motivation
 ==========
 
-.. include:: ../../macros.rst
 
 What is |foxbms|?
 -----------------

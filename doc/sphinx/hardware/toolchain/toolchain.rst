@@ -1,8 +1,7 @@
+.. include:: ../../macros.rst
 
 Hardware Toolchain
 ==================
-
-.. include:: ../../macros.rst
 
 Layout and schematics
 ---------------------
