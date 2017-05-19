@@ -62,7 +62,7 @@ For a detailed overview of the CAN peripheral see source [1]_.
 
 File Structure and Interfaces
 -----------------------------
-The CAN module is a one-file module with one-file configuration:
+The |mod_can| is a one-file module with one-file configuration:
 The module itself consists of one ``can.c`` and its associated ``can.h`` file.
 The configuration is given in ``can_cfg.c`` and its related ``can_cfg.h`` file.
 
@@ -83,7 +83,7 @@ The external interface to the can module is easy and consists of seven functions
 ``CAN_TxMsgBuffer(CAN_NodeTypeDef_e canNode)`` 
    Transmits a CAN message from transmit buffer
 ``CAN_ReceiveBuffer(CAN_NodeTypeDef_e canNode, Can_PduType* msg)``
-   Reads a can message from RxBuffer
+   Reads a CAN message from RxBuffer
 ``CAN_SetSleepMode(CAN_NodeTypeDef_e canNode)`` 
    Set CAN node to sleep mode
 ``CAN_WakeUp(CAN_NodeTypeDef_e canNode)`` 

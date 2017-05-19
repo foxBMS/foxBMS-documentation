@@ -118,7 +118,7 @@ In detail these members can be described as:
   - muxValue: number of multiplex value, e.g., 0 for the first module, when indicating module number 
   - muxor: symbolic name of multiplexor signal, for example ``{CANS_BMSx_Mux}``
   
-The control flow for transmission of a multiplexed signal in the CANSIGNAL module is shown in :numref:`fig. %s <cansignal_figure2>`.
+The control flow for transmission of a multiplexed signal in the |mod_cansignal| is shown in :numref:`fig. %s <cansignal_figure2>`.
 
 .. _cansignal_figure2:
 .. figure:: CANSMsgMultiplexTX2.png
