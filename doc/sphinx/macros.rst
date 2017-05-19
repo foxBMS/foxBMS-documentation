@@ -11,7 +11,7 @@
 .. |doxygen| replace:: Doxygen
 
 .. -----------------------------------------------
-.. Haardware Documentation Macros
+.. Hardware Documentation Macros
 .. -----------------------------------------------
 .. |LTC| replace:: LTC6804-1/LTC6811-1
 .. |master| replace:: foxBMS Master Unit

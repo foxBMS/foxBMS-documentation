@@ -29,7 +29,7 @@ Configuration of the Contactors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In the configuration header the set-up of the following variables is configurable at user level through |foxygen|:
 -  ``CONT_HAS_NO_FEEDBACK_SWICHTING_TIME, (100ms)``
-- ``CONT_MAXIUMUM_ALLOWED_CONTACTOR_SWITCHING_TIkME (100ms)``
+- ``CONT_MAXIUMUM_ALLOWED_CONTACTOR_SWITCHING_TIME (100ms)``
 - ``CONT_NUMBER_OF_BAD_COUNTINGS``
 - ``BAD_SWITCHOFF_CURRENT_POS``
 - ``BAD_SWITCHOFF_CURRENT_NEG``

@@ -28,12 +28,12 @@ Module Files
 
 
 Driver:
- - ``src\\engine\\bmsctrl\\bmsctrl.c``
- - ``src\\engine\\bmsctrl\\bmsctrl.h``
+ - ``src\engine\bmsctrl\bmsctrl.c``
+ - ``src\engine\bmsctrl\bmsctrl.h``
  
 Driver Configuration:
- - ``src\\engine\\config\\bmsctrl_cfg.c``
- - ``src\\engine\\config\\bmsctrl_cfg.h``
+ - ``src\engine\config\bmsctrl_cfg.c``
+ - ``src\engine\config\bmsctrl_cfg.h``
 
 .. _BMSCTRL_CONFIG:
  
@@ -122,27 +122,27 @@ BMSCTRL_REQ_ID_STANDBY        user        ID to request for STANDBY state       
 Dependencies
 ~~~~~~~~~~~~
 **DATABASE**
- - ``src\\engine\\database\\database.h`` (included indirectly by ``general.h``)
+ - ``src\engine\database\database.h`` (included indirectly by ``general.h``)
  
 ``BMSCTRL`` accesses minimum and maximum measurement values, SOF calculation results, can request data and can timing data from ``DATABASE``
 
 **SYSCTRL**
- - ``src\\engine\\sysctrl\\sysctrl.h``
+ - ``src\engine\sysctrl\sysctrl.h``
  
 ``BMSCTRL`` requests states of ``SYSCTRL`` statemachine depending on the input from CAN signals from ``DATABASE``.
 
 **SOX**
- - ``src\\engine\\sox\\sox.h``
+ - ``src\engine\sox\sox.h``
  
 ``BMSCTRL`` triggers the SOC initialization (until now only dummy implementation).
 
 **MCU**
- - ``src\\module\\mcu\\mcu.h``
+ - ``src\module\mcu\mcu.h``
 
 ``BMSCTRL`` enables and disables interrupt functionality and gets timestamps from MCU module.
 
 **CONT**
- - ``src\\module\\contactor\\contactor.h``
+ - ``src\module\contactor\contactor.h``
 
 ``BMSCTRL`` gets the feedback of the contactors.
 

@@ -7,19 +7,19 @@ Hardware Description
 ====================
 
 This part of the documentation describes the hardware modules used in |foxbms|.
-:numref:`Fig. %s <hwblockdiagram>` shows a block diagram of the |BMS-Master| with all its components.
+:numref:`Fig. %s <hwblockdiagram>` shows a block diagram of the |master| with all its components.
 
 .. _hwblockdiagram:
-.. figure:: ./_figures/2016-04-06_foxBMS_Block_Diagram.png
+.. figure:: ./_figures/2016-04-06_foxbms_block_diagram.png
    :width: 100 %   
    
-   |BMS-Master| hardware block diagram
+   |master| hardware block diagram
 
 Supply 0 (|primary|)
 --------------------
 
 .. _supplyzero:
-.. figure:: ./_figures/2016-04-14_SUPPLY_0.png
+.. figure:: ./_figures/2016-04-14_supply_0.png
    :width: 100 %
    
    Supply for all circuit parts related to the |primary| part of |foxbms|
@@ -30,7 +30,7 @@ Supply 1 (|secondary|)
 ----------------------
 
 .. _supplyone:
-.. figure:: ./_figures/2016-04-14_SUPPLY_1.png
+.. figure:: ./_figures/2016-04-14_supply_1.png
    :width: 100 %
    
    Supply for all circuit parts related to the |secondary| part of |foxbms|
@@ -41,7 +41,7 @@ The |secondary| part of |foxbms| is also supplied by SUPPLY_EXT_0 as shown in :n
 ------------------
 
 .. _mcuzerobootrst:
-.. figure:: ./_figures/2016-04-14_MCU_0_BOOT_RST.png
+.. figure:: ./_figures/2016-04-14_mcu_0_boot_rst.png
    :width: 100 %
    
    Boot and reset circuit for the |primary| microcontroller
@@ -49,7 +49,7 @@ The |secondary| part of |foxbms| is also supplied by SUPPLY_EXT_0 as shown in :n
 :numref:`Fig. %s <mcuzerobootrst>` shows the boot and reset related circuits of the |primary| microcontroller |MCU0|. |MCU0| can be manually reset by push button S401. Please note that the housing has to be opened to reach S401, therefore resetting |MCU0| by means of S401 is intended for use in a laboratory setting/debugging situation. 
 
 .. _mcuzeroadcref:
-.. figure:: ./_figures/2016-04-14_MCU_0_ADC_REF.png
+.. figure:: ./_figures/2016-04-14_mcu_0_adc_ref.png
    :width: 100 %
    
    ADC reference voltage for the |primary| microcontroller
@@ -57,8 +57,8 @@ The |secondary| part of |foxbms| is also supplied by SUPPLY_EXT_0 as shown in :n
 The ADCs of the |primary| microcontroller |MCU0| are supplied with a 2.5V reference voltage provided by an ADR3425 (IC401) as shown in  :numref:`Fig. %s <mcuzeroadcref>`.
    
 .. _mcuzeroosc:
-.. figure:: ./_figures/2016-04-14_MCU_0_OSC.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_mcu_0_osc.png
+   :width: 100 %   
    
    Clock circuits of the |primary| microcontroller
    
@@ -69,8 +69,8 @@ Interface between |MCU0| and |MCU1|
 -----------------------------------
 
 .. _mcumcuif:
-.. figure:: ./_figures/2016-04-14_MCU_TO_MCU_IF.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_mcu_to_mcu_if.png
+   :width: 100 %   
    
    Interface between |primary| and |secondary| microcontroller
 
@@ -79,8 +79,8 @@ Besides being linked over the common interlock line, the |primary| and |secondar
 Interface to Bender ISOMETER
 ----------------------------
 .. _bender:
-.. figure:: ./_figures/2016-04-14_BENDER.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_bender.png
+   :width: 100 %   
    
    Interface to the Bender ISOMETER
 
@@ -90,8 +90,8 @@ The |BMS-Master| supports Bender ISOMETER IR155-3203/-3204/-3210. Two inputs are
 ------
 
 .. _can:
-.. figure:: ./_figures/2016-04-14_CAN_0.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_can_0.png
+   :width: 100 %   
    
    Circuit of the CAN interface (|CAN0|) 
 
@@ -101,8 +101,8 @@ Interlock
 ---------
 
 .. _interlock:
-.. figure:: ./_figures/2016-04-14_INTERLOCK.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_interlock.png
+   :width: 100 %   
    
    Interlock circuit 
 
@@ -112,19 +112,19 @@ Contactors
 ----------
 
 .. _contactors:
-.. figure:: ./_figures/2016-04-14_CONTACTORS.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_contactors.png
+   :width: 100 %   
    
    Contactor circuit, exemplariliy shown for contactor 0 
 
-The |Master| can control up to 9 contactors: 6 on the |BMS-Master| and 3 on the |BMS-Extension|. The according control and feedback circuit is exemplarily shown  for contactor 0 in :numref:`Fig. %s <contactors>`. The contactor is switched on and off by an AQV25G2S OPTOMOS (IC1001) by the |primary| microcontroller |MCU0|. Every contactor channel is protected with slow blowing fuse (F1001) type Schurter UMT-250 630mA (3403.0164.xx). The free wheeling diode D1001 is not populated. It has to be inserted when contactors are used, that do not provide an internal free wheeling diode. The contactor interface also supports a feedback functionality for contactors with auxiliary contacts. The contactor status can be read back by |MCU0| via an ADUM3300 (IC1103).
+The |Master| can control up to 9 contactors: 6 on the |BMS-Master| and 3 on the |BMS-Extension|. The according control and feedback circuit is exemplarily shown  for contactor 0 in :numref:`Fig. %s <contactors>`. The contactor is switched on and off by an AQV25G2S PhotoMOS (IC1001) by the |primary| microcontroller |MCU0|. Every contactor channel is protected with slow blowing fuse (F1001) type Schurter UMT-250 630mA (3403.0164.xx). The free wheeling diode D1001 is not populated. It has to be inserted when contactors are used, that do not provide an internal free wheeling diode. The contactor interface also supports a feedback functionality for contactors with auxiliary contacts. The contactor status can be read back by |MCU0| via an ADUM3300 (IC1103).
 
 Isolated USB interface (|primary| and |secondary|)
 --------------------------------------------------
 
 .. _usb:
-.. figure:: ./_figures/2016-04-14_USB.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_usb.png
+   :width: 100 %   
    
    USB interface circuit
 
@@ -134,8 +134,8 @@ EEPROM
 ------
 
 .. _eeprom:
-.. figure:: ./_figures/2016-04-14_EEPROM.png
-   :width: 100 %
+.. figure:: ./_figures/2016-04-14_eeprom.png
+   :width: 100 %   
    
    EEPROM, exemplarily shown for the |MCU0|
 
@@ -146,7 +146,7 @@ Isolated RS485 Interface
 ------------------------
 
 .. _rs485:
-.. figure:: ./_figures/2016-04-07_RS485.png
+.. figure:: ./_figures/2016-04-07_rs485.png
    :width: 100 %
    
    Isolated RS485 interface circuit
@@ -158,12 +158,12 @@ Isolated Normally Open Contacts (isoNOC)
 ----------------------------------------
 
 .. _isonoc:
-.. figure:: ./_figures/2016-04-07_iso_NOC.png
+.. figure:: ./_figures/2016-04-07_iso_noc.png
    :width: 100 %
    
    Isolated normally open contacts (ISONOC_0 examplarily)
 
-The |BMS-extension| provides 6 normally open contacts (ISONOC_0 to ISONOC_5) for multi-purpose use. Their function is exemplarily described for ISONOC channel 0 ( shown in :numref:`Fig. %s <isonoc>`). Isolation and switching functionality are realized by AQV25G2S optoMOS (IC2001). The optoMOS are controlled by a MOSFET (T2001), which again is switched by the |primary| microcontroller (ISONOC_0_CONTROL). The optoMOS is configured for a maximum load current of 6A at 50V. Diode D1002 is optionally and not populated by default. Both power terminals of the optoMOS are available on connector X2001 as ISONOC_0_POSITIVE and ISONOC_0_POSITIVE on consecutive pins 1 and 2.
+The |BMS-extension| provides 6 normally open contacts (ISONOC_0 to ISONOC_5) for multi-purpose use. Their function is exemplarily described for ISONOC channel 0 ( shown in :numref:`Fig. %s <isonoc>`). Isolation and switching functionality are realized by AQV25G2S PhotoMOS (IC2001). The PhotoMOS are controlled by a MOSFET (T2001), which again is switched by the |primary| microcontroller (ISONOC_0_CONTROL). The PhotoMOS is configured for a maximum load current of 6A at 50V. Diode D1002 is optionally and not populated by default. Both power terminals of the PhotoMOS are available on connector X2001 as ISONOC_0_POSITIVE and ISONOC_0_POSITIVE on consecutive pins 1 and 2.
    
 Analog Inputs
 -------------
@@ -184,7 +184,7 @@ Isolated GPIO
 -------------
 
 .. _isogpio:
-.. figure:: ./_figures/2016-04-07_isolated_GPIO.png
+.. figure:: ./_figures/2016-04-07_isolated_gpio.png
    :width: 100 %
    
    Isolated GPIOs (Input 0 and 1; Output 0 and 1 shown exemplarily)
@@ -195,7 +195,7 @@ SD Card
 -------
 
 .. _sdcard:
-.. figure:: ./_figures/2016-04-07_SD_Card.png
+.. figure:: ./_figures/2016-04-07_sd_card.png
    :width: 100 %
    
    SD Card

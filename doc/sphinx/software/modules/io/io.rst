@@ -15,14 +15,14 @@ Module Files
 ~~~~~~~~~~~~
 
 Driver:
- - ``src\\module\\io\\io.c``
- - ``src\\module\\io\\io.h``
+ - ``src\module\io\io.c``
+ - ``src\module\io\io.h``
  
 Driver Configuration:
- - ``src\\module\\config\\io_cfg.c``
- - ``src\\module\\config\\io_cfg.h``
- - ``src\\module\\config\\io_mcu0.h``
- - ``src\\module\\config\\io_package_cfg.h``
+ - ``src\module\config\io_cfg.c``
+ - ``src\module\config\io_cfg.h``
+ - ``src\module\config\io_mcu0.h``
+ - ``src\module\config\io_package_cfg.h``
 
 
 Configuration of the GPIOs
@@ -98,8 +98,8 @@ Related Modules
 ~~~~~~~~~~~~~~~
 The contactor configuration is dependent on the |mod_io| configuration. The contactor configuration is found in the |mod_contactor|:
 
-  - ``src\\module\\config\\contactor_cfg.c``
-  - ``src\\module\\config\\contactor_cfg.h``
+  - ``src\module\config\contactor_cfg.c``
+  - ``src\module\config\contactor_cfg.h``
 
 ---------------------------------------------------------------------------
 
