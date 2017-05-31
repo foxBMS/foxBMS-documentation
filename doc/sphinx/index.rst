@@ -1,98 +1,117 @@
 .. include:: ./macros.rst
 
+
+
 ==========================
 The |foxbms| Documentation
 ==========================
 
-Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first modular open source BMS development platform from the `Fraunhofer IISB <http://www.iisb.fraunhofer.de/>`_. |foxBMS| is a free, open and flexible development environment to design state-of-the-art complex battery management systems. The current version of |foxbms| is |version| (more information in :ref:`fox-releases`).
+Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first modular open source BMS development platform from the `Fraunhofer IISB <http://www.iisb.fraunhofer.de/>`_. |foxBMS| is a free, open and flexible development environment to design state-of-the-art complex battery management systems.
 
 .. note::
-   
-      The |foxbms| hardware and software is still under development. The free and open research and development platform |foxbms| is not designed to be used as-is in road vehicles or in a production environment or any similar usage: it is for evaluation only.
+	The current version of |foxbms| is |version|. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
 
-First, general information about |foxbms| can be found (:ref:`infos`):
 
- - Information about the versions and release notes (:ref:`fox-releases`)
- - Licenses
- - Motivation
- - Overview (purpose and intended audience)
- - Roadmap
- - Who made it
+.. danger::   
+	The |foxbms| hardware and software is still under development. The free and open research and development platform |foxbms| is not designed to be used as-is in road vehicles or in a production environment or any similar usage: it is for evaluation only.
 
-Then the getting started guide (:ref:`start`) allows starting |foxbms| rapidly:
+
+The documentaion is divided in 4 parts:
+
+	#. :ref:`general_information`
+	#. :ref:`getting_started`
+	#. :ref:`software_documentation`
+	#. :ref:`hardware_documentation`
+
+In the first part of the documentation, general information about |foxbms| can be found (:ref:`general_information`):
+
+ - Information about the versions and the related release notes of |foxbms|
+ - Licenses of the hardware, software and document parts of |foxbms|
+ - Motivation behind the |foxbms| initiative
+ - Overview of the hardware and software of |foxbms|
+ - Roadmap of the upcoming hardware and software components
+ - Team involved in the development of |foxbms|
+
+In the second part of the documentation, the :ref:`getting_started` guide can be followed to commission |foxbms| rapidly:
 
  - The location of the electronic schematic and layout files in the HTML documentation is indicated
  - The hardware guide describes how the hardware is structured and works
  - The software guide explains how to configure and flash the software
  - The CAN documentation shows how to communicate with the system via the CAN bus
 
-To study and modify the software, the software documentation (:ref:`sw`) then explains the structure of the software and of the most import modules, how the basic tasks run and how to call user-defined functions easily. A FAQ answers the most common questions. A detailed description of the software functions and variables can be found in the |doxygen| documentation.
+To study and modify the software, the :ref:`software_documentation` presents the structure of the software and of the most important modules, how the basic tasks are running and how to call user-defined functions. Further, a FAQ is provided to answers the most common questions. A detailed description of the software functions and variables can be found in the |doxygen| documentation.
 
-Finally, the hardware documentation (:ref:`hw`) gives the details needed to understand the |foxbms| hardware.
+Finally, the :ref:`hardware_documentation` gives the details needed to understand the |foxbms| hardware.
 
-.. _infos:
 
-.. toctree::
-   :titlesonly:
-   :numbered:
-   :caption: General information
-   
-   general/release/release
-   general/license/license
-   general/motivation/motivation
-   general/link_hw_sw/link_hw_sw
-   general/roadmap/roadmap
-   general/team/team
-
-.. _start:
+.. _general_information:
 
 .. toctree::
-   :titlesonly:
-   :numbered:
-   :caption: Getting started
+	:titlesonly:
+	:numbered:
+	:maxdepth: 1
+	:caption: General Information
 
-   gettingstarted/quickstart_general
-   gettingstarted/quickstart_SW
-   gettingstarted/quickstart_HW_flash
-   gettingstarted/quickstart_HW_cables
-   gettingstarted/quickstart_HWspec
-   gettingstarted/can_com
-   gettingstarted/quickstart_HW_SW-check
+	./general_information/releases/releases.rst
+	./general_information/roadmap/roadmap.rst
+	./general_information/overview/overview.rst
+	./general_information/motivation/motivation.rst
+	./general_information/safety/safety.rst
+	./general_information/licenses/licenses.rst
+	./general_information/team/team.rst
 
-.. _sw:
 
-.. toctree::
-   :titlesonly:  
-   :numbered:
-   :maxdepth: 1
-   :caption: Software documentation
-   
-   software/file_structure/file_structure
-   software/components/components
-   software/basics/basics
-   software/toolchain/toolchain
-   software/modules/modules
-   software/advanced_topics/advanced_topics
-   software/faq/faq
-   software/tools/tools
-   software/build/build
-
-.. _hw:
+.. _getting_started:
 
 .. toctree::
-   :titlesonly:
-   :numbered:
-   :caption: Hardware documentation
+	:titlesonly:
+	:numbered:
+	:maxdepth: 1
+	:caption: Getting Started
 
-   hardware/basics/basics
-   hardware/schematics/schematics
-   hardware/additional_hw/additional_hw
-   hardware/bjb/bjb
-   hardware/toolchain/toolchain
+	./getting_started/general/general.rst
+	./getting_started/foxconda/foxconda.rst
+	./getting_started/flashing/flashing.rst
+	./getting_started/cabling/cabling.rst
+	./getting_started/connectors/connectors.rst
+	./getting_started/communicating/communicating.rst
+	./getting_started/checking/checking.rst
+
+
+.. _software_documentation:
+
+.. toctree::
+	:titlesonly:
+	:numbered:
+	:maxdepth: 1
+	:caption: Software Documentation
    
-   
-.. ignore
-   qstart
+	./software_documentation/structure/structure.rst
+	./software_documentation/components/components.rst
+	./software_documentation/overview/overview.rst
+	./software_documentation/modules/modules.rst
+	./software_documentation/tools/tools.rst
+	./software_documentation/build/build.rst
+	./software_documentation/styleguide/styleguide.rst
+	./software_documentation/faq/faq.rst
+
+
+.. _hardware_documentation:
+
+.. toctree::
+	:titlesonly:
+	:numbered:
+	:maxdepth: 1
+	:caption: Hardware Documentation
+
+	./hardware_documentation/specifications/specifications.rst
+	./hardware_documentation/overview/overview.rst
+	./hardware_documentation/schematics/schematics.rst
+	./hardware_documentation/components/components.rst
+	./hardware_documentation/bjb/bjb.rst
+	./hardware_documentation/toolchain/toolchain.rst
+
+
 
 
 

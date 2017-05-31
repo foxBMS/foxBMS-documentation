@@ -3,7 +3,8 @@
 .. -----------------------------------------------
 .. General Documentation Macros
 .. -----------------------------------------------
-.. |version| replace:: ``0.4.4``
+.. |version| replace:: ``0.5.0``
+.. |timestamp| date:: %Y-%m-%d %H:%M:%S
 .. |foxbms| replace:: foxBMS
 .. |foxconda| replace:: foxConda
 .. |frontdesk| replace:: Front Desk
@@ -18,17 +19,17 @@
 .. |masters| replace:: foxBMS Master Units
 .. |slave| replace:: foxBMS Slave Unit
 .. |slaves| replace:: foxBMS Slave Units
-.. |BMS-Master| replace:: BMS-Master board
-.. |BMS-Extension| replace:: BMS-Extension board
-.. |BMS-Interface| replace:: BMS-Interface board
-.. |BMS-Slave| replace:: BMS-Slave board
-.. |BMS-Slaves| replace:: BMS-Slave boards
+.. |BMS-Master| replace:: BMS-Master Board
+.. |BMS-Extension| replace:: BMS-Extension Board
+.. |BMS-Interface| replace:: BMS-Interface Board
+.. |BMS-Slave| replace:: BMS-Slave Board
+.. |BMS-Slaves| replace:: BMS-Slave Boards
 .. |primary| replace:: primary
 .. |secondary| replace:: secondary
 .. |MCU0| replace:: MCU0
 .. |MCU1| replace:: MCU1
-.. |CAN0| replace:: CAN_0
-.. |CAN1| replace:: CAN_1
+.. |CAN0| replace:: CAN0
+.. |CAN1| replace:: CAN1
 
 .. -----------------------------------------------
 .. Software Module Name Macros
@@ -46,8 +47,8 @@
 .. |mod_sox| replace:: ``sox`` module
 .. |mod_isoguard| replace:: ``isoguard`` module
 .. |mod_diag| replace:: ``diag`` module
-.. |primary archive| replace:: ``foxbms_primary-0-4-4.tar.gz``
-.. |secondary archive| replace:: ``foxbms_secondary-0-4-4.tar.gz``
+.. |mod_database| replace:: ``database`` module
+.. |mod_bender| replace:: ``bender`` module
 .. |installer archive| replace:: ``foxcondainstaller-0-4-3.exe``
 
 .. -----------------------------------------------
