@@ -131,6 +131,36 @@ After initializing the |mod_isoguard|, the ``ISO_MeasureInsulation(void)`` funct
 The measured insulation is split into intervals according to the array ``uint16 const static ir155_ResistanceInterval[7]``. For more detailed information see source code.
 
 
+Observable SW-behaviour
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``data_block_isometer.timestamp``-variable must be always running, otherwise the measured values are not written into the database (Check if the define ``ISO_ISOGUARD_ENABLE`` is defined, otherwise the |mod_isoguard| is not activated). Depending on the used resistor, the follwing behaviour can be observed:
+
+==============================     ==========================================================================================
+Variable                           Behaviour                                                                                 
+==============================     ==========================================================================================
+ir155_DC.resistance                Should equal the resistance value                                                         
+ir155_DC.dutycycle                 Depending on the resistance, see table below for more information                   
+ir155_DC.OKHS_state                0 if measured resistance below factory set resistance threshold, otherwise 1            
+ir155_DC.mode                      IR155_NORMAL_MODE            
+ir155_DC.state                     IR155_RESIST_MEAS_GOOD if resistance greater than factory set resistance threshold, otherwise IR155_RESIST_MEAS_BAD          
+data_block_isometer.valid          0; can be 1 if grounderror occured before reset. Should be 0 again after 25s 
+data_block_isometer.state          0 if measured resistance > ``ISO_RESISTANCE_THRESHOLD`` and no error, otherwise 1
+data_block_isometer.resistance     value between 0 and 7, see table below for more information
+==============================     ==========================================================================================
+
+
+
+==============================     ==================                ==============================
+Resistance value in kOhm           ir155_DC.dutycycle                data_block_isometer.resistance 
+==============================     ==================                ==============================
+1                                  95                                1
+220                                81                                2
+470                                70                                3
+1000                               55                                4
+==============================     ==================                ==============================
+
+
 References
 ~~~~~~~~~~
 

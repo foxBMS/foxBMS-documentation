@@ -31,25 +31,25 @@ The BJB contains the Battery Management System (BMS) and all safety relevant com
 
    BJB top view
    
-:numref:`Fig. %s <block_diagram>` shows the block diagram of the BJB. The battery is connected to the BJB at the left side (``Batt_Positive`` and ``Batt_Negative``). The source/sink (e.g., load, charger, inverter) is connected to the right side (``Out_Positive`` and ``Out_Negative``).
+:numref:`Fig. %s <bjb_block_diagram>` shows the block diagram of the BJB. The battery is connected to the BJB at the left side (``Batt_Positive`` and ``Batt_Negative``). The source/sink (e.g., load, charger, inverter) is connected to the right side (``Out_Positive`` and ``Out_Negative``).
 
 The main contactors disconnect the battery from the output terminals. These are normally off and switched on in BMS ON-Mode. The contactors are opened if the BMS detects hazardous conditions (e.g., abnormal battery cell temperature) or in BMS OFF-Mode.
 
 .. note::
 	A precharge contactor and resistor are used to limit the inrush current into the inverter DC-link capacitor when closing the main contactors at startup.
 
-To break the current flowing if a short circuit condition occurs, a fuse is placed in the positive current path. A Cooper-Bussmann FWP-350A fuse was selected for this system. The fuse is rated to 700V DC/AC.
+To break the current flowing in case a short circuit condition occurs between the two high voltage battery system poles, a fuse is placed in the positive current path. A Cooper Bussmann FWP-Series (700Vdc) or better FWJ-Series (800Vdc) fuse was selected for this purpose.
 
 .. danger::	
-	A special high-voltage DC fuse must be used to break high short circuit currents in high voltage battery systems.
+	A special high-voltage DC fuse must be used to break high short circuit currents in high voltage battery systems. This fuse must be very carefully chosen by electrically skilled engineers to ensure proper protection in the specific test environment using specific testing equipment and test conditions. In case the fuse is not appropriately chosen, its protection effect will not be provided.
 
-.. _block_diagram:
-.. figure:: ./block_diagram.png
+.. _bjb_block_diagram:
+.. figure:: ./bjb_block_diagram.png
    :width: 100 %
 
    BJB block diagram
 
-A Manual Service Disconnect (MSD) is placed in the positive current path to ensure a manual disconnection while the system is serviced. It is mounted on the front of the BJB for easy access. The MSD used is available with an integrated fuse or as shunted version without fuse. In case the fused version is chosen, the Cooper-Bussmann fuse can be omitted, but the integrated fuse version is limited to 200A.
+A Manual Service Disconnect (MSD) is placed in the positive current path to ensure a manual disconnection while the system is serviced. It is mounted on the front of the BJB for easy access. The MSD used is available with an integrated fuse or as shunted version without fuse. In case the fused version is chosen, the Cooper Bussmann fuse can be omitted, but the integrated fuse version is limited to 200A.
 
 The Battery Management System (BMS) is the main control unit of the whole battery system. It collects data from the battery modules (e.g., battery cell voltages, cell temperatures) and from the current sensor, and uses these data for battery state calculations (e.g., SOC, SOH, SOF). In addition, the BMS controls the power contactors and communicates with a superior management unit through the CAN bus.
 

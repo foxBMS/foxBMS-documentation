@@ -49,7 +49,15 @@ To measure the battery pack current, CAN based current sensors can be used. The 
 Insulation Monitor
 ------------------
 
-|foxBMS| supports an insulation monitoring device (i.e., also called a ground fault detector) to detect faulty insulation of the battery pack against chassis, ground or or battery pack enclosure. Bender insulation monitor IR155-3203/-3204/-3210 are supported and tested, while IR155-3204 is recommended. This section describes how to test the Bender functionality.
+|foxBMS| supports an insulation monitoring device (i.e., also called a ground fault detector) to detect faulty insulation of the battery pack against chassis, ground or or battery pack enclosure. Bender insulation monitor IR155-3203/-3204/-3210 are supported and tested, while IR155-3204 is recommended. 
+The Bender ISOMETER IR155-3203/-3204 monitors the insulation resistance between the insulated and active HV-conductors of an electrical drive system (up to 1000VDC) and the reference ground. The fault messages (insulation fault at the HV-system, connection or device error)  will be provided at the integrated and galvanic isolated interface. The interface consists of a status output (called OKHS output) and a measurement output
+(called MHS/MLS output). The status output signalises errors or that the system is error free. The measurement output signalises the actual insulation resistance. Furthermore, it is possible to distinguish between different fault messages and device conditions, which
+are base frequency encoded. For details, consult the corresponding device datasheet or manual. The insulation resistance threshold can be factory programmed, as well as an additional undervoltage threshold. Any violation of thresholds causes an error signal on the status pin.
+
+According to ECE R-100 the insulation resistance between the high voltage bus and the electrical chassis shall have a minimum value of 100Ohm/V of the working voltage for DC buses, and a minimum value of 500Ohm/V of the working
+voltage for AC buses (e.g., for a 800V system, the insulation resistance threshold should be selected for 400kOhm).
+
+The following section describes how to test the Bender functionality.
 
 
 Required Hardware
@@ -87,48 +95,5 @@ Connect the Bender as follwing:
 * connect one of the resistors between chassis ground/line voltage L-(XLA-) and line voltage L+(XLA+) 
 
 Depending on the connected resistor, different insulation values are measured.
-
-
-
-Software Check
-~~~~~~~~~~~~~~
-
-Connect the Lauterbach-Debugger and add the follwing variables to the watch window
-
-* ``ir155_DC``
-* ``data_block_isometer``
-
-Check if the define ``ISO_ISOGUARD_ENABLE`` is defined, otherwise the |mod_bender| is not activated. Check value of the define ``ISO_RESISTANCE_THRESHOLD``
-
-
-
-Observable behaviour
-~~~~~~~~~~~~~~~~~~~~
-
-The ``data_block_isometer.timestamp``-variable must be always running, otherwise the measured values are not written into the database. Depending on the used resistor, the follwing behaviour can be observed:
-
-==============================     ==========================================================================================
-Variable                           Behaviour                                                                                 
-==============================     ==========================================================================================
-ir155_DC.resistance                Should equal the resistance value                                                         
-ir155_DC.dutycycle                 Depending on the resistance, see table below for more information                   
-ir155_DC.OKHS_state                0 if measured resistance < 150kOhm, otherwise 1            
-ir155_DC.mode                      IR155_NORMAL_MODE            
-ir155_DC.state                     IR155_RESIST_MEAS_GOOD if resistance > 150kOhm, otherwise IR155_RESIST_MEAS_BAD          
-data_block_isometer.valid          0; can be 1 if grounderror occured before reset. Should be 0 again after 25s 
-data_block_isometer.state          0 if measured resistance > ``ISO_RESISTANCE_THRESHOLD`` and no error, otherwise 1
-data_block_isometer.resistance     value between 0 and 7, see table below for more information
-==============================     ==========================================================================================
-
-
-
-==============================     ==================                ==============================
-Resistance value in kOhm           ir155_DC.dutycycle                data_block_isometer.resistance 
-==============================     ==================                ==============================
-1                                  95                                1
-220                                81                                2
-470                                70                                3
-1000                               55                                4
-==============================     ==================                ==============================
 
 

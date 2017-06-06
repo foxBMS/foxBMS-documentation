@@ -9,7 +9,7 @@ The |foxbms| Documentation
 Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first modular open source BMS development platform from the `Fraunhofer IISB <http://www.iisb.fraunhofer.de/>`_. |foxBMS| is a free, open and flexible development environment to design state-of-the-art complex battery management systems.
 
 .. note::
-	The current version of |foxbms| is |version|. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
+	The present version of the |foxbms| Sphinx documentation is |version|. It is available in HTML, PDF and EPUB formats through the bottom left menu on `Read the Docs <https://foxbms.readthedocs.io>`_. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
 
 
 .. danger::   
