@@ -126,7 +126,8 @@ First, when no device is connected, ``No device found.`` is displayed, as shown 
 
 	Flashing tab, no device connected
 
-The device must be connected to the computer with the USB cable. The |MCU0| must be used. In the :ref:`getting_started_cabling`, it is explained how to find the |MCU0| and where the primary USB connector is located.
+The device must be connected to the computer with the USB cable. The |MCU0| must be used. In the :ref:`getting_started_cabling`, it is explained how to find
+the |MCU0| and where the primary USB connector is located.
 
 Once a device was connected and detected, ``Device found.`` is displayed and the flash button becomes active, as shown in :numref:`fig. %s <frontdesk_figure6>`.
 
@@ -145,6 +146,10 @@ When the flash button is clicked, a windows appears, reminding not to touch the 
 
 	Flashing tab, device connected, flashing
 
+.. note::
+
+    With the ``primary/secondary`` dropdown list, it can be chosen which binaries will be flashed. Click on ``Find foxBMS flash files`` to validate the selection.
+	
 The connection state can also be checked by watching the LEDs on the |master| hardware: for a running board, the green power LED is on, and the two indicator LEDs (green and red) are blinking alternately. If the device is connected and being flashed, the power-on LED is on but the two indicator LEDs are off.
 
 The LEDs for the |MCU0| must be used. In the :ref:`getting_started_cabling`, it is explained how to find the |MCU0| indicator LEDs.
@@ -166,7 +171,8 @@ Flashing the Secondary MCU
 The same procedure as explained above must be followed for the |MCU1|, with the following differences:
 
  * A second project must be created in the IDE
- * The secondary MCU must be flashed with the USB connector corresponding to secondary. 
+ * The secondary MCU must be flashed with the USB connector corresponding to secondary.
+ * The secondary MCU must be chosen in the dropdown list, followed by a click on the button ``Find foxBMS flash files``.
 
 With the supplied code, the |MCU1| checks the temperatures and voltages. If one or more of the values are outside the limits, the |MCU1| opens the interlock line (thus opening the contactors). The interlock line remains open until the |MCU1| is reset.
 

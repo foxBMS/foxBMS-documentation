@@ -90,8 +90,8 @@ In addition, if it is preferred to build |foxconda| from the command line, the c
 Configuration, Compilation and Flashing with the Graphical User Interface
 -------------------------------------------------------------------------
 
-Get the |foxbms| sources
-========================
+Get the |foxbms| sources via the terminal
+=========================================
 
 The sources are available on `GitHub <https://github.com/foxBMS/>`_. They consists of several repositories.
 One of the repositories is called ``foxBMS-setup`` and contains tools to download everything needed from GitHub.
@@ -120,12 +120,12 @@ If everything works correctly, the following repositories will be cloned from Gi
 * hal
 
 	
-Select the sources
-================== 
+Get the |foxbms| sources via the IDE
+====================================
 
 The |foxbms| configuration and flash IDE is started with ``foxbms.exe`` as described in the previous section.
 
-When the program starts, a terminal window appears. This is normal. It will dissapear when the program is closed.
+When the program starts, a terminal window may appear. This is normal. It will dissapear when the program is closed.
 
 The IDE starts with the source selection tab shown in :numref:`fig. %s <frontdesk_figure1>`.
 
@@ -139,7 +139,12 @@ A project corresponds to the |foxbms| source code tree located on the computer. 
 will be stored. First, the ``foxBMS workspaces directory`` must be clicked on to select the folder that was created,
 under which all the new |foxbms| projects will be placed.
 
-The existing source tree directory generated in the previous section can be added.
+Click on the button ``Add from git``. In the dialog, if it is not already the case, specify https://github.com/foxBMS/foxBMS-setup as the GIT repository.
+Enter the wanted project name. In the main window, click on the project name to select it. Then click on ``Initialize project``.
+This will fetch the sources on GitHub, put them in the workspace directory and generate the documentation. During this process,
+some terminal windows may open and close automatically. This is normal.
+
+An existing source tree directory like the one generated in the previous section can also be added.
 The button ``Add from existing directory`` must be used. The folder will not be copied to the workspace directory.
 It will only be linked to the list of available directories.
 
@@ -148,20 +153,26 @@ It will only be linked to the list of available directories.
 Generate complete HTML documentation and code reference
 =======================================================
 
-The Sphinx documentation available on ReadTheDocs is included as RST files and can be generated. A project from the ``Available projects`` list must be selected by clicking on it. The project that has just been created must be selected. It will be highlighted in the list. Then it must be initialized by clicking on ``Initialize project``. During the initialization, the project is configured for the current development environment, and the documentation is generated, including the complete HTML documentation and the code reference. Once generated, the documentation can be accessed fronm the interface in the ``Help menu``. The complete HTML documentation can then be accessed directly by pressing ``F1``, too.
+The Sphinx documentation available on ReadTheDocs is included as RST files and can be generated. A project from the ``Available projects`` list must be selected by clicking on it.
+The project that has just been created must be selected. It will be highlighted in the list. Then it must be initialized by clicking on ``Initialize project``.
+During the initialization, the project is configured for the current development environment, and the documentation is generated, including the complete HTML
+documentation and the code reference. Once generated, the documentation can be accessed fronm the interface in the ``Help menu``.
+The complete HTML documentation can then be accessed directly by pressing ``F1``, too.
 
-During initialization, some terminal windows may open. They will close automatically. It must be noted that the last column in the projects list shows if a project has been successfully initialized. A project can always
-be re-initialized, for example, if the |foxconda| environment has been upgraded or the documentation modified. For an already initialized project, the initialization button reads ``Re-initialize project``.
+During initialization, some terminal windows may open. They will close automatically. It must be noted that the last column in the projects list
+shows if a project has been successfully initialized. A project can always
+be re-initialized, for example, if the |foxconda| environment has been upgraded or the documentation modified. For an already initialized project,
+the initialization button reads ``Re-initialize project``.
 
 The result of the initialization procedure is displayed in the ``Output`` area. The ``Clear`` button can be pressed to clean the output sub-window.
 
 Configure the Code
 ==================
 
-After the selected project has been initialized, it can be proceeded to the ``Configuration`` page, shown in :numref:`fig. %s <frontdesk_figure3>`.
+After the selected project has been initialized, it can be proceeded to the ``Configuration`` page, shown in :numref:`fig. %s <frontdesk_figure2>`.
 
-.. _frontdesk_figure3:
-.. figure:: ./frontdesk3.png
+.. _frontdesk_figure2:
+.. figure:: ./frontdesk2.png
    :width: 100 %
 
    Configuration tab
@@ -187,22 +198,13 @@ Underneath the property list, a description for each item can be found. Differen
  - Activated or Deactivated
  - A list of options
 
-If the property expects a numerical value, a range of validity is typically given. It can be found in the description window. If a value outside of the permitted range is entered, the entry appears in red, as shown in :numref:`fig. %s <frontdesk_figure3a>`.
+If the property expects a numerical value, a range of validity is typically given. It can be found in the description window. If a value outside of the permitted range is entered, the entry appears in red, as shown in :numref:`fig. %s <frontdesk_figure3>`.
 
-.. _frontdesk_figure3a:
-.. figure:: ./frontdesk3a.png
+.. _frontdesk_figure3:
+.. figure:: ./frontdesk3.png
    :width: 100 %
 
    Configuration tab, incorrect parameter value
-
-:numref:`Fig. %s <frontdesk_figure3b>` shows an example for a list of options to
-choose from.
-
-.. _frontdesk_figure3b:
-.. figure:: ./frontdesk3b.png
-   :width: 100 %
-
-   Configuration tab, multiple choice parameter
 
 To modify the sources according to the configuration settings, the ``Write Configuration to Files`` button must be pressed. The modifications will be lost if another page is selected without pressing ``Write Configuration to Files``. The default values of all parameters can be restored by the ``Reset all values to default`` button.
 
