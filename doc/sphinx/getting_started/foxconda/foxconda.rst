@@ -120,6 +120,8 @@ If everything works correctly, the following repositories will be cloned from Gi
 * FreeRTOS
 * hal
 
+The sources and the documentaiton are build with the script ``build.py``. Use ``python build.py -h`` to get all available build options.
+The script ``clean.py`` is used to clean the generated binaries and documentation. Use ``python clean.py -h`` to get all available clean options.
 	
 Get the |foxbms| sources via the IDE
 ====================================
