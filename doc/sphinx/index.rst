@@ -86,7 +86,6 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 	:maxdepth: 1
 	:caption: Software Documentation
    
-	./software_documentation/structure/structure.rst
 	./software_documentation/components/components.rst
 	./software_documentation/overview/overview.rst
 	./software_documentation/modules/modules.rst
