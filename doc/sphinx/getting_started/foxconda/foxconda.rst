@@ -25,7 +25,8 @@ In the section :ref:`getting_started_flashing`, it is shown how the compiled sou
 Installation of the needed software via the |foxconda| distribution
 -------------------------------------------------------------------
 
-The first step is to install the software environment needed to compile and flash the |foxbms| sources. First, the |foxconda| installer must be run by executing |installer archive|.
+The first step is to install the software environment needed to compile and flash the |foxbms| sources. First, the |foxconda| installer must downloaded from the `server <https://iisb-foxbms.iisb.fraunhofer.de/foxbms/>`_ containing the |foxconda| installers.
+For Windows, the installer is run by executing |installer archive|.
 
 The window shown in :numref:`fig. %s <condainstaller1>` will appear. 
 
@@ -119,6 +120,8 @@ If everything works correctly, the following repositories will be cloned from Gi
 * FreeRTOS
 * hal
 
+The sources and the documentaiton are build with the script ``build.py``. Use ``python build.py -h`` to get all available build options.
+The script ``clean.py`` is used to clean the generated binaries and documentation. Use ``python clean.py -h`` to get all available clean options.
 	
 Get the |foxbms| sources via the IDE
 ====================================

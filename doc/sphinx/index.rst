@@ -16,7 +16,7 @@ Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first mo
 	The |foxbms| hardware and software is still under development. The free and open research and development platform |foxbms| is not designed to be used as-is in road vehicles or in a production environment or any similar usage: it is for evaluation only.
 
 
-The documentaion is divided in 4 parts:
+The documentation is divided in 4 parts:
 
 	#. :ref:`general_information`
 	#. :ref:`getting_started`
@@ -86,7 +86,6 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 	:maxdepth: 1
 	:caption: Software Documentation
    
-	./software_documentation/structure/structure.rst
 	./software_documentation/components/components.rst
 	./software_documentation/overview/overview.rst
 	./software_documentation/modules/modules.rst

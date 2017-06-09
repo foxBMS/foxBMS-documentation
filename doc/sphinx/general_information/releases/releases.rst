@@ -16,6 +16,8 @@ The first line is the most recent one, the last one the oldest one.
 +               +----------+-----------+--------------+-----------------+-------------+-----------------+            +
 |               | Primary  | Secondary | |BMS-Master| | |BMS-Interface| | |BMS-Slave| | |BMS-Extension| |            |
 +===============+==========+===========+==============+=================+=============+=================+============+
+| 0.5.0         | 0.5.0    | 0.5.0     | 1.0.2        | 1.0.1           | 1.0.1       | 1.0.2           | 0.5.0      |
++---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.4.4         | 0.4.4    | 0.4.4     | 1.0.1        | 1.0.1           | 1.0.1       | 1.0.1           | 0.4.3      |
 +---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.4.3         | 0.4.3    | 0.4.3     | 1.0.0        | 1.0.0           | 1.0.0       | 1.0.0           | 0.4.3      |
@@ -28,6 +30,37 @@ The first line is the most recent one, the last one the oldest one.
 +---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 
 The following section summarizes the release notes for the different versions of the documentation.
+
+Release 0.5.0
+-------------
+
+A new project structure is now used by foxBMS. The documentation is no more contained in the embedded software sources and has its own repository. FreeRTOS and hal have their own repository, too.
+A central repository called foxBMS-setup is now used. It contains several scripts:
+
+    - bootsrap.py gets all the repositories needed to work with foxBMS
+    - build.py is used to compile binaries and to generate the documentation
+    - clean.py is used to removed the generated binaries and documentation
+
+Release notes:
+	
+    - New project structure
+    - Embedded Software
+	
+        - Added support for external (SPI) EEPROM on the BMS-Master
+        - Redesign of can and cansignal module to simplify the usage
+        - Added support for triggered and cyclic current measurement of Isabellenhütte current sensor (IVT)
+        - Current sensor now functions by default in non-triggered modus (no reprogramming needed for the sensor)
+	
+    - Sphinx Documentation:
+	
+        - Updated and restructured complete documentation
+        - Restructured file and folder structure for the documentation
+        - Added safety and risk analysis section
+        - Cleaning up of non-used files in the documentation
+        - Consistency check and correction of the naming and wording used
+        - Addition of the source files (e.g., Microsoft Visio diagrams) used to generate the figures in the documentation
+        - Reformatted the licenses text formatting (no changes in the licenses content)
+        - Updated the battery junction box (BJB) section with up-to-date components and parameters
 
 Release 0.4.4
 -------------
