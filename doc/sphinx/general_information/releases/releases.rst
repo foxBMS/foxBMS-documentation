@@ -16,6 +16,8 @@ The first line is the most recent one, the last one the oldest one.
 +               +----------+-----------+--------------+-----------------+-------------+-----------------+            +
 |               | Primary  | Secondary | |BMS-Master| | |BMS-Interface| | |BMS-Slave| | |BMS-Extension| |            |
 +===============+==========+===========+==============+=================+=============+=================+============+
+| 0.5.0         | 0.5.0    | 0.5.0     | 1.0.2        | 1.0.1           | 1.0.1       | 1.0.2           | 0.5.0      |
++---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.4.4         | 0.4.4    | 0.4.4     | 1.0.1        | 1.0.1           | 1.0.1       | 1.0.1           | 0.4.3      |
 +---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.4.3         | 0.4.3    | 0.4.3     | 1.0.0        | 1.0.0           | 1.0.0       | 1.0.0           | 0.4.3      |
@@ -28,6 +30,30 @@ The first line is the most recent one, the last one the oldest one.
 +---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 
 The following section summarizes the release notes for the different versions of the documentation.
+
+Release 0.5.0
+-------------
+
+Release notes:
+
+    - New project structure
+    - Embedded Software
+	
+        - Added support for external (SPI) EEPROM on the BMS-Master
+        - Redesign of can and cansignal module to simplify the usage
+        - Added support for triggered and cyclic currennt measurement of Isabellenhütte current sensor (IVT)
+        - Current sensor now functions by default in non-triggered modus (no reprogramming needed for the sensor)
+	
+    - Sphinx Documentation:
+	
+        - Updated and restructured complete documentation
+        - Restructured file and folder structure for the documentation
+        - Added safety and risk analysis section
+        - Cleaning up of non-used files in the documentation
+        - Consistency check and correction of the naming and wording used
+        - Addition of the source files (e.g., Microsoft Visio diagrams) used to generate the figures in the documention
+        - Reformated the licenses text formating (no changes in the licenses content)
+        - Updated the battery junction box (BJB) section with up-to-date components and parameters
 
 Release 0.4.4
 -------------

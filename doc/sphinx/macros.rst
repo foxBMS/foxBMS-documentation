@@ -49,7 +49,7 @@
 .. |mod_diag| replace:: ``diag`` module
 .. |mod_database| replace:: ``database`` module
 .. |mod_bender| replace:: ``bender`` module
-.. |installer archive| replace:: ``foxcondainstaller-0-4-3.exe``
+.. |installer archive| replace:: ``foxcondainstall-win-0.5_003.exe``
 
 .. -----------------------------------------------
 .. Hardware-Software Quickcheck Macros

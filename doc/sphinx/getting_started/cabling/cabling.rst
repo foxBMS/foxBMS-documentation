@@ -154,7 +154,7 @@ Use of |foxbms| in a Battery System
 
 The |BMS-Interface| converts the messages sent by the |BMS-Master| so that they can be transmitted to the daisy chain and vice versa.
 
-The |master| communicates with the Isabellenhuette current sensor IVT-MOD or IVT-S via CAN.
+The |master| communicates with the current sensor (for instance, Isabellenhuette IVT-MOD or IVT-S) via CAN.
 
 Communication with the control unit (for instance, a personal computer), is also made via CAN.
 
@@ -369,12 +369,14 @@ If temperature sensors have been connected and the conversion function changed i
 Current Sensor Configuration
 ----------------------------
 
-Further information on the current sensor tested with |foxbms| can be found in the `datasheet of the current sensor <http://www.isabellenhuette.de/uploads/media/IVT_Modular_datasheet_1.20_02.pdf>`_. To be used in |foxbms|, the current sensor IVT-MOD from Isabellenhütte was reprogrammed. The changes compared to factory default are:
+Further information on the current sensor tested with |foxbms| can be found in the `datasheet of the current sensor <http://www.isabellenhuette.de/uploads/media/IVT_Modular_datasheet_1.20_02.pdf>`_.
+By default, |foxbms| uses the factory defaults of the current sensor, which works in cyclic (non-triggered) mode.
+Another possibility tested with |foxbms| is to use the current sensor in triggered mode. For this, the current sensor IVT-MOD from Isabellenhütte has to be reprogrammed. The changes compared to factory default are then:
 
  * The CAN Message IDs was changed
  * The triggered measurement mode was activated
 
-The two following parts sum up the differences between factory setup and |foxbms| setup.
+The two following parts sum up the differences between factory setup and triggered setup tested with |foxbms|.
 
 Factory Default
 ---------------
