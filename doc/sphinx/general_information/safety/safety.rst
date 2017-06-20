@@ -130,7 +130,7 @@ The interfaces of the |slave| are:
    * - 4 Daisy Chains
      - Primary and secondary daisy chain connections to the next and to the previous |BMS-Slave|
 
-The maximum amount of BMS-Slave units depends on the number of battery cells connected to the slaves and the voltage of each cell. The total voltage of the battery pack must never exceed 1500VDC (continuous and peak). Battery types to be used with the system are lithium-ion batteries or comparable electrochemical rechargeable accumulator cells, lithium-ion capacitors or supercapacitors.
+The maximum amount of BMS-Slave units depends on the number of battery cells connected to the slaves and the voltage of each cell. The total voltage of the battery pack must never exceed 1500Vdc (continuous and peak). Battery types to be used with the system are lithium-ion batteries or comparable electrochemical rechargeable accumulator cells, lithium-ion capacitors or supercapacitors.
 
 
 Targetted Users of |foxbms|
