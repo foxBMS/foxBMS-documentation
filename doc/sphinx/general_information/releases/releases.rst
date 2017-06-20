@@ -48,7 +48,7 @@ Release notes:
 	
         - Added support for external (SPI) EEPROM on the BMS-Master
         - Redesign of can and cansignal module to simplify the usage
-        - Added support for triggered and cyclic current measurement of Isabellenhütte current sensor (IVT)
+        - Added support for triggered and cyclic current measurement of Isabellenhuette current sensor (IVT)
         - Current sensor now functions by default in non-triggered modus (no reprogramming needed for the sensor)
 	
     - Sphinx Documentation:

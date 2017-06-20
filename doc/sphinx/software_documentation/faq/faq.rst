@@ -432,14 +432,14 @@ Storing data from the local variable to the database is made via: ``DATA_StoreDa
 How to store data in the backup SRAM of the MCU?
 ------------------------------------------------
 
-The STM32F4 has 4kB Backup SRAM. Variables can be stored there with the keywork ``BKP_SRAM`` which is defined in ``src/general/config/gobal.h``.
+The STM32F4 has 4kB Backup SRAM. Variables can be stored there with the keywork ``MEM_BKP_SRAM`` which is defined in ``src/general/config/global.h``.
 
 Example:
 
 .. code-block:: C
 
    #define DIAG_FAIL_ENTRY_LENGTH (50)
-   DIAG_ERROR_ENTRY_s BKP_SRAM diag_memory[DIAG_FAIL_ENTRY_LENGTH];
+   DIAG_ERROR_ENTRY_s MEM_BKP_SRAM diag_memory[DIAG_FAIL_ENTRY_LENGTH];
 
 
 .. _faq_can_manually_add:

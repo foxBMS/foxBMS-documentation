@@ -12,8 +12,8 @@ Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first mo
 	The present version of the |foxbms| Sphinx documentation is |version|. It is available in HTML, PDF and EPUB formats through the bottom left menu on `Read the Docs <https://foxbms.readthedocs.io>`_. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
 
 
-.. danger::   
-	The |foxbms| hardware and software is still under development. The free and open research and development platform |foxbms| is not designed to be used as-is in road vehicles or in a production environment or any similar usage: it is for evaluation only.
+.. warning::   
+	The |foxbms| hardware and software is under permanent development. The free and open research and development platform |foxbms| as presented in the documentation hereafter is not provided to be used without any adaptions (e.g., to fulfill mandatory regulations) in consumer products, electric vehicles, production environments or any similar usages: it is only intended to be used by skilled professionals trained in designing battery system prototypes.
 
 
 The documentation is divided in 4 parts:
@@ -78,23 +78,6 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 	./getting_started/checking/checking.rst
 
 
-.. _software_documentation:
-
-.. toctree::
-	:titlesonly:
-	:numbered:
-	:maxdepth: 1
-	:caption: Software Documentation
-   
-	./software_documentation/components/components.rst
-	./software_documentation/overview/overview.rst
-	./software_documentation/modules/modules.rst
-	./software_documentation/tools/tools.rst
-	./software_documentation/build/build.rst
-	./software_documentation/styleguide/styleguide.rst
-	./software_documentation/faq/faq.rst
-
-
 .. _hardware_documentation:
 
 .. toctree::
@@ -111,6 +94,19 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 	./hardware_documentation/toolchain/toolchain.rst
 
 
+.. _software_documentation:
 
-
+.. toctree::
+	:titlesonly:
+	:numbered:
+	:maxdepth: 1
+	:caption: Software Documentation
+   
+	./software_documentation/components/components.rst
+	./software_documentation/overview/overview.rst
+	./software_documentation/modules/modules.rst
+	./software_documentation/tools/tools.rst
+	./software_documentation/build/build.rst
+	./software_documentation/styleguide/styleguide.rst
+	./software_documentation/faq/faq.rst
 
