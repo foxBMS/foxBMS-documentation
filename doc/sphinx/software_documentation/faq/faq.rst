@@ -13,12 +13,14 @@ Software FAQ and HOWTOs
 This sections shows different kind of actions related to the software.
 
 .. contents::
-   :local:
+	:local:
+
+
 
 How to create a task and change its priority and period?
 --------------------------------------------------------
 
-First, declare a new task configuration ``appltask_cfg.h`` file:
+First, declare a new task configuration in the ``appltask_cfg.h`` file:
 
 .. code-block:: C
 
@@ -202,6 +204,23 @@ How to change the relation between voltages read by multiplexer via |LTC| and te
 -------------------------------------------------------------------------------------------
 
 The function ``float LTC_Convert_MuxVoltages_to_Temperatures(float Vout)`` is defined in ``ltc.c``. It gets a voltage as input and returns a temperature. It can simply be changed to meet the application needs. 
+
+To get the function converting the measured voltage to temperature, the following procedure can be followed if a Negative Temperature Coefficient resistor (NTC) is used :
+
+ #. Create a spreadsheet (e.g., in Microsoft Excel)
+ #. In the datasheet of the NTC, take the table giving the resistance versus the temperature
+ #. In the spreadsheet, define three columns:
+
+    - Temperature value (read from the NTC datasheet)
+    - Corresponding resistance value (read from the NTC datasheet)
+    - Voltage value provided by the voltage divider calculated with the NTC resistance for each temperature value. On the |slave|, the voltage divider is formed by a 20kOhm resistor in series with the NTC, with a 3V power supply, as shown in :ref:`slave_voltage_divider`
+	
+ #. Plot the temperature versus the corresponding measured voltage value (i.e., first column versus third column in the spreadsheet)
+ #. Fit a polynomial function to the plotted curve (e.g., by using Microsoft Excel)
+ #. Implement the polynom in ``float LTC_Convert_MuxVoltages_to_Temperatures(float Vout)``
+ 
+The function ``float LTC_Convert_MuxVoltages_to_Temperatures(float Vout)`` gets a voltage as input and outputs the corresponding temperature.
+
 
 How to configure the MCU clock?
 -------------------------------

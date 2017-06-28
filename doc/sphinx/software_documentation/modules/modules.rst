@@ -12,7 +12,7 @@ This section contains the documentation of the software modules, present in the 
 
 .. highlight:: C
 
-.. toctree::   
+.. toctree::
 	:maxdepth: 2
 
 	./bmsctrl/bmsctrl
