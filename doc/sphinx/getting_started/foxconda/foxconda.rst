@@ -25,7 +25,7 @@ In the section :ref:`getting_started_flashing`, it is shown how the compiled sou
 Installation of the needed software via the |foxconda| distribution
 -------------------------------------------------------------------
 
-The first step is to install the software environment needed to compile and flash the |foxbms| sources. First, the |foxconda| installer must downloaded from the `server <https://iisb-foxbms.iisb.fraunhofer.de/foxbms/>`_ containing the |foxconda| installers.
+The first step is to install the software environment needed to compile and flash the |foxbms| sources. First, the |foxconda| installer must be downloaded from the `server <https://iisb-foxbms.iisb.fraunhofer.de/foxbms/>`_ containing the |foxconda| installers.
 For Windows, the installer is run by executing |installer archive|.
 
 The window shown in :numref:`fig. %s <condainstaller1>` will appear. 
