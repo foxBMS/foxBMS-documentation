@@ -27,7 +27,7 @@ This section describes how to test the |BMS-Master| with one |BMS-Slave| connect
      - operating system
      - ``syscontrol`` and ``bmscontrol``
      - |il| and contactors
-     - SRAM and EEPROM
+     - Non-volatile memory (NVRAM): BKPSRAM and EEPROM
      - CAN, SPI
      - diagnosis
 

@@ -113,7 +113,7 @@ The ``module`` directory contains all the software modules needed by the BMS.
 +-------------+-------------------------------------------------------------------------------------------+
 | dma         | Configuration for Direct Memory Access (e.g. used for SPI Communication)                  |
 +-------------+-------------------------------------------------------------------------------------------+
-| eeprom      | Driver for non-volatile storage of data. Retains data even if the 3V button cell fails    |
+| nvram       | Non-volatile Memory: Eeprom and button cell buffered SRAM (BKP_SRAM)                      |
 +-------------+-------------------------------------------------------------------------------------------+
 | intermcu    | Driver for communication between |MCU0| (primary) and |MCU1| (secondary)                  |
 +-------------+-------------------------------------------------------------------------------------------+

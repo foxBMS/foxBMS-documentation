@@ -49,6 +49,7 @@
 .. |mod_diag| replace:: ``diag`` module
 .. |mod_database| replace:: ``database`` module
 .. |mod_bender| replace:: ``bender`` module
+.. |mod_nvm| replace:: ``nvm`` module
 .. |installer archive| replace:: ``foxcondainstall-win-0.5.0.exe``
 
 .. -----------------------------------------------

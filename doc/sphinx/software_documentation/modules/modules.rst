@@ -15,6 +15,7 @@ This section contains the documentation of the software modules, present in the 
 .. toctree::
 	:maxdepth: 2
 
+	./nvm/nvm
 	./bmsctrl/bmsctrl
 	./sysctrl/sysctrl
 	./io/io
@@ -27,4 +28,5 @@ This section contains the documentation of the software modules, present in the 
 	./chksum/chksum
 	./sox/sox
 	./isoguard/isoguard
+
 
