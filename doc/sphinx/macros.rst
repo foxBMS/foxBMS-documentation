@@ -3,7 +3,7 @@
 .. -----------------------------------------------
 .. General Documentation Macros
 .. -----------------------------------------------
-.. |version| replace:: ``0.5.0``
+.. |version| replace:: ``0.5.1``
 .. |timestamp| date:: %Y-%m-%d %H:%M:%S
 .. |foxbms| replace:: foxBMS
 .. |foxconda| replace:: foxConda
