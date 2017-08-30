@@ -33,6 +33,28 @@ The first line is the most recent one, the last one the oldest one.
 
 The following section summarizes the release notes for the different versions of the documentation.
 
+Release 0.5.1
+-------------
+
+Release notes:
+- Update from waf version 1.8.12 to version 1.9.13
+- Rewrite of the non-volatile random-access memory driver on the primary MCU. It is now located in"\foxBMS-primary\src\module\nvram"
+- The bootstrap script of foxBMS-setup repository now supports self-updating by calling "python bootstrap.py --update". This will allow easier version updates in the future.
+
+Changelog :
+- foxBMS-setup
+  - added parameter '-u', '--update' to bootstrap.py for updating the setup repository.
+- foxBMS-primary
+  - updates for waf 1.9.13 support
+  - updated module/EEPROM and migrated to module/nvmram
+  - minor code adaptations and cleanup
+- foxBMS-secondary
+  - support for waf 1.9.13
+  - minor code adaptations and cleanup
+- foxbMS-tools
+  - updated waf from version 1.8.12 to version 1.9.13
+
+
 Release 0.5.0
 -------------
 
@@ -44,17 +66,17 @@ A central repository called foxBMS-setup is now used. It contains several script
     - clean.py is used to removed the generated binaries and documentation
 
 Release notes:
-	
+
     - New project structure
     - Embedded Software
-	
+
         - Added support for external (SPI) EEPROM on the BMS-Master
         - Redesign of can and cansignal module to simplify the usage
         - Added support for triggered and cyclic current measurement of Isabellenhuette current sensor (IVT)
         - Current sensor now functions by default in non-triggered modus (no reprogramming needed for the sensor)
-	
+
     - Sphinx Documentation:
-	
+
         - Updated and restructured complete documentation
         - Restructured file and folder structure for the documentation
         - Added safety and risk analysis section
@@ -69,13 +91,13 @@ Release 0.4.4
 
 Release notes:
 
-	- Full update and correction of the documentation based on the feedback received
-	- Consistency check and update of the wording and naming used in the hardware, software and documentation
-	- Improved checksum process
-	
-		- faster implementation of checksum script
-		- checksum script is called automatically after "python tools/waf-1.8.12 configure build"
-		- build command "python tools/waf-1.8.12 configure build chksum" NO longer supported
+    - Full update and correction of the documentation based on the feedback received
+    - Consistency check and update of the wording and naming used in the hardware, software and documentation
+    - Improved checksum process
+
+        - faster implementation of checksum script
+        - checksum script is called automatically after "python tools/waf-1.8.12 configure build"
+        - build command "python tools/waf-1.8.12 configure build chksum" NO longer supported
 
 Release 0.4.3
 -------------
@@ -85,11 +107,11 @@ Starting from this version, a checksum mechanism was implemented in |foxbms|. If
 Release notes:
 
     - Important: Changed contactor configuration order in the software to match the labels on the front
-    
+
         - Contactor 0: CONT_PLUS_MAIN
         - Contactor 1: CONT_PLUS_PRECHARGE
         - Contactor 2: CONT_MINUS_MAIN
-        
+
     - Fixed an bug which could cause an unintended closing of the contactors after recovering from error mode
     - Increased stack size for the engine tasks to avoid stack overflow in some special conditions
     - Added a note in the documentation to indicate the necessity to send a periodic CAN message to the BMS
