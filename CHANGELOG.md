@@ -1,4 +1,4 @@
-﻿# foxBMS Change Log
+# foxBMS Change Log
 
 ## Release 0.5.1
 
