@@ -37,21 +37,30 @@ Release 0.5.1
 -------------
 
 Release notes:
+
 - Update from waf version 1.8.12 to version 1.9.13
 - Rewrite of the non-volatile random-access memory driver on the primary MCU. It is now located in"\foxBMS-primary\src\module\nvram"
 - The bootstrap script of foxBMS-setup repository now supports self-updating by calling "python bootstrap.py --update". This will allow easier version updates in the future.
 
 Changelog :
+
 - foxBMS-setup
+
   - added parameter '-u', '--update' to bootstrap.py for updating the setup repository.
+  
 - foxBMS-primary
+
   - updates for waf 1.9.13 support
   - updated module/EEPROM and migrated to module/nvmram
   - minor code adaptations and cleanup
+  
 - foxBMS-secondary
+
   - support for waf 1.9.13
   - minor code adaptations and cleanup
+  
 - foxbMS-tools
+
   - updated waf from version 1.8.12 to version 1.9.13
 
 
