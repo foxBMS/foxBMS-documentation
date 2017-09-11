@@ -16,6 +16,9 @@ The first line is the most recent one, the last one the oldest one.
 +               +----------+-----------+--------------+-----------------+-------------+-----------------+            +
 |               | Primary  | Secondary | |BMS-Master| | |BMS-Interface| | |BMS-Slave| | |BMS-Extension| |            |
 +===============+==========+===========+==============+=================+=============+=================+============+
+| 0.5.2         | 0.5.2    | 0.5.2     | 1.0.2        | 1.0.1           | | 1.0.1     | 1.0.2           | 0.5.0      |
+|               |          |           |              |                 | | 2.0.3     |                 |            |
++---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.5.1         | 0.5.1    | 0.5.1     | 1.0.2        | 1.0.1           | 1.0.1       | 1.0.2           | 0.5.0      |
 +---------------+----------+-----------+--------------+-----------------+-------------+-----------------+------------+
 | 0.5.0         | 0.5.0    | 0.5.0     | 1.0.2        | 1.0.1           | 1.0.1       | 1.0.2           | 0.5.0      |
@@ -33,16 +36,44 @@ The first line is the most recent one, the last one the oldest one.
 
 The following section summarizes the release notes for the different versions of the documentation.
 
+Release 0.5.2
+-------------
+
+Release notes:
+
+- We fixed a bug in the ltc driver, leading to a non-functional temperature
+  sensing for foxBMS Slave Hardware version 1.xx. The slave version is
+  configuration for the primary MCU in `foxBMS-primary\\src\\module\\config\\
+  ltc_cfg.h` by the define `SLAVE_BOARD_VERSION` and for the secondary MCU in
+  `foxBMS-secondary\\src\\module\\config\\ltc_cfg.h` by the define
+  `SLAVE_BOARD_VERSION`.
+
+ - Set SLAVE_BOARD_VERSION to "1" if you are using version 1.xx of the
+   foxBMS Slave.
+ - Set SLAVE_BOARD_VERSION to "2" if you are using version 2.xx of the foxBMS
+   Slave. Version 2.xx is the default configuration.
+
+Changelog:
+
+- foxBMS-primary
+
+  - fixed LTC temperature sensing bug
+
+- foxBMS-secondary
+
+  - fixed LTC temperature sensing bug
+
+
 Release 0.5.1
 -------------
 
 Release notes:
 
 - Update from waf version 1.8.12 to version 1.9.13
-- Rewrite of the non-volatile random-access memory driver on the primary MCU. It is now located in"\foxBMS-primary\src\module\nvram"
+- Rewrite of the non-volatile random-access memory driver on the primary MCU. It is now located in `\\foxBMS-primary\\src\\module\\nvram`
 - The bootstrap script of foxBMS-setup repository now supports self-updating by calling "python bootstrap.py --update". This will allow easier version updates in the future.
 
-Changelog :
+Changelog:
 
 - foxBMS-setup
 
@@ -51,7 +82,7 @@ Changelog :
 - foxBMS-primary
 
   - updates for waf 1.9.13 support
-  - updated module/EEPROM and migrated to module/nvmram
+  - updated `module\\EEPROM` and migrated to `module\\nvmram`
   - minor code adaptations and cleanup
 
 - foxBMS-secondary
