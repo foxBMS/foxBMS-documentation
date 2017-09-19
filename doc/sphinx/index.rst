@@ -88,6 +88,7 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 
 	./hardware_documentation/specifications/specifications.rst
 	./hardware_documentation/overview/overview.rst
+	./hardware_documentation/slave/slave_12cell.rst
 	./hardware_documentation/schematics/schematics.rst
 	./hardware_documentation/components/components.rst
 	./hardware_documentation/bjb/bjb.rst
