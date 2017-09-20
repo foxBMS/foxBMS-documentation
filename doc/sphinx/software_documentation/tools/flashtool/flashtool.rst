@@ -119,8 +119,8 @@ Class Diagram
 STM32Interface:
 - serial interface abstraction of foxBMS interface to send according to the protocol specified by ST Microelectronics
 
-    - for detailed insight to the USART protocol refer to STM32 appnote AN3155
-    - for detailed insight to the device bootloader" refer to STM32 appnote AN2606
+    - for detailed insight to the USART protocol refer to STM32 appnote AN3155 [1]_
+    - for detailed insight to the device bootloader refer to STM32 appnote AN2606 [2]_
 
 STM32flasher:
 - easy-to-use flash tool for STM32f4 microcontrollers (similar to popular other flashtools like avrdude)
@@ -135,6 +135,6 @@ FoxFlasher:
 References
 ~~~~~~~~~~ 
 
-.. [1] ST Microelectronics Application Note 3155 [PDF],  "USART protocol used in the STM32 bootloader" http://www.st.com/content/ccc/resource/technical/document/application_note/51/5f/03/1e/bd/9b/45/be/CD00264342.pdf
+.. [1] ST Microelectronics Application Note 3155 [PDF], 'USART protocol used in the STM32 bootloader' http://www.st.com/content/ccc/resource/technical/document/application_note/51/5f/03/1e/bd/9b/45/be/CD00264342.pdf
 
-.. [2] ST Microelectronics Application Note 2606 [PDF],"STM32 microcontroller system memory boot mode" http://www.st.com/content/ccc/resource/technical/document/application_note/b9/9b/16/3a/12/1e/40/0c/CD00167594.pdf
+.. [2] ST Microelectronics Application Note 2606 [PDF], 'STM32 microcontroller system memory boot mode' http://www.st.com/content/ccc/resource/technical/document/application_note/b9/9b/16/3a/12/1e/40/0c/CD00167594.pdf

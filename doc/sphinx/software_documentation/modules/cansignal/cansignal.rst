@@ -138,7 +138,7 @@ The control flow for transmission of a multiplexed signal in the |mod_cansignal|
 Disadvantage of the multiplexing is the asynchronous transmission of the voltage measurement values of different modules (but asynchronous transmission does not necessarily mean asynchronous A/D sampling).
 
 .. note::
-	The getter of the multiplexor signal is responsible for incrementing and resetting the multiplexor value.
+    The getter of the multiplexor signal is responsible for incrementing and resetting the multiplexor value.
 
 **Specific example with transmission of the battery temperatures**
 

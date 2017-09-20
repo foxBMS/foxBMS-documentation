@@ -13,7 +13,7 @@ Software FAQ and HOWTOs
 This sections shows different kind of actions related to the software.
 
 .. contents::
-	:local:
+    :local:
 
 
 
@@ -133,23 +133,23 @@ The implementation of the task should be done like shown in the following exampl
 
 .. note::
 
-	- Every task should have the while loop ``while(os_boot != OS_SYSTEM_RUNNING)`` at the beginning of the funtion. This prevents the task from being executed before |foxbms| is completely initialized.
-	- ``osDelayUntil(os_schedulerstarttime, appl_tskdef_10ms.Phase)`` sets the wished phase offset of the task
-	- Tasks in FreeRTOS should never finish. Therefore, the actual task implementation is done in a ``while(1)``-loop
-	- ``APPL_TSK_Cyclic_10ms`` serves as wrapper function for task implementation in ``APPL_Cyclic_10ms()``
-	- The call of ``osDelayUntil(currentTime, appl_tskdef_10ms.CycleTime)`` sets the task in blocked state until the cycle time until the next period arrives
-	- Every task should be secured by the system monitoring module (``DIAG_SysMonNotify()``)
-	- |foxbms| provides two default tasks for user applications with a periods of 10ms and 100ms
+    - Every task should have the while loop ``while(os_boot != OS_SYSTEM_RUNNING)`` at the beginning of the funtion. This prevents the task from being executed before |foxbms| is completely initialized.
+    - ``osDelayUntil(os_schedulerstarttime, appl_tskdef_10ms.Phase)`` sets the wished phase offset of the task
+    - Tasks in FreeRTOS should never finish. Therefore, the actual task implementation is done in a ``while(1)``-loop
+    - ``APPL_TSK_Cyclic_10ms`` serves as wrapper function for task implementation in ``APPL_Cyclic_10ms()``
+    - The call of ``osDelayUntil(currentTime, appl_tskdef_10ms.CycleTime)`` sets the task in blocked state until the cycle time until the next period arrives
+    - Every task should be secured by the system monitoring module (``DIAG_SysMonNotify()``)
+    - |foxbms| provides two default tasks for user applications with a periods of 10ms and 100ms
  
-	.. code-block:: C
+    .. code-block:: C
 
-		void APPL_Cyclic_10ms(void) {
-			DIAG_SysMonNotify(DIAG_SYSMON_APPL_CYCLIC_10ms, 0);        // task is running, state = ok
+        void APPL_Cyclic_10ms(void) {
+            DIAG_SysMonNotify(DIAG_SYSMON_APPL_CYCLIC_10ms, 0);        // task is running, state = ok
 
-			/* User specific implementations:   */
-			/*   ...                            */
-			/*   ...                            */
-		}
+            /* User specific implementations:   */
+            /*   ...                            */
+            /*   ...                            */
+        }
 
 
 How to add a software module and take it into account with WAF?
@@ -214,7 +214,7 @@ To get the function converting the measured voltage to temperature, the followin
     - Temperature value (read from the NTC datasheet)
     - Corresponding resistance value (read from the NTC datasheet)
     - Voltage value provided by the voltage divider calculated with the NTC resistance for each temperature value. On the |slave|, the voltage divider is formed by a 20kOhm resistor in series with the NTC, with a 3V power supply, as shown in :ref:`slave_voltage_divider`
-	
+    
  #. Plot the temperature versus the corresponding measured voltage value (i.e., first column versus third column in the spreadsheet)
  #. Fit a polynomial function to the plotted curve (e.g., by using Microsoft Excel)
  #. Implement the polynom in ``float LTC_Convert_MuxVoltages_to_Temperatures(float Vout)``
@@ -607,25 +607,25 @@ The number of logged error events can be changed by modifying the value of the m
 
 
 .. note::
-	The diag module is a powerfull module for general error handling. The user has to be aware of timings when using custom diag entries. As example how to use this module correct syscontrol is choosen.
-	- The function ``SYSCTRL_Trigger()`` is called in the 10ms task (``ENG_TSK_Cyclic_10ms()``), meaning every 10ms this function must be executed.
-	- In the diagnosis-module header ``diag_cfg.h`` there is the enum ``DIAG_SYSMON_MODULE_ID_e`` for the different error types that are handeled by the diagnosismodule. For syscontrol errors there is ``DIAG_SYSMON_SYSCTRL_ID``.
-	- In the diagnosis-module source ``diag_cfg.c`` there is the ``diag_sysmon_ch_cfg[]`` array assigning timings to this error, in this case 20ms.
+    The diag module is a powerfull module for general error handling. The user has to be aware of timings when using custom diag entries. As example how to use this module correct syscontrol is choosen.
+    - The function ``SYSCTRL_Trigger()`` is called in the 10ms task (``ENG_TSK_Cyclic_10ms()``), meaning every 10ms this function must be executed.
+    - In the diagnosis-module header ``diag_cfg.h`` there is the enum ``DIAG_SYSMON_MODULE_ID_e`` for the different error types that are handeled by the diagnosismodule. For syscontrol errors there is ``DIAG_SYSMON_SYSCTRL_ID``.
+    - In the diagnosis-module source ``diag_cfg.c`` there is the ``diag_sysmon_ch_cfg[]`` array assigning timings to this error, in this case 20ms.
    
-	.. code-block:: C
+    .. code-block:: C
 
-		{DIAG_SYSMON_SYSCTRL_ID, DIAG_SYSMON_CYCLICTASK, 20,
-		DIAG_RECORDING_ENABLED, DIAG_ENABLED, dummyfu2},
+        {DIAG_SYSMON_SYSCTRL_ID, DIAG_SYSMON_CYCLICTASK, 20,
+        DIAG_RECORDING_ENABLED, DIAG_ENABLED, dummyfu2},
 
-	This means every time ``SYSCTRL_Trigger()`` is called, the function indicating "syscontrol is running" has to be exectued. If this is not done, the diagnosis module will set the syscontrol to the error state. Therefore, the user must set up functions, which are wanted to be supervised by the diagnosis module, and that they are still running, in this way:
+    This means every time ``SYSCTRL_Trigger()`` is called, the function indicating `syscontrol is running` has to be exectued. If this is not done, the diagnosis module will set the syscontrol to the error state. Therefore, the user must set up functions, which are wanted to be supervised by the diagnosis module, and that they are still running, in this way:
 
-	.. code-block:: C
+    .. code-block:: C
 
-		void SYSCTRL_Trigger(SYSCTRL_TRIG_EVENT_e event) {
-			DIAG_SysMonNotify(DIAG_SYSMON_SYSCTRL_ID, 0);	// task is running, therefore
-									// reset state to 0
-			/* user code */
-		}
+        void SYSCTRL_Trigger(SYSCTRL_TRIG_EVENT_e event) {
+            DIAG_SysMonNotify(DIAG_SYSMON_SYSCTRL_ID, 0);    // task is running, therefore
+                                    // reset state to 0
+            /* user code */
+        }
 
 
 How to configure contactors without feedback?
@@ -654,7 +654,7 @@ With this configuration, the feedback value will always be equal to the expected
 How to simply trigger events via CAN?
 -------------------------------------
 
-The CAN message with ID 0x55E is considered as a "debug message". If received, the function ``cans_setdebug()`` defined in ``cansignal_cfc.c`` is called. There, a switch case is used on the first byte (byte0) of the message to define what to do. This means that 256 actions are possible, and that 7 bytes remain to transfer data in the debug message.
+The CAN message with ID 0x55E is considered as a `debug message`. If received, the function ``cans_setdebug()`` defined in ``cansignal_cfc.c`` is called. There, a switch case is used on the first byte (byte0) of the message to define what to do. This means that 256 actions are possible, and that 7 bytes remain to transfer data in the debug message.
 
 
 How to start/stop balancing the battery cells?
@@ -730,8 +730,8 @@ Concretely:
         .muxCh    = 5,
     },
     {
-        .muxID    = 0,		//configure the multiplexer to be used
-        .muxCh    = 6,		//configure input to ne used on the selected multiplexer
+        .muxID    = 0,      //configure the multiplexer to be used
+        .muxCh    = 6,      //configure input to ne used on the selected multiplexer
     },
 
 must be used instead of:

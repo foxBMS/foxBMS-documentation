@@ -10,7 +10,7 @@ In the preceeding sections, the |master| has been connected to the power supply 
 
 .. note::
 
-	When the connection is made between the |master| and the |slaves|, both primary and secondary isoSPI daisy chains have to be connected.
+    When the connection is made between the |master| and the |slaves|, both primary and secondary isoSPI daisy chains have to be connected.
 
 ----------------------------------
 Convention for Connector Numbering
@@ -359,7 +359,7 @@ Once |foxbms| is running, CAN messages should be sent.
 .. note::
    
       **A periodic state request must be made to the system by sending a message with ID 0x152 on the bus CAN periodically.**
-      If not, the system will go into an error state. The period must be 100ms. More information on state requests can be found in the section :ref:`getting_started_communicating_CAN`. Typically the request "Standby state" can be made.
+      If not, the system will go into an error state. The period must be 100ms. More information on state requests can be found in the section :ref:`getting_started_communicating_CAN`. Typically the request `Standby state` can be made.
 
 If voltages have been applied to the voltage connector, they are sent with the message IDs 0x550, 0x551, 0x552 and 0x553. Details can be found in the section :ref:`getting_started_communicating_CAN`.
 

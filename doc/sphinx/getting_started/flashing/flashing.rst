@@ -18,9 +18,9 @@ Convention for Connector Numbering
 
 .. _connector_convention_flash:
 .. figure:: ./connector_viewing_direction.png
-	:width: 100 %
+    :width: 100 %
 
-	Supply connector pin out, receptable - rear view, header - front view (image source: MOLEX)
+    Supply connector pin out, receptable - rear view, header - front view (image source: MOLEX)
 
 There are two types of connectors:
 
@@ -38,19 +38,19 @@ The foxBMS system can be mounted in a metal housing, as shown in :numref:`fig. %
 
 .. _housing_flash:
 .. figure:: ./foxbms_housing.jpg
-	:width: 100 %
+    :width: 100 %
    
-	|master| housing
+    |master| housing
 
 Connectors are available, shown in :numref:`Fig. %s <foxbmsfront_quickstart_flash>`, which presents all the connectors of the |master|.
  
 .. _foxbmsfront_quickstart_flash:
 .. figure:: ./foxbms_front.png
-	:width: 100 %
+    :width: 100 %
    
-	Front view of the |master| indicating the location of each header
+    Front view of the |master| indicating the location of each header
 
-For this section on flashing, only the connector "Supply" is needed. 
+For this section on flashing, only the connector ``Supply`` is needed. 
 
 -----------------------------
 Supply of the |master|
@@ -60,7 +60,7 @@ The first step is to supply the |master|, which works with supply voltages betwe
 
 .. _sixcon_view:
 .. figure:: ./connector_6pin.png
-	:width: 10 %
+    :width: 10 %
 
 .. _master_supply_connector:
 
@@ -122,9 +122,9 @@ First, when no device is connected, ``No device found.`` is displayed, as shown 
 
 .. _frontdesk_figure5:
 .. figure:: ./frontdesk5.png
-	:width: 100 %
+    :width: 100 %
 
-	Flashing tab, no device connected
+    Flashing tab, no device connected
 
 The device must be connected to the computer with the USB cable. The |MCU0| must be used. In the :ref:`getting_started_cabling`, it is explained how to find
 the |MCU0| and where the primary USB connector is located.
@@ -133,23 +133,23 @@ Once a device was connected and detected, ``Device found.`` is displayed and the
 
 .. _frontdesk_figure6:
 .. figure:: ./frontdesk6.png
-	:width: 100 %
+    :width: 100 %
 
-	Flashing tab, device connected
+    Flashing tab, device connected
  
 When the flash button is clicked, a windows appears, reminding not to touch the device that is being flashed, as shown in
 :numref:`fig. %s <frontdesk_figure7>`.
 
 .. _frontdesk_figure7:
 .. figure:: ./frontdesk7.png
-	:width: 100 %
+    :width: 100 %
 
-	Flashing tab, device connected, flashing
+    Flashing tab, device connected, flashing
 
 .. note::
 
     With the ``primary/secondary`` dropdown list, it can be chosen which binaries will be flashed. Click on ``Find foxBMS flash files`` to validate the selection.
-	
+    
 The connection state can also be checked by watching the LEDs on the |master| hardware: for a running board, the green power LED is on, and the two indicator LEDs (green and red) are blinking alternately. If the device is connected and being flashed, the power-on LED is on but the two indicator LEDs are off.
 
 The LEDs for the |MCU0| must be used. In the :ref:`getting_started_cabling`, it is explained how to find the |MCU0| indicator LEDs.
@@ -180,7 +180,7 @@ Before the flashing procedure, the limits can be set via the configuration page 
 
 .. note::
 
-	Setting these limits is safety relevant and must be done with care.
+    Setting these limits is safety relevant and must be done with care.
    
 If the user wishes to work without these protection, to experiment more easily, this can be changed in the file `bmsctrl_cfg.h` by setting
 
@@ -196,7 +196,7 @@ to
    
 .. note::
 
-	**Working without configuring the right battery cell voltage limits is dangerous and should never be done when real batteries are connected, since they may burn and explode when overcharged or shorted.**
+    **Working without configuring the right battery cell voltage limits is dangerous and should never be done when real batteries are connected, since they may burn and explode when overcharged or shorted.**
    
 The next step is to connect a |slave| to perform voltage and temperature measurement.
 

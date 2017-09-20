@@ -178,7 +178,7 @@ Analog Inputs
 For the acquisition of analog data, there are 5 ADC channels (``ANALOG_IN_CH0`` - ``ANALOG_IN_CH4``) available on |BMS-Extension| board. :numref:`Fig. %s <analog_inputs>` shows the input circuit for channel 0. The analog input of the microcontroller (``ADC_MCU0_CH0``) is protected by diode D1701, which clamps the input voltage to 3.3V. By default R1701 is shorted with jumper, while R1702 is 7.75kOhm and C1701 is 100nF. The analog input channels are available on connector X1701. A reference voltage of 2.5V is provided by IC1701 (ADR3425), which can supply a total load current up to +10mA and sink up −3mA. The reference voltage is available in X1701 next to every analog input pin. Pin 11 and 12 are connected to GND.
 
 .. note::
-	The analog inputs are not isolated. They are referenced to the same potential as the |primary| microcontroller.
+    The analog inputs are not isolated. They are referenced to the same potential as the |primary| microcontroller.
 
    
 Isolated GPIO

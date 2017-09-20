@@ -23,7 +23,7 @@ The Battery Junction Box (BJB) described in this document is designed for mobile
 System Overview
 ~~~~~~~~~~~~~~~
 
-The BJB contains the Battery Management System (BMS) and all safety relevant components. :numref:`Fig. %s <big_bjb>` shows a BJB integrated into a 19" enclosure with a 4U height.
+The BJB contains the Battery Management System (BMS) and all safety relevant components. :numref:`Fig. %s <big_bjb>` shows a BJB integrated into a 19'' enclosure with a 4U height.
 
 .. _big_bjb:
 .. figure:: ./big_bjb.jpg
@@ -36,12 +36,12 @@ The BJB contains the Battery Management System (BMS) and all safety relevant com
 The main contactors disconnect the battery from the output terminals. These are normally off and switched on in BMS ON-Mode. The contactors are opened if the BMS detects hazardous conditions (e.g., abnormal battery cell temperature) or in BMS OFF-Mode.
 
 .. note::
-	A precharge contactor and resistor are used to limit the inrush current into the inverter DC-link capacitor when closing the main contactors at startup.
+    A precharge contactor and resistor are used to limit the inrush current into the inverter DC-link capacitor when closing the main contactors at startup.
 
 To break the current flowing in case a short circuit condition occurs between the two high voltage battery system poles, a fuse is placed in the positive current path. A Cooper Bussmann FWP-Series (700Vdc) or better FWJ-Series (800Vdc) fuse was selected for this purpose.
 
-.. danger::	
-	A special high-voltage DC fuse must be used to break high short circuit currents in high voltage battery systems. This fuse must be very carefully chosen by electrically skilled engineers to ensure proper protection in the specific test environment using specific testing equipment and test conditions. In case the fuse is not appropriately chosen, its protection effect will not be provided.
+.. danger::    
+    A special high-voltage DC fuse must be used to break high short circuit currents in high voltage battery systems. This fuse must be very carefully chosen by electrically skilled engineers to ensure proper protection in the specific test environment using specific testing equipment and test conditions. In case the fuse is not appropriately chosen, its protection effect will not be provided.
 
 .. _bjb_block_diagram:
 .. figure:: ./bjb_block_diagram.png
@@ -152,9 +152,9 @@ The current sensor is supplied without its crimps and housings (e.g., by JST). T
 
 
  .. note::
-	When the precharge contactor is closed after the main negative contactor has been closed, the measured voltages are used to ensure a correct precharge procedure.
+    When the precharge contactor is closed after the main negative contactor has been closed, the measured voltages are used to ensure a correct precharge procedure.
 
-	
+    
 Summary of the Assembly Procedure
 ---------------------------------
 

@@ -10,11 +10,11 @@ NVM
 
 The |mod_nvm| provides a non-volatile memory for the data by using an external EEPROM with integrated transparent hardware error correcting code (ECC). It handles the backup and recovery features between the participating submodules and depends on the implementation (EEPROM, BKSSRAM or SRAM). The user has to group the data in channels which are taped with a checksum and handled as one entity. Usually, the data are first written into the SRAM (or BKPSRAM if available) and then backed up into the EEPROM. Alternatively, the data can be written directly into the EEPROM without a buffer. When a buffer is used, it can be located in SRAM or in BKPSRAM (Backup SRAM) with following different reset characteristics:
 
-* BKPSRAM: 
-   no data loss in case of any kind of reset (button cell buffered SRAM) 
-* SRAM (cleared memory section): 
-   data loss in case of any kind of reset 
-* SRAM (non-cleared memory section): 
+* BKPSRAM:
+   no data loss in case of any kind of reset (button cell buffered SRAM)
+* SRAM (cleared memory section):
+   data loss in case of any kind of reset
+* SRAM (non-cleared memory section):
    data loss only in case of power down, no data loss in case of software reset or warm startup
 
 
@@ -27,7 +27,7 @@ Driver:
  - ``src\module\nvram\eepr.c``
  - ``src\module\rtc\bkpsram.h``
  - ``src\module\rtc\bkpsram.c``
- 
+
 Driver Configuration:
  - ``src\module\config\eepr_cfg.h``
  - ``src\module\config\eepr_cfg.c``
@@ -51,9 +51,9 @@ Example: EEPROM-channels A, B and C have coherent BKPSRAM channels. D has a cohe
 
 .. _nvm_datastructure:
 .. figure:: ./nvm_datastructure.png
-	:width: 100 %
-	
-	Data organisation of the NV-Memory
+    :width: 100 %
+
+    Data organisation of the NV-Memory
 
 
 
@@ -89,7 +89,7 @@ The statemachine is capable of handling the requests to write, read or to go int
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
 | ``EEPR_INITFAILED``               | Handling of an initialization error                                                           |
 |                                   |                                                                                               |
-| ``EEPR_READFAILED``               | Handling of read errors                                                                       | 
+| ``EEPR_READFAILED``               | Handling of read errors                                                                       |
 |                                   |                                                                                               |
 | ``EEPR_WRITEFAILED``              | Handling of write errors                                                                      |
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
@@ -97,9 +97,9 @@ The statemachine is capable of handling the requests to write, read or to go int
 
 .. _nvm_statemachine:
 .. figure:: ./nvm_statemachine.png
-	:width: 100 %
-	
-	Statemachine of the EEPROM
+    :width: 100 %
+
+    Statemachine of the EEPROM
 
 Startup
 -------
@@ -119,9 +119,9 @@ During the initialization, the driver will check and update the data of the sele
 
 .. _nvm_channelinit:
 .. figure:: ./nvm_channelinit.png
-	:width: 100 %
-	
-	Initialization of the NVM channels
+    :width: 100 %
+
+    Initialization of the NVM channels
 
 
 
@@ -168,6 +168,6 @@ Other Functions
 Sources
 ~~~~~~~
 
-<Link to source [1]_>. 
+<Link to source [1]_>.
 
 .. [1] Datasheet DM00071990 [PDF] http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00071990.pdf

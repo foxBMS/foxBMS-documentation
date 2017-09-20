@@ -15,7 +15,10 @@ The driver communicates with the |LTC| monitoring chips in daisy-chain configura
  - measure the voltage of up to 32 inputs via I2C-driven multiplexer
  - enable passive balancing of the connected battery cells
 
+The slave version is configuration in ``src\module\config\ltc_cfg.h`` by the define ``SLAVE_BOARD_VERSION``.
 
+ - Set SLAVE_BOARD_VERSION to ``1`` if you are using version 1.xx of the foxBMS Slave.
+ - Set SLAVE_BOARD_VERSION to ``2`` if you are using version 2.xx of the foxBMS Slave. Version 2.xx is the default configuration.
 
 Module Files
 ~~~~~~~~~~~~
@@ -39,6 +42,8 @@ Dependencies
 
 Detailed Description of the |mod_ltc|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 State Machine
 -------------

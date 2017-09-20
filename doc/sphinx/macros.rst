@@ -76,6 +76,6 @@
 .. -----------------------------------------------
 .. State Machine Macros
 .. -----------------------------------------------
-.. |req_drive| replace:: Request "Drive"-state via CAN
-.. |req_stdby| replace:: Request "Standby"-state via CAN
+.. |req_drive| replace:: Request `Drive`-state via CAN
+.. |req_stdby| replace:: Request `Standby`-state via CAN
 .. -----------------------------------------------
