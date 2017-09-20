@@ -152,7 +152,7 @@ The configurable options are
 There are four predefined values for the CAN bus baud-rate and only one define must be enabled at the same time. If another baud-rate is wished, the time quants need to be calculated and then this option can be added in the configuration. If the define ``CAN_USE_CAN_NODE1`` is disabled (i.e., set to zero), all other options of the chosen CAN bus (i.e., |CAN0| or |CAN1|) have no influence on the program execution.
 
 .. warning::
-	The bypass possibility should be used carefully because the message interpreting is then done in the context of the corresponding ISR-Handler and can lead to a violation of the timing constraints. The recommended setting is to use both buffers and to bypass as little messages as possible.
+    The bypass possibility should be used carefully because the message interpreting is then done in the context of the corresponding ISR-Handler and can lead to a violation of the timing constraints. The recommended setting is to use both buffers and to bypass as little messages as possible.
 
 can_cfg.c
 ---------
@@ -174,14 +174,14 @@ The periodic transmit messages are defined in the ``const CAN_MSG_TX_TYPE_s can_
 
 .. code-block:: C
 
-	typedef struct  {
-		uint32_t ID;                    //!< CAN message id
-		uint8_t DLC;                    //!< CAN message data length code
-		uint32_t repetition_time;       //!< CAN message cycle time
-		uint32_t repetition_phase;      //!< CAN message startup (first send) offset
-		can_callback_funcPtr cbk_func; //!< CAN message callback after message is sent or received
-	} CAN_MSG_TX_TYPE_s;
-	
+    typedef struct  {
+        uint32_t ID;                    //!< CAN message id
+        uint8_t DLC;                    //!< CAN message data length code
+        uint32_t repetition_time;       //!< CAN message cycle time
+        uint32_t repetition_phase;      //!< CAN message startup (first send) offset
+        can_callback_funcPtr cbk_func; //!< CAN message callback after message is sent or received
+    } CAN_MSG_TX_TYPE_s;
+    
 Messages that are transmitted asynchronous don't need to be declared in this struct. Moreover the settings for message reception need to be set in the source file. The received messages are defined in the ``CAN_MSG_RX_TYPE_s can_RxMsgs[CAN_NUMBER_OF_RX_IDs]`` array structs:
 
 .. code-block:: C

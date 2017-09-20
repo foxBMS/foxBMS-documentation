@@ -164,4 +164,6 @@ Resistance value in kOhm           ir155_DC.dutycycle                data_block_
 References
 ~~~~~~~~~~
 
+<Link to source [1]_>. 
+
 .. [1] Datasheet ISOMETER IR155-3204 [PDF] https://www.bender-de.com/fileadmin/products/doc/IR155-42xx-V004_DB_en.pdf

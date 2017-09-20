@@ -9,19 +9,19 @@ The |foxbms| Documentation
 Welcome to the `foxBMS <https://www.foxbms.org/>`_ documentation of the first modular open source BMS development platform from the `Fraunhofer IISB <http://www.iisb.fraunhofer.de/>`_. |foxBMS| is a free, open and flexible development environment to design state-of-the-art complex battery management systems.
 
 .. note::
-	The present version of the |foxbms| Sphinx documentation is |version|. It is available in HTML, PDF and EPUB formats through the bottom left menu on `Read the Docs <https://foxbms.readthedocs.io>`_. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
+    The present version of the |foxbms| Sphinx documentation is |version|. It is available in HTML, PDF and EPUB formats through the bottom left menu on `Read the Docs <https://foxbms.readthedocs.io>`_. More detailed information on the version history can be found in the :ref:`general_information_releases` section. This documentation was generated on |timestamp|.
 
 
 .. warning::   
-	The |foxbms| hardware and software is under permanent development. The free and open research and development platform |foxbms| as presented in the documentation hereafter is not provided to be used without any adaptions (e.g., to fulfill mandatory regulations) in consumer products, electric vehicles, production environments or any similar usages: it is only intended to be used by skilled professionals trained in designing battery system prototypes.
+    The |foxbms| hardware and software is under permanent development. The free and open research and development platform |foxbms| as presented in the documentation hereafter is not provided to be used without any adaptions (e.g., to fulfill mandatory regulations) in consumer products, electric vehicles, production environments or any similar usages: it is only intended to be used by skilled professionals trained in designing battery system prototypes.
 
 
 The documentation is divided in 4 parts:
 
-	#. :ref:`general_information`
-	#. :ref:`getting_started`
-	#. :ref:`software_documentation`
-	#. :ref:`hardware_documentation`
+    #. :ref:`general_information`
+    #. :ref:`getting_started`
+    #. :ref:`software_documentation`
+    #. :ref:`hardware_documentation`
 
 In the first part of the documentation, general information about |foxbms| can be found (:ref:`general_information`):
 
@@ -47,67 +47,67 @@ Finally, the :ref:`hardware_documentation` gives the details needed to understan
 .. _general_information:
 
 .. toctree::
-	:titlesonly:
-	:numbered:
-	:maxdepth: 1
-	:caption: General Information
+    :titlesonly:
+    :numbered:
+    :maxdepth: 1
+    :caption: General Information
 
-	./general_information/releases/releases.rst
-	./general_information/roadmap/roadmap.rst
-	./general_information/overview/overview.rst
-	./general_information/motivation/motivation.rst
-	./general_information/safety/safety.rst
-	./general_information/licenses/licenses.rst
-	./general_information/team/team.rst
+    ./general_information/releases/releases.rst
+    ./general_information/roadmap/roadmap.rst
+    ./general_information/overview/overview.rst
+    ./general_information/motivation/motivation.rst
+    ./general_information/safety/safety.rst
+    ./general_information/licenses/licenses.rst
+    ./general_information/team/team.rst
 
 
 .. _getting_started:
 
 .. toctree::
-	:titlesonly:
-	:numbered:
-	:maxdepth: 1
-	:caption: Getting Started
+    :titlesonly:
+    :numbered:
+    :maxdepth: 1
+    :caption: Getting Started
 
-	./getting_started/general/general.rst
-	./getting_started/foxconda/foxconda.rst
-	./getting_started/flashing/flashing.rst
-	./getting_started/cabling/cabling.rst
-	./getting_started/connectors/connectors.rst
-	./getting_started/communicating/communicating.rst
-	./getting_started/checking/checking.rst
+    ./getting_started/general/general.rst
+    ./getting_started/foxconda/foxconda.rst
+    ./getting_started/flashing/flashing.rst
+    ./getting_started/cabling/cabling.rst
+    ./getting_started/connectors/connectors.rst
+    ./getting_started/communicating/communicating.rst
+    ./getting_started/checking/checking.rst
 
 
 .. _hardware_documentation:
 
 .. toctree::
-	:titlesonly:
-	:numbered:
-	:maxdepth: 1
-	:caption: Hardware Documentation
+    :titlesonly:
+    :numbered:
+    :maxdepth: 1
+    :caption: Hardware Documentation
 
-	./hardware_documentation/specifications/specifications.rst
-	./hardware_documentation/overview/overview.rst
-	./hardware_documentation/slave/slave_12cell.rst
-	./hardware_documentation/schematics/schematics.rst
-	./hardware_documentation/components/components.rst
-	./hardware_documentation/bjb/bjb.rst
-	./hardware_documentation/toolchain/toolchain.rst
+    ./hardware_documentation/specifications/specifications.rst
+    ./hardware_documentation/overview/overview.rst
+    ./hardware_documentation/slave/slave_12cell.rst
+    ./hardware_documentation/schematics/schematics.rst
+    ./hardware_documentation/components/components.rst
+    ./hardware_documentation/bjb/bjb.rst
+    ./hardware_documentation/toolchain/toolchain.rst
 
 
 .. _software_documentation:
 
 .. toctree::
-	:titlesonly:
-	:numbered:
-	:maxdepth: 1
-	:caption: Software Documentation
+    :titlesonly:
+    :numbered:
+    :maxdepth: 1
+    :caption: Software Documentation
    
-	./software_documentation/components/components.rst
-	./software_documentation/overview/overview.rst
-	./software_documentation/modules/modules.rst
-	./software_documentation/tools/tools.rst
-	./software_documentation/build/build.rst
-	./software_documentation/styleguide/styleguide.rst
-	./software_documentation/faq/faq.rst
+    ./software_documentation/components/components.rst
+    ./software_documentation/overview/overview.rst
+    ./software_documentation/modules/modules.rst
+    ./software_documentation/tools/tools.rst
+    ./software_documentation/build/build.rst
+    ./software_documentation/styleguide/styleguide.rst
+    ./software_documentation/faq/faq.rst
 

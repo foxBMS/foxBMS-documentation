@@ -48,9 +48,9 @@ Release notes:
   `foxBMS-secondary\\src\\module\\config\\ltc_cfg.h` by the define
   `SLAVE_BOARD_VERSION`.
 
- - Set SLAVE_BOARD_VERSION to "1" if you are using version 1.xx of the
+ - Set SLAVE_BOARD_VERSION to ``1`` if you are using version 1.xx of the
    foxBMS Slave.
- - Set SLAVE_BOARD_VERSION to "2" if you are using version 2.xx of the foxBMS
+ - Set SLAVE_BOARD_VERSION to ``2`` if you are using version 2.xx of the foxBMS
    Slave. Version 2.xx is the default configuration.
 
 Changelog:
@@ -70,8 +70,11 @@ Release 0.5.1
 Release notes:
 
 - Update from waf version 1.8.12 to version 1.9.13
-- Rewrite of the non-volatile random-access memory driver on the primary MCU. It is now located in `\\foxBMS-primary\\src\\module\\nvram`
-- The bootstrap script of foxBMS-setup repository now supports self-updating by calling "python bootstrap.py --update". This will allow easier version updates in the future.
+- Rewrite of the non-volatile random-access memory driver on the primary MCU. 
+  It is now located in ``\foxBMS-primary\src\module\nvram``
+- The bootstrap script of foxBMS-setup repository now supports self-updating 
+  by calling ``python bootstrap.py --update``. This will allow easier version 
+  updates in the future.
 
 Changelog:
 
@@ -82,7 +85,7 @@ Changelog:
 - foxBMS-primary
 
   - updates for waf 1.9.13 support
-  - updated `module\\EEPROM` and migrated to `module\\nvmram`
+  - updated `module\\EEPROM` and migrated to ``module\nvmram``
   - minor code adaptations and cleanup
 
 - foxBMS-secondary
@@ -136,8 +139,8 @@ Release notes:
     - Improved checksum process
 
         - faster implementation of checksum script
-        - checksum script is called automatically after "python tools/waf-1.8.12 configure build"
-        - build command "python tools/waf-1.8.12 configure build chksum" NO longer supported
+        - checksum script is called automatically after ``python tools/waf-1.8.12 configure build``
+        - build command ``python tools/waf-1.8.12 configure build chksum`` NO longer supported
 
 Release 0.4.3
 -------------

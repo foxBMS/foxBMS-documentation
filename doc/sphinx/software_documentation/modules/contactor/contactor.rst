@@ -94,7 +94,7 @@ The corresponding feedback state configuration would look like this:
    };
 
 .. note::
-	The configuration in ``CONT_CFG_s contactors_cfg[]`` must have the same order as defined in ``CONT_NAMES_e``.
+    The configuration in ``CONT_CFG_s contactors_cfg[]`` must have the same order as defined in ``CONT_NAMES_e``.
 
 The parameters after the feedback type parameter display the state in which the contactor is. The initial state of the contactor is always switched off. The state variables store the set value (``TRUE`` or ``FALSE``), the expected feedback (``CONT_SWITCH_OFF`` or ``CONT_SWITCH_ON``), the measured feedback (``CONT_SWITCH_OFF`` or ``CONT_SWITCH_ON``) and the according timestamp to each (``os_timer``).
 

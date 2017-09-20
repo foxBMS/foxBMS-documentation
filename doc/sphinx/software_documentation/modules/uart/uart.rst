@@ -22,8 +22,8 @@ Driver:
 Driver Configuration:
  - ``src\module\config\uart\uart_cfg.c``
  - ``src\module\config\uart\uart_cfg.h``
- 
- 
+
+
 Description of the |mod_uart|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -36,7 +36,7 @@ The default configuration is done within the ``UART_Init()`` function, which get
 
 .. code-block:: C
 
-	UART_HandleTypeDef uart_cfg[UART_NUMBER_OF_USED_UART_CHANNELS] = {
+    UART_HandleTypeDef uart_cfg[UART_NUMBER_OF_USED_UART_CHANNELS] = {
            {
                 .Instance = USART3,
                 .Init.BaudRate = 115200,
@@ -47,7 +47,7 @@ The default configuration is done within the ``UART_Init()`` function, which get
                 .Init.HwFlowCtl = UART_HWCONTROL_NONE,
                 .Init.OverSampling = UART_OVERSAMPLING_16,
            }
-	};
+    };
 
 
 

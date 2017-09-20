@@ -14,9 +14,9 @@ Overview of the Connectors on the |master|
 
 .. _foxbmsfront:
 .. figure:: ./foxbms_front.png
-	:width: 100 %
+    :width: 100 %
    
-	Front view of the |master| indicating the location of each pin header
+    Front view of the |master| indicating the location of each pin header
 
 |foxbms| uses only Molex Micro-Fit 3.0 type connectors, except for USB. A comprehensive set of connectors and crimps is supplied with |foxbms| to start connecting immediately. In case crimps or housings are missing, they are commonly available at major distributors. 
 
@@ -36,16 +36,16 @@ Pin Count    Molex Housing Part Number    Farnell Order Number
 ==========   =========================   =====================
 
 .. figure:: ./connector_viewing_direction.png
-	:width: 100 %
+    :width: 100 %
 
-	Defined viewing direction for the connector pin out; receptable - rear view; header - front view (image source: MOLEX)
+    Defined viewing direction for the connector pin out; receptable - rear view; header - front view (image source: MOLEX)
 
 --------------------------------------------
 Supply (X201 on |BMS-Master|)
 --------------------------------------------
 
 .. figure:: ./connector_6pin.png
-	:width: 10 %
+    :width: 10 %
 
 ====   =============    ============    ============   
 Pin    Signal           Direction       Description
@@ -66,7 +66,7 @@ Pin    Signal           Direction       Description
 --------------------------------------------
 
 .. figure:: ./connector_4pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====    =========    =============    ============
 Pin     Signal       Direction        Description
@@ -84,7 +84,7 @@ Ground of |CAN0| is shared with supply ground ``GND_EXT0``. |CAN0| is isolated f
 -----------------------------------------------
 
 .. figure:: ./connector_4pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====    ============    =============    ============
 Pin     Signal          Direction        Description
@@ -102,7 +102,7 @@ Insulation Monitor (Bender ISOMETER) (X701  on |BMS-Master|)
 --------------------------------------------------------------------------
 
 .. figure:: ./connector_4pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====    =======================    ==============    ===================================================
 Pin     Signal                     Direction         Description
@@ -120,7 +120,7 @@ Contactors (X1201 - X1206 on |BMS-Master| and X1201 - X1203 on |BMS-Extension|)
 --------------------------------------------------------------------------------------------------------------
 
 .. figure:: ./connector_4pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====    ========================    ==============    ============================================
 Pin     Signal                      Direction         Description
@@ -140,7 +140,7 @@ Interlock (X901 on |BMS-Master|)
 -----------------------------------------------
 
 .. figure:: ./connector_2pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====    ========================    ==============        ============================================
 Pin     Signal                      Direction             Description
@@ -156,7 +156,7 @@ Daisy Chain - Primary and Secondary (X1601 on |BMS-Master|)
 --------------------------------------------------------------------------
 
 .. figure:: ./connector_16pin.png
-	:scale: 20 %
+    :scale: 20 %
 
 ====   ====================== 
 Pin    Signal                    
@@ -186,7 +186,7 @@ RS485 (X1301 on |BMS-Extension|)
 ------------------------------------------------
 
 .. figure:: ./connector_6pin.png
-	:scale: 20 %
+    :scale: 20 %
    
 ====   =============    ============    ============   
 Pin    Signal           Direction       Description
@@ -206,7 +206,7 @@ Isolated GPIO (X1901 on |BMS-Extension|)
 --------------------------------------------------------
 
 .. figure:: ./connector_10pin.png
-	:scale: 20 %
+    :scale: 20 %
    
 ====   =============    ============    ============   
 Pin    Signal           Direction       Description
@@ -230,7 +230,7 @@ Isolated normally open contacts - isoNOC (X2001 on |BMS-Extension|)
 -----------------------------------------------------------------------------------
 
 .. figure:: ./connector_12pin.png
-	:scale: 20 %
+    :scale: 20 %
    
 ====   ====================    ============    ============   
 Pin    Signal                  Direction       Description
@@ -256,7 +256,7 @@ Analog Inputs (X1701 on |BMS-Master|)
 ----------------------------------------------------
 
 .. figure:: ./connector_12pin.png
-	:scale: 20 %
+    :scale: 20 %
    
 ====   ====================    ============    ============   
 Pin    Signal                  Direction       Description

@@ -20,9 +20,9 @@ When using |foxBMS| with batteries, a DC fuse in the current path is mandatory. 
 
 .. _battery_system_block_diagram:
 .. figure:: ./battery_system_block_diagram.png
-	:width: 100 %
+    :width: 100 %
    
-	Block diagram showing the typical topology of a battery system
+    Block diagram showing the typical topology of a battery system
 
 
 
