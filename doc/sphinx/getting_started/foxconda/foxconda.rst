@@ -28,7 +28,11 @@ Installation of the needed software via the |foxconda| distribution
 The first step is to install the software environment needed to compile and flash the |foxbms| sources. First, the |foxconda| installer must be downloaded from the `server <https://iisb-foxbms.iisb.fraunhofer.de/foxbms/>`_ containing the |foxconda| installers.
 For Windows, the installer is run by executing |installer archive|.
 
-The window shown in :numref:`fig. %s <condainstaller1>` will appear. 
+.. warning::
+    Do not install |foxconda| into a directory containing whitespace, e.g. for
+    Windows ``C:\Program Files``, ``C:\Program Files (x86)`` etc.
+
+The window shown in :numref:`fig. %s <condainstaller1>` will appear.
 
 .. _condainstaller1:
 .. figure:: ./condainstaller1.png
@@ -43,7 +47,7 @@ Then by clicking on ``Next >`` the license shown in :numref:`fig. %s <condainsta
 .. _condainstaller2:
 .. figure:: ./condainstaller2.png
    :width: 100 %
-   
+
    Installer license terms
 
 To continue, the license terms must be accepted (check ``I accept the terms``) before
@@ -54,17 +58,17 @@ An installation directory must be selected :numref:`fig. %s <condainstaller3>`.
 .. _condainstaller3:
 .. figure:: ./condainstaller3.png
    :width: 100 %
-   
+
    Installation path for the Front Desk environment
 
 A default location is proposed, which can be changed. Clicking
-on ``Next >`` starts the installation as shown in 
+on ``Next >`` starts the installation as shown in
 :numref:`fig. %s <condainstaller4>`. This step can take several minutes.
 
 .. _condainstaller4:
 .. figure:: ./condainstaller4.png
    :width: 100 %
-   
+
    Installation progress
 
 The login credentials may be asked to generate start menu and
@@ -76,7 +80,7 @@ Once the installation is complete, the message shown in :numref:`fig. %s
 .. _condainstaller5:
 .. figure:: ./condainstaller5.png
    :width: 100 %
-   
+
    Installation end
 
 Here, it can be chosen to launch the |foxbms| |frontdesk|—the graphical user interface that configures, builds and flashes the software—immediately after finishing the installation.
@@ -122,7 +126,7 @@ If everything works correctly, the following repositories will be cloned from Gi
 
 The sources and the documentaiton are build with the script ``build.py``. Use ``python build.py -h`` to get all available build options.
 The script ``clean.py`` is used to clean the generated binaries and documentation. Use ``python clean.py -h`` to get all available clean options.
-	
+
 Get the |foxbms| sources via the IDE
 ====================================
 
@@ -191,10 +195,10 @@ The properties are divided into five different categories that can be selected b
  1. User: standard configuration for the BMS (e.g., number of battery modules, number of cells per module, battery cell capacity)
  2. Advanced: advanced configuration for the BMS (e.g., clock timings)
  3. Devel: configuration for user modifying the source code
- 4. Debug: configuration needed for user debugging the source code 
+ 4. Debug: configuration needed for user debugging the source code
  5. Read-only: parameters shown as information
 
-Underneath the property list, a description for each item can be found. Different types of parameters can be distinguished: 
+Underneath the property list, a description for each item can be found. Different types of parameters can be distinguished:
 
  - Numeric value (integer of floating point number)
  - True or False
@@ -247,4 +251,4 @@ What libraries and programs must be installed?
 ----------------------------------------------
 
 None, because they are installed with the |foxconda| installer.
- 
+
