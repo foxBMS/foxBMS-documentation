@@ -17,7 +17,7 @@ generation purposes. |foxbms| hence comes with its own Python distribution,
 called |foxconda|, powered by `Anaconda <https://continuum.io>`_. These build
 instructions assume that |foxconda| was successfully installed and that the
 ``PATH`` environment has been adjusted accordingly. For further information
-refer to the |foxconda| documentation.
+refer to the |foxconda| documentation (:ref:`getting_started_foxconda`).
 
 Obtaining the Sources
 ---------------------
