@@ -201,10 +201,9 @@ The IDE starts with the source selection tab shown in :numref:`fig. %s
    Project selection tab
 
 A project corresponds to the |foxbms| source code tree located on the computer.
- A folder must be created were the projects
-will be stored. First, the ``foxBMS workspaces directory`` must be clicked on
-to select the folder that was created,
-under which all the new |foxbms| projects will be placed.
+A folder must be created were the projects will be stored. First, the 
+``foxBMS workspaces directory`` must be clicked on to select the folder that 
+was created, under which all the new |foxbms| projects will be placed.
 
 Click on the button ``Add from git``. In the dialog, if it is not already the
 case, specify https://github.com/foxBMS/foxBMS-setup as the GIT repository.
@@ -229,8 +228,7 @@ The Sphinx documentation available on ReadTheDocs is included as RST files and
 can be generated. A project from the ``Available projects`` list must be
 selected by clicking on it.
 The project that has just been created must be selected. It will be highlighted
- in the list. Then it must be initialized by clicking on ``Initialize
- project``.
+in the list. Then it must be initialized by clicking on ``Initialize project``.
 During the initialization, the project is configured for the current
 development environment, and the documentation is generated, including the
 complete HTML documentation and the code reference. Once generated, the
@@ -304,9 +302,9 @@ permitted range is entered, the entry appears in red, as shown in :numref:`fig.
 
 To modify the sources according to the configuration settings, the ``Write
 Configuration to Files`` button must be pressed. The modifications will be lost
- if another page is selected without pressing ``Write Configuration to Files``.
- The default values of all parameters can be restored by the ``Reset all values
- to default`` button.
+if another page is selected without pressing ``Write Configuration to Files``.
+The default values of all parameters can be restored by the ``Reset all values
+to default`` button.
 
 .. note::
 

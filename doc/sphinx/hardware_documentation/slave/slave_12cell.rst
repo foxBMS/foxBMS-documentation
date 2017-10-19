@@ -73,7 +73,7 @@ Pin    Signal           Direction       Description
 5      CELL_6+          Input           Cell 6 positve terminal
 6      CELL_8+          Input           Cell 8 positve terminal
 7      CELL_10+         Input           Cell 10 positve terminal
-8      NC               --              --
+8      VBAT+            Input           Battery module positive terminal
 9      NC               --              --
 10     NC               --              --
 11     NC               --              --
@@ -85,7 +85,7 @@ Pin    Signal           Direction       Description
 17     CELL_7+          Input           Cell 7 positive terminal
 18     CELL_9+          Input           Cell 9 positive terminal
 19     CELL_11+         Input           Cell 11 positive terminal
-20     VBAT+            Input           Battery module positive terminal
+20     NC               --              --
 21     NC               --              --
 22     NC               --              --
 23     NC               --              --
