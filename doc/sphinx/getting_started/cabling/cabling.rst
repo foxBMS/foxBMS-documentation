@@ -122,6 +122,11 @@ Its purpose is to convert the signals sent by the Serial Peripheral Interface (S
 
 A |BMS-Slave| is shown in :numref:`fig. %s <foxbms_slave>`.
 
+.. note::
+
+   If you are using a |BMS-Slave| with a hardware version of ``2.x.x`` (green color), please refer to section :ref:`hw_slave_12cell` for pin assignments and
+   cabling instructions. The follwing descriptions only apply for slave hardware versions ``1.x.x`` (red color).
+
 .. _foxbms_slave:
 .. figure:: ./foxbms_slave.jpg
    :width: 100 %
@@ -174,7 +179,7 @@ Hardware Setup of the |BMS-Master| and the |BMS-Slave|
 The connectors needed for this quickstart guide are indicated in the following parts. 
 
 Connecting the |BMS-Slave| to the |BMS-Master|
-----------------------------------------------------------------------
+----------------------------------------------
 
 .. note::
    
@@ -240,7 +245,7 @@ In case a second |BMS-Slave| must be connected to the daisy chain, the OUT+ and 
 
 
 Cell Voltage Connector on the |slaves|
---------------------------------------------
+--------------------------------------
 
 The connector indicated as ``Battery cell connector (16 pin)`` in :numref:`fig. %s <slave_diagram>` has two purposes:
 
@@ -285,7 +290,7 @@ In case no cells are available, they can be simulated with a series of voltage d
 .. _slave_voltage_divider:
 
 Cell Temperature Connector on the |slaves|
-------------------------------------------------
+------------------------------------------
 
 The connector indicated as ``Temperature sensor connector (24 pin)`` in :numref:`fig. %s <slave_diagram>` is used to connect temperature sensors to the |BMS-Slave|.
 
@@ -350,9 +355,9 @@ is described in :numref:`table %s <master_CAN>`.
 
 Ground of |CAN0| is shared with supply ground ``GND_EXT0``. |CAN0| is isolated from the |MCU0| via the isolated CAN transceiver TJA1052. The CAN transceiver may be put into standby mode by |MCU0|.
 
---------------------------------------
+-----------------------------------
 Communication with the |BMS-Master|
---------------------------------------
+-----------------------------------
 
 Once |foxbms| is running, CAN messages should be sent.
 
