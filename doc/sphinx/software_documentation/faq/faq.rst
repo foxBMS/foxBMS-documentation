@@ -671,7 +671,7 @@ This is done via the debug message with the first byte (byte0) equal to 11 (0x0B
 How to add/remove temperature sensors?
 --------------------------------------
 
-To remove one temperature sensor, the first step is to change:
+To add one temperature sensor, the first step is to change:
 
 .. code-block:: C
 
@@ -833,6 +833,7 @@ into:
 
     extern const uint8_t ltc_muxsensortemperatur_cfg[7];
 
+The same procedure must be used to remove a temperature sensor.
 
 How to change the resolution of the temperature values stored?
 --------------------------------------------------------------
